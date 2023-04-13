@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/beecode-rs/msh-logger/compare/v0.1.0...v0.2.0) (2023-04-13)
+
+
+### Features
+
+* project rename ([92dd658](https://github.com/beecode-rs/msh-logger/commit/92dd658719b80107c4c6330b256352cb80da9985))
+
 ## [2.2.3](https://github.com/beecode-rs/msh-node-log/compare/v2.2.2...v2.2.3) (2022-10-16)
 
 
