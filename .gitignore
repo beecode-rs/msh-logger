@@ -1,5 +1,8 @@
 /.idea
+/.base-frame-tmp
 /!.idea/runConfigurations
 /coverage
 /node_modules
 /packages
+/test/node_modules
+/test/dist
