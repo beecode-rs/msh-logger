@@ -1,3 +1,3 @@
-export * from 'src/logger-strategy'
+export { LoggerStrategy, LoggerStrategyParams, ObjectType, StringOrObjectType } from '#/logger-strategy/index'
 
-export * from 'src/log-level'
+export { LogLevel } from '#/log-level'
