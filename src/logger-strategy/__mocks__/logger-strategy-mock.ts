@@ -1,4 +1,4 @@
-import { LoggerStrategy, LoggerStrategyParams, StringOrObjectType } from 'src/logger-strategy'
+import { LoggerStrategy, LoggerStrategyParams, StringOrObjectType } from '#/logger-strategy/index'
 
 export class LoggerStrategyMock implements LoggerStrategy {
 	clone = jest.fn<LoggerStrategyMock, [LoggerStrategyParams | undefined]>()
