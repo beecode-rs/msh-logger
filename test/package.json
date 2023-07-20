@@ -1,14 +1,15 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {},
-  "optionalDependencies": {
-    "@beecode/msh-logger": ".."
-  }
+	"name": "test",
+	"version": "1.0.0",
+	"description": "",
+	"license": "ISC",
+	"author": "",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {},
+	"optionalDependencies": {
+		"@beecode/msh-logger": "0.2.1"
+	}
 }
