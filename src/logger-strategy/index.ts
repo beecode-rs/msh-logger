@@ -1,5 +1,6 @@
-import { LogLevel } from 'src/log-level'
+import { LogLevel } from '#/log-level.js'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ObjectType = Record<string, any>
 
 export type StringOrObjectType = string | ObjectType

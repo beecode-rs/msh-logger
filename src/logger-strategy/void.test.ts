@@ -1,8 +1,10 @@
-import { LoggerStrategyVoid } from 'src/logger-strategy/void'
+import { jest } from '@jest/globals'
+
+import { LoggerStrategyVoid } from '#/logger-strategy/void.js'
 
 describe('LoggerStrategyVoid', () => {
 	describe('should not call logger', () => {
-		let spy_console_log: jest.SpyInstance
+		let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
 		const logger = new LoggerStrategyVoid()
 		const dummyMessage = 'dummyMessage'
 		const dummyObject = { dummy: 'object' }
