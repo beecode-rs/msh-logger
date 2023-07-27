@@ -1,7 +1,6 @@
 import { jest } from '@jest/globals'
-
-import { LogLevel } from '#/log-level.js'
-import { ConsoleLogStrategySimple } from '#/logger-strategy/console/log-strategy/simple.js'
+import { LogLevel } from 'src/log-level'
+import { ConsoleLogStrategySimple } from 'src/logger-strategy/console/log-strategy/simple'
 
 describe('SimpleConsoleLog', () => {
 	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>

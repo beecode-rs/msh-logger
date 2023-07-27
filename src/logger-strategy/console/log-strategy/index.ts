@@ -1,5 +1,5 @@
-import { LogLevel } from '#/log-level.js'
-import { ObjectType, StringOrObjectType } from '#/logger-strategy/index.js'
+import { LogLevel } from 'src/log-level'
+import { ObjectType, StringOrObjectType } from 'src/logger-strategy'
 
 export interface ConsoleLogStrategy {
 	log(

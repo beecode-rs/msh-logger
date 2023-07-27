@@ -1,9 +1,8 @@
 import { jest } from '@jest/globals'
-
-import { LogLevel } from '#/log-level.js'
-import { LoggerStrategyConsole } from '#/logger-strategy/console/index.js'
-import { ConsoleLogStrategyMock } from '#/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.js'
-import { ConsoleLogStrategySimple } from '#/logger-strategy/console/log-strategy/simple.js'
+import { LogLevel } from 'src/log-level'
+import { LoggerStrategyConsole } from 'src/logger-strategy/console'
+import { ConsoleLogStrategyMock } from 'src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock'
+import { ConsoleLogStrategySimple } from 'src/logger-strategy/console/log-strategy/simple'
 
 describe('LoggerStrategyConsole', () => {
 	const defaultLogger = new LoggerStrategyConsole()

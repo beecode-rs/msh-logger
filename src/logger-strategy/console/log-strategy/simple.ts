@@ -1,8 +1,7 @@
-import { typeUtil } from '@beecode/msh-util/type-util.js'
-
-import { LogLevel } from '#/log-level.js'
-import { ConsoleLogStrategy } from '#/logger-strategy/console/log-strategy/index.js'
-import { ObjectType, StringOrObjectType } from '#/logger-strategy/index.js'
+import { typeUtil } from '@beecode/msh-util/type-util'
+import { LogLevel } from 'src/log-level'
+import { ObjectType, StringOrObjectType } from 'src/logger-strategy'
+import { ConsoleLogStrategy } from 'src/logger-strategy/console/log-strategy'
 
 export class ConsoleLogStrategySimple implements ConsoleLogStrategy {
 	log(params: { type: LogLevel; meta?: ObjectType; datetime?: Date; prefix?: string }, ...msgs: StringOrObjectType[]): void {
