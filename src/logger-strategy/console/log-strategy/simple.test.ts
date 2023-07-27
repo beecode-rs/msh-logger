@@ -1,11 +1,12 @@
+import { jest } from '@jest/globals'
 import { LogLevel } from 'src/log-level'
 import { ConsoleLogStrategySimple } from 'src/logger-strategy/console/log-strategy/simple'
 
 describe('SimpleConsoleLog', () => {
-	let spy_console_log: jest.SpyInstance
-	let spy_console_info: jest.SpyInstance
-	let spy_console_warn: jest.SpyInstance
-	let spy_console_error: jest.SpyInstance
+	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	let spy_console_info: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	let spy_console_warn: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	let spy_console_error: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
 	const simpleConsoleLog = new ConsoleLogStrategySimple()
 	const mockDateTime = new Date()
 	const mockDateTimeStr = mockDateTime.toISOString()
@@ -107,6 +108,7 @@ describe('SimpleConsoleLog', () => {
 
 		it('should throw error if wrong type passed', () => {
 			try {
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				ConsoleLogStrategySimple.LogTypeToFunctionName('dummyType' as any)
 				expect.fail('LogTypeToFunctionNane did not fail')
 			} catch (err) {

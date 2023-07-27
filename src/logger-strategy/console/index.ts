@@ -1,4 +1,4 @@
-import { typeUtil } from '@beecode/msh-util/lib/type-util'
+import { typeUtil } from '@beecode/msh-util/type-util'
 import { LogLevel } from 'src/log-level'
 import { LoggerStrategy, LoggerStrategyParams, ObjectType, StringOrObjectType } from 'src/logger-strategy'
 import { ConsoleLogStrategy } from 'src/logger-strategy/console/log-strategy'
