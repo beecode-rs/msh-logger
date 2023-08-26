@@ -1,9 +1,6 @@
 import { LogLevel } from 'src/log-level'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type ObjectType = Record<string, any>
-
-export type StringOrObjectType = string | ObjectType
+export type ObjectType = Record<string, unknown>
 
 export type LoggerStrategyParams = {
 	logLevel?: LogLevel
@@ -12,9 +9,9 @@ export type LoggerStrategyParams = {
 }
 
 export interface LoggerStrategy {
-	debug(...messageObjects: StringOrObjectType[]): void
-	info(...messageObjects: StringOrObjectType[]): void
-	warn(...messageObjects: StringOrObjectType[]): void
-	error(...messageObjects: StringOrObjectType[]): void
+	debug(...msgs: unknown[]): void
+	info(...msgs: unknown[]): void
+	warn(...msgs: unknown[]): void
+	error(...msgs: unknown[]): void
 	clone(overrideParams?: LoggerStrategyParams): LoggerStrategy
 }

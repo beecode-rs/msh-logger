@@ -50,10 +50,9 @@ describe('SimpleConsoleLog', () => {
 			const prefix = 'Prefix'
 			const meta = { m: 'test' }
 			simpleConsoleLog.log({ datetime: mockDateTime, meta, prefix, type: LogLevel.WARN }, msg, msg1)
-			expect(spy_console_warn).toHaveBeenCalledTimes(3)
-			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: ${prefix}`, msg)
-			expect(spy_console_warn).nthCalledWith(2, msg1)
-			expect(spy_console_warn).nthCalledWith(3, meta)
+			expect(spy_console_warn).toHaveBeenCalledTimes(2)
+			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: ${prefix}`, msg, msg1)
+			expect(spy_console_warn).nthCalledWith(2, meta)
 		})
 
 		it('should call console.warn with multiple string', () => {
@@ -61,11 +60,9 @@ describe('SimpleConsoleLog', () => {
 			const msg1 = 'test1'
 			const msg2 = 'test2'
 			simpleConsoleLog.log({ datetime: mockDateTime, type: LogLevel.WARN }, msg, msg1, msg2)
-			expect(spy_console_warn).toHaveBeenCalledTimes(3)
+			expect(spy_console_warn).toHaveBeenCalledTimes(1)
 
-			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: `, msg)
-			expect(spy_console_warn).nthCalledWith(2, msg1)
-			expect(spy_console_warn).nthCalledWith(3, msg2)
+			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: `, msg, msg1, msg2)
 		})
 
 		it('should call console.log with object', () => {
@@ -89,10 +86,9 @@ describe('SimpleConsoleLog', () => {
 			const msg1 = 'test1'
 			const metaObj = { test: 'test' }
 			simpleConsoleLog.log({ datetime: mockDateTime, meta: metaObj, type: LogLevel.ERROR }, msg, msg1)
-			expect(spy_console_error).toHaveBeenCalledTimes(3)
-			expect(spy_console_error).nthCalledWith(1, `${mockDateTimeStr} - ERROR: `, msg)
-			expect(spy_console_error).nthCalledWith(2, msg1)
-			expect(spy_console_error).nthCalledWith(3, metaObj)
+			expect(spy_console_error).toHaveBeenCalledTimes(2)
+			expect(spy_console_error).nthCalledWith(1, `${mockDateTimeStr} - ERROR: `, msg, msg1)
+			expect(spy_console_error).nthCalledWith(2, metaObj)
 		})
 	})
 

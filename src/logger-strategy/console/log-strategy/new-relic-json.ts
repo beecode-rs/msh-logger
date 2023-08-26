@@ -1,12 +1,12 @@
-import { ObjectUtil } from '@beecode/msh-util/object-util'
+import { ObjectUtil } from '@beecode/msh-util/dist/object-util'
 import { LogLevel } from 'src/log-level'
-import { ObjectType, StringOrObjectType } from 'src/logger-strategy'
+import { ObjectType } from 'src/logger-strategy'
 import { ConsoleLogStrategy } from 'src/logger-strategy/console/log-strategy'
 
 export class ConsoleLogStrategyNewRelicJson implements ConsoleLogStrategy {
 	protected _objectUtil = new ObjectUtil()
 
-	log(params: { type: LogLevel; meta?: ObjectType; datetime?: Date; prefix?: string }, ...msgs: StringOrObjectType[]): void {
+	log(params: { type: LogLevel; meta?: ObjectType; datetime?: Date; prefix?: string }, ...msgs: unknown[]): void {
 		const { type, meta, prefix, datetime = new Date() } = params
 
 		const messagePayloads = msgs.map((msg) => {
@@ -22,14 +22,26 @@ export class ConsoleLogStrategyNewRelicJson implements ConsoleLogStrategy {
 		})
 	}
 
-	protected _messagePayloadExtractorIfExists(params: { msg: StringOrObjectType; prefix?: string }): { message: string } {
+	protected _messagePayloadExtractorIfExists(params: { msg: unknown; prefix?: string }): {
+		message: string
+		[key: string]: unknown
+	} {
 		const { msg, prefix } = params
-
-		if (typeof msg === 'object') {
-			return { ...msg, ...((prefix || msg.message) && { message: this._joinDefined(prefix, msg.message) }) }
+		if (!msg) {
+			return { message: '' }
 		}
 
-		return { message: this._joinDefined(prefix, msg) }
+		if (typeof msg === 'object') {
+			const { message, ...restObjects } = msg as { message?: string; [key: string]: unknown }
+
+			return { ...restObjects, message: this._joinDefined(prefix, message) }
+		}
+
+		if (typeof msg === 'string') {
+			return { message: this._joinDefined(prefix, msg) }
+		}
+
+		return { message: '' }
 	}
 
 	protected _joinDefined(prefix?: string, msg?: string): string {

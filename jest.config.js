@@ -1,4 +1,4 @@
-export default {
+module.exports = {
 	collectCoverage: false,
 	collectCoverageFrom: ['src/**/*.ts', '!src/index.ts', '!src/**/*.{contract,d}.ts'],
 	coveragePathIgnorePatterns: ['/node_modules/', '/__tests__/', '/__mocks__/', '/__snapshots__/'],
@@ -9,7 +9,7 @@ export default {
 	transform: {},
 	preset: 'ts-jest/presets/default-esm',
 	moduleNameMapper: {
-		'^src\\/(.*)': '<rootDir>/src/$1.ts',
+		'^src\\/(.*)': '<rootDir>/src/$1',
 	},
 	roots: ['<rootDir>/src'],
 	extensionsToTreatAsEsm: ['.ts'],
