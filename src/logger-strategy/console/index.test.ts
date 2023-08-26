@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals'
 import { LogLevel } from 'src/log-level'
 import { LoggerStrategyConsole } from 'src/logger-strategy/console'
 import { ConsoleLogStrategyMock } from 'src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock'
@@ -33,6 +34,7 @@ describe('LoggerStrategyConsole', () => {
 		it('should throw error if unknown level passed', () => {
 			const notALogLevel = 'not a log level'
 			try {
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				expect(LoggerStrategyConsole.LogLevelToInt(notALogLevel as any)).toEqual(1)
 				expect.fail('LogLevelToInt did not throw error')
 			} catch (err) {
@@ -78,12 +80,13 @@ describe('LoggerStrategyConsole', () => {
 	})
 
 	describe('_logMessage', () => {
-		let spy_logger_shouldLog: jest.SpyInstance
+		let spy_logger_shouldLog: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
 
 		const consoleLogStrategy = new ConsoleLogStrategyMock()
 		const logMessageLogger = new LoggerStrategyConsole({ consoleLogStrategy })
 
 		beforeEach(() => {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_logger_shouldLog = jest.spyOn(logMessageLogger, '_shouldLog' as any)
 		})
 		afterEach(() => jest.resetAllMocks())
@@ -111,7 +114,7 @@ describe('LoggerStrategyConsole', () => {
 	})
 
 	describe('public functions', () => {
-		let spy_logger_logMessage: jest.SpyInstance
+		let spy_logger_logMessage: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
 
 		const logger = new LoggerStrategyConsole()
 		const dummyMessage = 'dummy message'
@@ -121,6 +124,7 @@ describe('LoggerStrategyConsole', () => {
 			jest.spyOn(console, 'error').mockImplementation(jest.fn)
 			jest.spyOn(console, 'warn').mockImplementation(jest.fn)
 			jest.spyOn(console, 'info').mockImplementation(jest.fn)
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_logger_logMessage = jest.spyOn(logger, '_logMessage' as any)
 		})
 		afterEach(() => jest.resetAllMocks())

@@ -1,21 +1,15 @@
-import { typeUtil } from '@beecode/msh-util/lib/type-util'
+import { typeUtil } from '@beecode/msh-util/dist/type-util'
 import { LogLevel } from 'src/log-level'
-import { ObjectType, StringOrObjectType } from 'src/logger-strategy'
+import { ObjectType } from 'src/logger-strategy'
 import { ConsoleLogStrategy } from 'src/logger-strategy/console/log-strategy'
 
 export class ConsoleLogStrategySimple implements ConsoleLogStrategy {
-	log(params: { type: LogLevel; meta?: ObjectType; datetime?: Date; prefix?: string }, ...msgs: StringOrObjectType[]): void {
+	log(params: { type: LogLevel; meta?: ObjectType; datetime?: Date; prefix?: string }, ...msgs: unknown[]): void {
 		const { type, meta, prefix, datetime = new Date() } = params
 		const fnName = ConsoleLogStrategySimple.LogTypeToFunctionName(type)
 
 		/* eslint-disable no-console*/
-		msgs.forEach((msg, ix) => {
-			if (ix === 0) {
-				console[fnName](`${datetime.toISOString()} - ${type.toUpperCase()}: ${prefix ?? ''}`, msg)
-			} else {
-				console[fnName](msg)
-			}
-		})
+		console[fnName](`${datetime.toISOString()} - ${type.toUpperCase()}: ${prefix ?? ''}`, ...msgs)
 		if (meta) {
 			console[fnName](meta)
 		}

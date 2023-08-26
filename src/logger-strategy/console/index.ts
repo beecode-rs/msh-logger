@@ -1,6 +1,6 @@
-import { typeUtil } from '@beecode/msh-util/lib/type-util'
+import { typeUtil } from '@beecode/msh-util/dist/type-util'
 import { LogLevel } from 'src/log-level'
-import { LoggerStrategy, LoggerStrategyParams, ObjectType, StringOrObjectType } from 'src/logger-strategy'
+import { LoggerStrategy, LoggerStrategyParams, ObjectType } from 'src/logger-strategy'
 import { ConsoleLogStrategy } from 'src/logger-strategy/console/log-strategy'
 import { ConsoleLogStrategySimple } from 'src/logger-strategy/console/log-strategy/simple'
 
@@ -52,26 +52,26 @@ export class LoggerStrategyConsole implements LoggerStrategy {
 		return LoggerStrategyConsole.LogLevelToInt(this._logLevel) >= LoggerStrategyConsole.LogLevelToInt(currentLevel)
 	}
 
-	protected _logMessage(type: LogLevel, ...messageObjects: StringOrObjectType[]): void {
+	protected _logMessage(type: LogLevel, ...msgs: unknown[]): void {
 		if (!this._shouldLog(type)) {
 			return
 		}
-		this._consoleLogStrategy.log({ meta: this._meta, prefix: this._messagePrefix, type }, ...messageObjects)
+		this._consoleLogStrategy.log({ meta: this._meta, prefix: this._messagePrefix, type }, ...msgs)
 	}
 
-	debug(...messageObjects: StringOrObjectType[]): void {
-		this._logMessage(LogLevel.DEBUG, ...messageObjects)
+	debug(...msgs: unknown[]): void {
+		this._logMessage(LogLevel.DEBUG, ...msgs)
 	}
 
-	info(...messageObjects: StringOrObjectType[]): void {
-		this._logMessage(LogLevel.INFO, ...messageObjects)
+	info(...msgs: unknown[]): void {
+		this._logMessage(LogLevel.INFO, ...msgs)
 	}
 
-	warn(...messageObjects: StringOrObjectType[]): void {
-		this._logMessage(LogLevel.WARN, ...messageObjects)
+	warn(...msgs: unknown[]): void {
+		this._logMessage(LogLevel.WARN, ...msgs)
 	}
 
-	error(...messageObjects: StringOrObjectType[]): void {
-		this._logMessage(LogLevel.ERROR, ...messageObjects)
+	error(...msgs: unknown[]): void {
+		this._logMessage(LogLevel.ERROR, ...msgs)
 	}
 }
