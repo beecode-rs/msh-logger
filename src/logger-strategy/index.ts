@@ -1,4 +1,4 @@
-import { LogLevel } from 'src/log-level'
+import { LogLevel } from '#/log-level'
 
 export type ObjectType = Record<string, unknown>
 

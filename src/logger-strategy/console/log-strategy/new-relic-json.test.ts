@@ -1,7 +1,8 @@
-import { ObjectUtil } from '@beecode/msh-util/dist/object-util'
+import { ObjectUtil } from '@beecode/msh-util/object-util'
 import { jest } from '@jest/globals'
-import { LogLevel } from 'src/log-level'
-import { ConsoleLogStrategyNewRelicJson } from 'src/logger-strategy/console/log-strategy/new-relic-json'
+
+import { LogLevel } from '#/log-level'
+import { ConsoleLogStrategyNewRelicJson } from '#/logger-strategy/console/log-strategy/new-relic-json'
 
 describe('NewRelicConsoleLog', () => {
 	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>

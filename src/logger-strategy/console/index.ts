@@ -1,8 +1,9 @@
-import { typeUtil } from '@beecode/msh-util/dist/type-util'
-import { LogLevel } from 'src/log-level'
-import { LoggerStrategy, LoggerStrategyParams, ObjectType } from 'src/logger-strategy'
-import { ConsoleLogStrategy } from 'src/logger-strategy/console/log-strategy'
-import { ConsoleLogStrategySimple } from 'src/logger-strategy/console/log-strategy/simple'
+import { typeUtil } from '@beecode/msh-util/type-util'
+
+import { LogLevel } from '#/log-level'
+import { LoggerStrategy, LoggerStrategyParams, ObjectType } from '#/logger-strategy'
+import { ConsoleLogStrategy } from '#/logger-strategy/console/log-strategy'
+import { ConsoleLogStrategySimple } from '#/logger-strategy/console/log-strategy/simple'
 
 export type ConsoleLoggerParams = {
 	consoleLogStrategy?: ConsoleLogStrategy

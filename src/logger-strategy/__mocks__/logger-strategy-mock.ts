@@ -1,12 +1,12 @@
-import { LoggerStrategy, LoggerStrategyParams, StringOrObjectType } from 'src/logger-strategy'
+import { LoggerStrategy, LoggerStrategyParams } from '#/logger-strategy'
 
 export class LoggerStrategyMock implements LoggerStrategy {
 	clone = jest.fn<LoggerStrategyMock, [LoggerStrategyParams | undefined]>()
 
 	/* eslint-disable @typescript-eslint/no-invalid-void-type */
-	debug = jest.fn<void, StringOrObjectType[]>()
-	error = jest.fn<void, StringOrObjectType[]>()
-	info = jest.fn<void, StringOrObjectType[]>()
-	warn = jest.fn<void, StringOrObjectType[]>()
+	debug = jest.fn<void, unknown[]>()
+	error = jest.fn<void, unknown[]>()
+	info = jest.fn<void, unknown[]>()
+	warn = jest.fn<void, unknown[]>()
 	/* eslint-enable @typescript-eslint/no-invalid-void-type */
 }

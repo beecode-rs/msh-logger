@@ -4,12 +4,11 @@
 	"description": "",
 	"license": "ISC",
 	"author": "",
-	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {},
 	"optionalDependencies": {
-		"@beecode/msh-logger": "0.2.1"
+		"@beecode/msh-logger": "file:./.."
 	}
 }

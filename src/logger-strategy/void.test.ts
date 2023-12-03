@@ -1,5 +1,6 @@
 import { jest } from '@jest/globals'
-import { LoggerStrategyVoid } from 'src/logger-strategy/void'
+
+import { LoggerStrategyVoid } from '#/logger-strategy/void'
 
 describe('LoggerStrategyVoid', () => {
 	describe('should not call logger', () => {
