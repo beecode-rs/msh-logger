@@ -1,11 +1,13 @@
-import { ObjectUtil } from '@beecode/msh-util/lib/object-util'
-import { LogLevel } from 'src/log-level'
-import { ConsoleLogStrategyNewRelicJson } from 'src/logger-strategy/console/log-strategy/new-relic-json'
+import { ObjectUtil } from '@beecode/msh-util/object-util'
+import { jest } from '@jest/globals'
+
+import { LogLevel } from '#/log-level'
+import { ConsoleLogStrategyNewRelicJson } from '#/logger-strategy/console/log-strategy/new-relic-json'
 
 describe('NewRelicConsoleLog', () => {
-	let spy_console_log: jest.SpyInstance
+	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
 	const objectUtil = new ObjectUtil()
-	const deepStringify = (obj: any): string => {
+	const deepStringify = (obj: unknown): string => {
 		return objectUtil.deepStringify(obj, { isSorted: true })
 	}
 
@@ -33,7 +35,9 @@ describe('NewRelicConsoleLog', () => {
 			const obj = { test: 'test' }
 			newRelicJsonConsoleLog.log({ datetime: mockDateTime, type: LogLevel.INFO }, obj)
 			expect(spy_console_log).toHaveBeenCalledTimes(1)
-			expect(spy_console_log).toHaveBeenCalledWith(deepStringify({ logtype: LogLevel.INFO, timestamp: mockTimeStamp, ...obj }))
+			expect(spy_console_log).toHaveBeenCalledWith(
+				deepStringify({ logtype: LogLevel.INFO, message: '', timestamp: mockTimeStamp, ...obj })
+			)
 		})
 
 		it('should call console.log with message and meta', () => {
