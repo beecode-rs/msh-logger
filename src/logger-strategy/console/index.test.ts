@@ -1,4 +1,4 @@
-import { jest } from '@jest/globals'
+import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
 import { LogLevel } from '#/log-level'
 import { LoggerStrategyConsole } from '#/logger-strategy/console'
@@ -37,7 +37,7 @@ describe('LoggerStrategyConsole', () => {
 			try {
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				expect(LoggerStrategyConsole.LogLevelToInt(notALogLevel as any)).toEqual(1)
-				expect.fail('LogLevelToInt did not throw error')
+				throw new Error('LogLevelToInt did not throw error')
 			} catch (err) {
 				if (!(err instanceof Error)) {
 					throw err
@@ -90,8 +90,12 @@ describe('LoggerStrategyConsole', () => {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_logger_shouldLog = jest.spyOn(logMessageLogger, '_shouldLog' as any)
 		})
-		afterEach(() => jest.resetAllMocks())
-		afterAll(() => jest.restoreAllMocks())
+		afterEach(() => {
+			jest.resetAllMocks()
+		})
+		afterAll(() => {
+			jest.restoreAllMocks()
+		})
 
 		it('should not log messages if shouldLog returns false', () => {
 			spy_logger_shouldLog.mockReturnValue(false)
@@ -128,8 +132,12 @@ describe('LoggerStrategyConsole', () => {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_logger_logMessage = jest.spyOn(logger, '_logMessage' as any)
 		})
-		afterEach(() => jest.resetAllMocks())
-		afterAll(() => jest.restoreAllMocks())
+		afterEach(() => {
+			jest.resetAllMocks()
+		})
+		afterAll(() => {
+			jest.restoreAllMocks()
+		})
 
 		it('should call logger with error level for error', () => {
 			logger.error(dummyMessage, dummyObject)

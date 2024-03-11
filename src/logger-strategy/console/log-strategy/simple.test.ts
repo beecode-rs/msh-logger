@@ -1,4 +1,4 @@
-import { jest } from '@jest/globals'
+import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
 import { LogLevel } from '#/log-level'
 import { ConsoleLogStrategySimple } from '#/logger-strategy/console/log-strategy/simple'
@@ -19,8 +19,12 @@ describe('SimpleConsoleLog', () => {
 		spy_console_error = jest.spyOn(console, 'error').mockImplementation(jest.fn)
 	})
 
-	afterEach(() => jest.resetAllMocks())
-	afterAll(() => jest.restoreAllMocks())
+	afterEach(() => {
+		jest.resetAllMocks()
+	})
+	afterAll(() => {
+		jest.restoreAllMocks()
+	})
 
 	describe('log', () => {
 		it('should call console.log with string', () => {
@@ -107,7 +111,7 @@ describe('SimpleConsoleLog', () => {
 			try {
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				ConsoleLogStrategySimple.LogTypeToFunctionName('dummyType' as any)
-				expect.fail('LogTypeToFunctionNane did not fail')
+				throw new Error('LogTypeToFunctionNane did not fail')
 			} catch (err) {
 				if (!(err instanceof Error)) {
 					throw err

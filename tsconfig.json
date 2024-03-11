@@ -12,9 +12,11 @@
 		"forceConsistentCasingInFileNames": true,
 		"inlineSourceMap": true,
 		"inlineSources": true,
-		"lib": ["esnext"],
-		"module": "nodenext",
-		"moduleResolution": "nodenext",
+		"lib": [
+			"esnext"
+		],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
@@ -23,8 +25,13 @@
 		"noUnusedParameters": true,
 		"outDir": "./dist/esm",
 		"paths": {
-			"#": ["./src/index.ts"],
-			"#/*": ["./src/*.ts", "./src/*/index.ts"]
+			"#": [
+				"./src/index.ts"
+			],
+			"#/*": [
+				"./src/*.ts",
+				"./src/*/index.ts"
+			]
 		},
 		"resolveJsonModule": true,
 		"rootDir": "./src",
@@ -34,5 +41,7 @@
 		"strictNullChecks": true,
 		"target": "ESNext"
 	},
-	"include": ["./src"]
+	"include": [
+		"./src"
+	]
 }

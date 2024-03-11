@@ -1,8 +1,8 @@
 import { jest } from '@jest/globals'
 
-import { LoggerStrategyParams, LoggerStrategy as LoggerStrategyToMock } from '#/logger-strategy'
+import { LoggerStrategy, LoggerStrategyParams } from '#'
 
-export class LoggerStrategy implements LoggerStrategyToMock {
+export class LoggerStrategyVoid implements LoggerStrategy {
 	clone = jest.fn<(overrideParams?: LoggerStrategyParams | undefined) => LoggerStrategy>()
 
 	debug = jest.fn<(..._msgs: unknown[]) => void>()

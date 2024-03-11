@@ -1,5 +1,5 @@
 import { ObjectUtil } from '@beecode/msh-util/object-util'
-import { jest } from '@jest/globals'
+import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
 import { LogLevel } from '#/log-level'
 import { ConsoleLogStrategyNewRelicJson } from '#/logger-strategy/console/log-strategy/new-relic-json'
@@ -18,8 +18,12 @@ describe('NewRelicConsoleLog', () => {
 	beforeEach(() => {
 		spy_console_log = jest.spyOn(console, 'log').mockImplementation(jest.fn)
 	})
-	afterEach(() => jest.resetAllMocks())
-	afterAll(() => jest.restoreAllMocks())
+	afterEach(() => {
+		jest.resetAllMocks()
+	})
+	afterAll(() => {
+		jest.restoreAllMocks()
+	})
 
 	describe('log', () => {
 		it('should call console.log with string', () => {
