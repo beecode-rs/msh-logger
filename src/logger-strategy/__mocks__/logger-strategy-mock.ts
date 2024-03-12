@@ -1,10 +1,12 @@
-import { LoggerStrategy, LoggerStrategyParams, StringOrObjectType } from 'src/logger-strategy'
+import { jest } from '@jest/globals'
 
-export class LoggerStrategyMock implements LoggerStrategy {
-	clone = jest.fn<LoggerStrategyMock, [LoggerStrategyParams | undefined]>()
+import { LoggerStrategyParams, LoggerStrategy as LoggerStrategyToMock } from '#/logger-strategy'
 
-	debug = jest.fn<void, StringOrObjectType[]>()
-	error = jest.fn<void, StringOrObjectType[]>()
-	info = jest.fn<void, StringOrObjectType[]>()
-	warn = jest.fn<void, StringOrObjectType[]>()
+export class LoggerStrategy implements LoggerStrategyToMock {
+	clone = jest.fn<(overrideParams?: LoggerStrategyParams | undefined) => LoggerStrategy>()
+
+	debug = jest.fn<(..._msgs: unknown[]) => void>()
+	error = jest.fn<(..._msgs: unknown[]) => void>()
+	info = jest.fn<(..._msgs: unknown[]) => void>()
+	warn = jest.fn<(..._msgs: unknown[]) => void>()
 }
