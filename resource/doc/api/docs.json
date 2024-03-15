@@ -1,0 +1,4614 @@
+{
+	"id": 0,
+	"name": "@beecode/msh-logger",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "index",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 176,
+					"name": "LogLevel",
+					"variant": "reference",
+					"kind": 8388608,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "log-level.ts",
+							"line": 1,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L1"
+						}
+					],
+					"target": 3
+				},
+				{
+					"id": 175,
+					"name": "LoggerStrategy",
+					"variant": "reference",
+					"kind": 8388608,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 13,
+							"character": 17,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L13"
+						}
+					],
+					"target": 16
+				},
+				{
+					"id": 174,
+					"name": "LoggerStrategyParams",
+					"variant": "reference",
+					"kind": 8388608,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 7,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L7"
+						}
+					],
+					"target": 11
+				},
+				{
+					"id": 172,
+					"name": "ObjectType",
+					"variant": "reference",
+					"kind": 8388608,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 3,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L3"
+						}
+					],
+					"target": 9
+				},
+				{
+					"id": 173,
+					"name": "StringOrObjectType",
+					"variant": "reference",
+					"kind": 8388608,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 5,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L5"
+						}
+					],
+					"target": 10
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"children": [
+						176,
+						175,
+						174,
+						172,
+						173
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "log-level",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 3,
+					"name": "LogLevel",
+					"variant": "declaration",
+					"kind": 8,
+					"flags": {},
+					"children": [
+						{
+							"id": 7,
+							"name": "DEBUG",
+							"variant": "declaration",
+							"kind": 16,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "log-level.ts",
+									"line": 5,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L5"
+								}
+							],
+							"type": {
+								"type": "literal",
+								"value": "DEBUG"
+							}
+						},
+						{
+							"id": 4,
+							"name": "ERROR",
+							"variant": "declaration",
+							"kind": 16,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "log-level.ts",
+									"line": 2,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L2"
+								}
+							],
+							"type": {
+								"type": "literal",
+								"value": "ERROR"
+							}
+						},
+						{
+							"id": 6,
+							"name": "INFO",
+							"variant": "declaration",
+							"kind": 16,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "log-level.ts",
+									"line": 4,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L4"
+								}
+							],
+							"type": {
+								"type": "literal",
+								"value": "INFO"
+							}
+						},
+						{
+							"id": 5,
+							"name": "WARN",
+							"variant": "declaration",
+							"kind": 16,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "log-level.ts",
+									"line": 3,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L3"
+								}
+							],
+							"type": {
+								"type": "literal",
+								"value": "WARN"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Enumeration Members",
+							"children": [
+								7,
+								4,
+								6,
+								5
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "log-level.ts",
+							"line": 1,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L1"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumerations",
+					"children": [
+						3
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "log-level.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "logger-strategy",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 16,
+					"name": "LoggerStrategy",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"children": [
+						{
+							"id": 29,
+							"name": "clone",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/index.ts",
+									"line": 18,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L18"
+								}
+							],
+							"signatures": [
+								{
+									"id": 30,
+									"name": "clone",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 18,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L18"
+										}
+									],
+									"parameters": [
+										{
+											"id": 31,
+											"name": "overrideParams",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 11,
+												"name": "LoggerStrategyParams",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 16,
+										"name": "LoggerStrategy",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							]
+						},
+						{
+							"id": 17,
+							"name": "debug",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/index.ts",
+									"line": 14,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L14"
+								}
+							],
+							"signatures": [
+								{
+									"id": 18,
+									"name": "debug",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 14,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L14"
+										}
+									],
+									"parameters": [
+										{
+											"id": 19,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 26,
+							"name": "error",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/index.ts",
+									"line": 17,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L17"
+								}
+							],
+							"signatures": [
+								{
+									"id": 27,
+									"name": "error",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 17,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L17"
+										}
+									],
+									"parameters": [
+										{
+											"id": 28,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 20,
+							"name": "info",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/index.ts",
+									"line": 15,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L15"
+								}
+							],
+							"signatures": [
+								{
+									"id": 21,
+									"name": "info",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 15,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L15"
+										}
+									],
+									"parameters": [
+										{
+											"id": 22,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 23,
+							"name": "warn",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/index.ts",
+									"line": 16,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L16"
+								}
+							],
+							"signatures": [
+								{
+									"id": 24,
+									"name": "warn",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 16,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L16"
+										}
+									],
+									"parameters": [
+										{
+											"id": 25,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"children": [
+								29,
+								17,
+								26,
+								20,
+								23
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 13,
+							"character": 17,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L13"
+						}
+					],
+					"implementedBy": [
+						{
+							"type": "reference",
+							"target": 70,
+							"name": "LoggerStrategyConsole"
+						},
+						{
+							"type": "reference",
+							"target": 57,
+							"name": "LoggerStrategyMock"
+						},
+						{
+							"type": "reference",
+							"target": 34,
+							"name": "LoggerStrategyVoid"
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "LoggerStrategyParams",
+					"variant": "declaration",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 7,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L7"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 12,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 13,
+									"name": "logLevel",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 8,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L8"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 3,
+										"name": "LogLevel",
+										"package": "@beecode/msh-logger"
+									}
+								},
+								{
+									"id": 14,
+									"name": "messagePrefix",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 9,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L9"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 15,
+									"name": "meta",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "logger-strategy/index.ts",
+											"line": 10,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L10"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 9,
+										"name": "ObjectType",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										13,
+										14,
+										15
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "logger-strategy/index.ts",
+									"line": 7,
+									"character": 35,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L7"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 9,
+					"name": "ObjectType",
+					"variant": "declaration",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 3,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L3"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+							"qualifiedName": "Record"
+						},
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "any"
+							}
+						],
+						"name": "Record",
+						"package": "typescript"
+					}
+				},
+				{
+					"id": 10,
+					"name": "StringOrObjectType",
+					"variant": "declaration",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/index.ts",
+							"line": 5,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L5"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"target": 9,
+								"name": "ObjectType",
+								"package": "@beecode/msh-logger"
+							}
+						]
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						16
+					]
+				},
+				{
+					"title": "Type Aliases",
+					"children": [
+						11,
+						9,
+						10
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 56,
+			"name": "logger-strategy/__mocks__/logger-strategy-mock",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 57,
+					"name": "LoggerStrategyMock",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 58,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 59,
+									"name": "new LoggerStrategyMock",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 57,
+										"name": "LoggerStrategyMock",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							]
+						},
+						{
+							"id": 60,
+							"name": "clone",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/__mocks__/logger-strategy-mock.ts",
+									"line": 4,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/__mocks__/logger-strategy-mock.ts#L4"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/@types/jest/index.d.ts",
+									"qualifiedName": "jest.Mock"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 57,
+										"name": "LoggerStrategyMock",
+										"package": "@beecode/msh-logger"
+									},
+									{
+										"type": "tuple",
+										"elements": [
+											{
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "reference",
+														"target": 11,
+														"name": "LoggerStrategyParams",
+														"package": "@beecode/msh-logger"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Mock",
+								"package": "@types/jest",
+								"qualifiedName": "jest.Mock"
+							},
+							"defaultValue": "...",
+							"implementationOf": {
+								"type": "reference",
+								"target": 29,
+								"name": "LoggerStrategy.clone"
+							}
+						},
+						{
+							"id": 61,
+							"name": "debug",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/__mocks__/logger-strategy-mock.ts",
+									"line": 6,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/__mocks__/logger-strategy-mock.ts#L6"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/@types/jest/index.d.ts",
+									"qualifiedName": "jest.Mock"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": 10,
+											"name": "StringOrObjectType",
+											"package": "@beecode/msh-logger"
+										}
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Mock",
+								"package": "@types/jest",
+								"qualifiedName": "jest.Mock"
+							},
+							"defaultValue": "...",
+							"implementationOf": {
+								"type": "reference",
+								"target": 17,
+								"name": "LoggerStrategy.debug"
+							}
+						},
+						{
+							"id": 62,
+							"name": "error",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/__mocks__/logger-strategy-mock.ts",
+									"line": 7,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/__mocks__/logger-strategy-mock.ts#L7"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/@types/jest/index.d.ts",
+									"qualifiedName": "jest.Mock"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": 10,
+											"name": "StringOrObjectType",
+											"package": "@beecode/msh-logger"
+										}
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Mock",
+								"package": "@types/jest",
+								"qualifiedName": "jest.Mock"
+							},
+							"defaultValue": "...",
+							"implementationOf": {
+								"type": "reference",
+								"target": 26,
+								"name": "LoggerStrategy.error"
+							}
+						},
+						{
+							"id": 63,
+							"name": "info",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/__mocks__/logger-strategy-mock.ts",
+									"line": 8,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/__mocks__/logger-strategy-mock.ts#L8"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/@types/jest/index.d.ts",
+									"qualifiedName": "jest.Mock"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": 10,
+											"name": "StringOrObjectType",
+											"package": "@beecode/msh-logger"
+										}
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Mock",
+								"package": "@types/jest",
+								"qualifiedName": "jest.Mock"
+							},
+							"defaultValue": "...",
+							"implementationOf": {
+								"type": "reference",
+								"target": 20,
+								"name": "LoggerStrategy.info"
+							}
+						},
+						{
+							"id": 64,
+							"name": "warn",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/__mocks__/logger-strategy-mock.ts",
+									"line": 9,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/__mocks__/logger-strategy-mock.ts#L9"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/@types/jest/index.d.ts",
+									"qualifiedName": "jest.Mock"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": 10,
+											"name": "StringOrObjectType",
+											"package": "@beecode/msh-logger"
+										}
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Mock",
+								"package": "@types/jest",
+								"qualifiedName": "jest.Mock"
+							},
+							"defaultValue": "...",
+							"implementationOf": {
+								"type": "reference",
+								"target": 23,
+								"name": "LoggerStrategy.warn"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								58
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								60,
+								61,
+								62,
+								63,
+								64
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/__mocks__/logger-strategy-mock.ts",
+							"line": 3,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/__mocks__/logger-strategy-mock.ts#L3"
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"target": 16,
+							"name": "LoggerStrategy",
+							"package": "@beecode/msh-logger"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						57
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/__mocks__/logger-strategy-mock.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/__mocks__/logger-strategy-mock.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 66,
+			"name": "logger-strategy/console",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 70,
+					"name": "LoggerStrategyConsole",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 74,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 18,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L18"
+								}
+							],
+							"signatures": [
+								{
+									"id": 75,
+									"name": "new LoggerStrategyConsole",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 18,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L18"
+										}
+									],
+									"parameters": [
+										{
+											"id": 76,
+											"name": "params",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 67,
+												"name": "ConsoleLoggerParams",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 70,
+										"name": "LoggerStrategyConsole",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							]
+						},
+						{
+							"id": 78,
+							"name": "_consoleLogStrategy",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 14,
+									"character": 20,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L14"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 105,
+								"name": "ConsoleLogStrategy",
+								"package": "@beecode/msh-logger"
+							}
+						},
+						{
+							"id": 77,
+							"name": "_logLevel",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 13,
+									"character": 20,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L13"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 3,
+								"name": "LogLevel",
+								"package": "@beecode/msh-logger"
+							}
+						},
+						{
+							"id": 79,
+							"name": "_messagePrefix",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true,
+								"isOptional": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 15,
+									"character": 20,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L15"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 80,
+							"name": "_meta",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true,
+								"isOptional": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 16,
+									"character": 20,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L16"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 9,
+								"name": "ObjectType",
+								"package": "@beecode/msh-logger"
+							}
+						},
+						{
+							"id": 87,
+							"name": "_logMessage",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 56,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L56"
+								}
+							],
+							"signatures": [
+								{
+									"id": 88,
+									"name": "_logMessage",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 56,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L56"
+										}
+									],
+									"parameters": [
+										{
+											"id": 89,
+											"name": "type",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 3,
+												"name": "LogLevel",
+												"package": "@beecode/msh-logger"
+											}
+										},
+										{
+											"id": 90,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 84,
+							"name": "_shouldLog",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 52,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L52"
+								}
+							],
+							"signatures": [
+								{
+									"id": 85,
+									"name": "_shouldLog",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 52,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L52"
+										}
+									],
+									"parameters": [
+										{
+											"id": 86,
+											"name": "currentLevel",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 3,
+												"name": "LogLevel",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							]
+						},
+						{
+							"id": 81,
+							"name": "clone",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 27,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L27"
+								}
+							],
+							"signatures": [
+								{
+									"id": 82,
+									"name": "clone",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 27,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L27"
+										}
+									],
+									"parameters": [
+										{
+											"id": 83,
+											"name": "params",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 11,
+												"name": "LoggerStrategyParams",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 70,
+										"name": "LoggerStrategyConsole",
+										"package": "@beecode/msh-logger"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 30,
+										"name": "LoggerStrategy.clone"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 29,
+								"name": "LoggerStrategy.clone"
+							}
+						},
+						{
+							"id": 91,
+							"name": "debug",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 63,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L63"
+								}
+							],
+							"signatures": [
+								{
+									"id": 92,
+									"name": "debug",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 63,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L63"
+										}
+									],
+									"parameters": [
+										{
+											"id": 93,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 18,
+										"name": "LoggerStrategy.debug"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 17,
+								"name": "LoggerStrategy.debug"
+							}
+						},
+						{
+							"id": 100,
+							"name": "error",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 75,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L75"
+								}
+							],
+							"signatures": [
+								{
+									"id": 101,
+									"name": "error",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 75,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L75"
+										}
+									],
+									"parameters": [
+										{
+											"id": 102,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 27,
+										"name": "LoggerStrategy.error"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 26,
+								"name": "LoggerStrategy.error"
+							}
+						},
+						{
+							"id": 94,
+							"name": "info",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 67,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L67"
+								}
+							],
+							"signatures": [
+								{
+									"id": 95,
+									"name": "info",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 67,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L67"
+										}
+									],
+									"parameters": [
+										{
+											"id": 96,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 21,
+										"name": "LoggerStrategy.info"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 20,
+								"name": "LoggerStrategy.info"
+							}
+						},
+						{
+							"id": 97,
+							"name": "warn",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 71,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L71"
+								}
+							],
+							"signatures": [
+								{
+									"id": 98,
+									"name": "warn",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 71,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L71"
+										}
+									],
+									"parameters": [
+										{
+											"id": 99,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 24,
+										"name": "LoggerStrategy.warn"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 23,
+								"name": "LoggerStrategy.warn"
+							}
+						},
+						{
+							"id": 71,
+							"name": "LogLevelToInt",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/index.ts",
+									"line": 37,
+									"character": 8,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L37"
+								}
+							],
+							"signatures": [
+								{
+									"id": 72,
+									"name": "LogLevelToInt",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 37,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L37"
+										}
+									],
+									"parameters": [
+										{
+											"id": 73,
+											"name": "logLevel",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 3,
+												"name": "LogLevel",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								74
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								78,
+								77,
+								79,
+								80
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								87,
+								84,
+								81,
+								91,
+								100,
+								94,
+								97,
+								71
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/console/index.ts",
+							"line": 12,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L12"
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"target": 16,
+							"name": "LoggerStrategy",
+							"package": "@beecode/msh-logger"
+						}
+					]
+				},
+				{
+					"id": 67,
+					"name": "ConsoleLoggerParams",
+					"variant": "declaration",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "logger-strategy/console/index.ts",
+							"line": 8,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L8"
+						}
+					],
+					"type": {
+						"type": "intersection",
+						"types": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 68,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 69,
+											"name": "consoleLogStrategy",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "logger-strategy/console/index.ts",
+													"line": 9,
+													"character": 1,
+													"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": 105,
+												"name": "ConsoleLogStrategy",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												69
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/index.ts",
+											"line": 8,
+											"character": 34,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L8"
+										}
+									]
+								}
+							},
+							{
+								"type": "reference",
+								"target": 11,
+								"name": "LoggerStrategyParams",
+								"package": "@beecode/msh-logger"
+							}
+						]
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						70
+					]
+				},
+				{
+					"title": "Type Aliases",
+					"children": [
+						67
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 65,
+			"name": "logger-strategy/console/index.test",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/index.test.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.test.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 104,
+			"name": "logger-strategy/console/log-strategy",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 105,
+					"name": "ConsoleLogStrategy",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"children": [
+						{
+							"id": 106,
+							"name": "log",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/index.ts",
+									"line": 5,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L5"
+								}
+							],
+							"signatures": [
+								{
+									"id": 107,
+									"name": "log",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/log-strategy/index.ts",
+											"line": 5,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L5"
+										}
+									],
+									"parameters": [
+										{
+											"id": 108,
+											"name": "params",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 109,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"children": [
+														{
+															"id": 112,
+															"name": "datetime",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/index.ts",
+																	"line": 6,
+																	"character": 47,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L6"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+																	"qualifiedName": "Date"
+																},
+																"name": "Date",
+																"package": "typescript"
+															}
+														},
+														{
+															"id": 111,
+															"name": "meta",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/index.ts",
+																	"line": 6,
+																	"character": 28,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L6"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": 9,
+																"name": "ObjectType",
+																"package": "@beecode/msh-logger"
+															}
+														},
+														{
+															"id": 113,
+															"name": "prefix",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/index.ts",
+																	"line": 6,
+																	"character": 64,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L6"
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 110,
+															"name": "type",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/index.ts",
+																	"line": 6,
+																	"character": 12,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L6"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": 3,
+																"name": "LogLevel",
+																"package": "@beecode/msh-logger"
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"children": [
+																112,
+																111,
+																113,
+																110
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "logger-strategy/console/log-strategy/index.ts",
+															"line": 6,
+															"character": 10,
+															"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L6"
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 114,
+											"name": "messageObjects",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"children": [
+								106
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/console/log-strategy/index.ts",
+							"line": 4,
+							"character": 17,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L4"
+						}
+					],
+					"implementedBy": [
+						{
+							"type": "reference",
+							"target": 160,
+							"name": "ConsoleLogStrategyMock"
+						},
+						{
+							"type": "reference",
+							"target": 117,
+							"name": "ConsoleLogStrategyNewRelicJson"
+						},
+						{
+							"type": "reference",
+							"target": 144,
+							"name": "ConsoleLogStrategySimple"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						105
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/log-strategy/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 159,
+			"name": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 160,
+					"name": "ConsoleLogStrategyMock",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 161,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 162,
+									"name": "new ConsoleLogStrategyMock",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 160,
+										"name": "ConsoleLogStrategyMock",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							]
+						},
+						{
+							"id": 163,
+							"name": "log",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+									"line": 8,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/jest-mock/build/index.d.ts",
+									"qualifiedName": "Mock"
+								},
+								"typeArguments": [
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 164,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+													"line": 8,
+													"character": 15,
+													"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+												}
+											],
+											"signatures": [
+												{
+													"id": 165,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+															"line": 8,
+															"character": 15,
+															"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+														}
+													],
+													"parameters": [
+														{
+															"id": 166,
+															"name": "params",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "reflection",
+																"declaration": {
+																	"id": 167,
+																	"name": "__type",
+																	"variant": "declaration",
+																	"kind": 65536,
+																	"flags": {},
+																	"children": [
+																		{
+																			"id": 170,
+																			"name": "datetime",
+																			"variant": "declaration",
+																			"kind": 1024,
+																			"flags": {
+																				"isOptional": true
+																			},
+																			"sources": [
+																				{
+																					"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+																					"line": 8,
+																					"character": 69,
+																					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+																				}
+																			],
+																			"type": {
+																				"type": "reference",
+																				"target": {
+																					"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+																					"qualifiedName": "Date"
+																				},
+																				"name": "Date",
+																				"package": "typescript"
+																			}
+																		},
+																		{
+																			"id": 169,
+																			"name": "meta",
+																			"variant": "declaration",
+																			"kind": 1024,
+																			"flags": {
+																				"isOptional": true
+																			},
+																			"sources": [
+																				{
+																					"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+																					"line": 8,
+																					"character": 42,
+																					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+																				}
+																			],
+																			"type": {
+																				"type": "reference",
+																				"target": 10,
+																				"name": "StringOrObjectType",
+																				"package": "@beecode/msh-logger"
+																			}
+																		},
+																		{
+																			"id": 171,
+																			"name": "prefix",
+																			"variant": "declaration",
+																			"kind": 1024,
+																			"flags": {
+																				"isOptional": true
+																			},
+																			"sources": [
+																				{
+																					"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+																					"line": 8,
+																					"character": 86,
+																					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+																				}
+																			],
+																			"type": {
+																				"type": "intrinsic",
+																				"name": "string"
+																			}
+																		},
+																		{
+																			"id": 168,
+																			"name": "type",
+																			"variant": "declaration",
+																			"kind": 1024,
+																			"flags": {},
+																			"sources": [
+																				{
+																					"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+																					"line": 8,
+																					"character": 26,
+																					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+																				}
+																			],
+																			"type": {
+																				"type": "reference",
+																				"target": 3,
+																				"name": "LogLevel",
+																				"package": "@beecode/msh-logger"
+																			}
+																		}
+																	],
+																	"groups": [
+																		{
+																			"title": "Properties",
+																			"children": [
+																				170,
+																				169,
+																				171,
+																				168
+																			]
+																		}
+																	],
+																	"sources": [
+																		{
+																			"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+																			"line": 8,
+																			"character": 24,
+																			"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L8"
+																		}
+																	]
+																}
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": 10,
+														"name": "StringOrObjectType",
+														"package": "@beecode/msh-logger"
+													}
+												}
+											]
+										}
+									}
+								],
+								"name": "Mock",
+								"package": "jest-mock"
+							},
+							"defaultValue": "...",
+							"implementationOf": {
+								"type": "reference",
+								"target": 106,
+								"name": "ConsoleLogStrategy.log"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								161
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								163
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+							"line": 7,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L7"
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"target": 105,
+							"name": "ConsoleLogStrategy",
+							"package": "@beecode/msh-logger"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						160
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 116,
+			"name": "logger-strategy/console/log-strategy/new-relic-json",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 117,
+					"name": "ConsoleLogStrategyNewRelicJson",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 118,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 119,
+									"name": "new ConsoleLogStrategyNewRelicJson",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 117,
+										"name": "ConsoleLogStrategyNewRelicJson",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							]
+						},
+						{
+							"id": 120,
+							"name": "_objectUtil",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+									"line": 8,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L8"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../util/src/object-util.ts",
+									"qualifiedName": "ObjectUtil"
+								},
+								"name": "ObjectUtil",
+								"package": "@beecode/msh-util"
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 138,
+							"name": "_joinDefined",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+									"line": 36,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L36"
+								}
+							],
+							"signatures": [
+								{
+									"id": 139,
+									"name": "_joinDefined",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+											"line": 36,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L36"
+										}
+									],
+									"parameters": [
+										{
+											"id": 140,
+											"name": "prefix",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 141,
+											"name": "msg",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							]
+						},
+						{
+							"id": 130,
+							"name": "_messagePayloadExtractorIfExists",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+									"line": 26,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26"
+								}
+							],
+							"signatures": [
+								{
+									"id": 131,
+									"name": "_messagePayloadExtractorIfExists",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+											"line": 26,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26"
+										}
+									],
+									"parameters": [
+										{
+											"id": 132,
+											"name": "params",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 133,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"children": [
+														{
+															"id": 134,
+															"name": "msg",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+																	"line": 26,
+																	"character": 54,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": 10,
+																"name": "StringOrObjectType",
+																"package": "@beecode/msh-logger"
+															}
+														},
+														{
+															"id": 135,
+															"name": "prefix",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+																	"line": 26,
+																	"character": 79,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26"
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"children": [
+																134,
+																135
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+															"line": 26,
+															"character": 52,
+															"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26"
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 136,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"children": [
+												{
+													"id": 137,
+													"name": "message",
+													"variant": "declaration",
+													"kind": 1024,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+															"line": 26,
+															"character": 101,
+															"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26"
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"children": [
+														137
+													]
+												}
+											],
+											"sources": [
+												{
+													"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+													"line": 26,
+													"character": 99,
+													"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26"
+												}
+											]
+										}
+									}
+								}
+							]
+						},
+						{
+							"id": 121,
+							"name": "log",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+									"line": 10,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10"
+								}
+							],
+							"signatures": [
+								{
+									"id": 122,
+									"name": "log",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+											"line": 10,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10"
+										}
+									],
+									"parameters": [
+										{
+											"id": 123,
+											"name": "params",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 124,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"children": [
+														{
+															"id": 127,
+															"name": "datetime",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+																	"line": 10,
+																	"character": 50,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+																	"qualifiedName": "Date"
+																},
+																"name": "Date",
+																"package": "typescript"
+															}
+														},
+														{
+															"id": 126,
+															"name": "meta",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+																	"line": 10,
+																	"character": 31,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": 9,
+																"name": "ObjectType",
+																"package": "@beecode/msh-logger"
+															}
+														},
+														{
+															"id": 128,
+															"name": "prefix",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+																	"line": 10,
+																	"character": 67,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10"
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 125,
+															"name": "type",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+																	"line": 10,
+																	"character": 15,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": 3,
+																"name": "LogLevel",
+																"package": "@beecode/msh-logger"
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"children": [
+																127,
+																126,
+																128,
+																125
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+															"line": 10,
+															"character": 13,
+															"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10"
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 129,
+											"name": "msgs",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 107,
+										"name": "ConsoleLogStrategy.log"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 106,
+								"name": "ConsoleLogStrategy.log"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								118
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								120
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								138,
+								130,
+								121
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+							"line": 7,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L7"
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"target": 105,
+							"name": "ConsoleLogStrategy",
+							"package": "@beecode/msh-logger"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						117
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/log-strategy/new-relic-json.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 115,
+			"name": "logger-strategy/console/log-strategy/new-relic-json.test",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/log-strategy/new-relic-json.test.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.test.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 143,
+			"name": "logger-strategy/console/log-strategy/simple",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 144,
+					"name": "ConsoleLogStrategySimple",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 148,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 149,
+									"name": "new ConsoleLogStrategySimple",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 144,
+										"name": "ConsoleLogStrategySimple",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							]
+						},
+						{
+							"id": 150,
+							"name": "log",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/simple.ts",
+									"line": 8,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8"
+								}
+							],
+							"signatures": [
+								{
+									"id": 151,
+									"name": "log",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/log-strategy/simple.ts",
+											"line": 8,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8"
+										}
+									],
+									"parameters": [
+										{
+											"id": 152,
+											"name": "params",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 153,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"children": [
+														{
+															"id": 156,
+															"name": "datetime",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/simple.ts",
+																	"line": 8,
+																	"character": 50,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+																	"qualifiedName": "Date"
+																},
+																"name": "Date",
+																"package": "typescript"
+															}
+														},
+														{
+															"id": 155,
+															"name": "meta",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/simple.ts",
+																	"line": 8,
+																	"character": 31,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": 9,
+																"name": "ObjectType",
+																"package": "@beecode/msh-logger"
+															}
+														},
+														{
+															"id": 157,
+															"name": "prefix",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {
+																"isOptional": true
+															},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/simple.ts",
+																	"line": 8,
+																	"character": 67,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8"
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 154,
+															"name": "type",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "logger-strategy/console/log-strategy/simple.ts",
+																	"line": 8,
+																	"character": 15,
+																	"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": 3,
+																"name": "LogLevel",
+																"package": "@beecode/msh-logger"
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"children": [
+																156,
+																155,
+																157,
+																154
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "logger-strategy/console/log-strategy/simple.ts",
+															"line": 8,
+															"character": 13,
+															"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8"
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 158,
+											"name": "msgs",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 10,
+													"name": "StringOrObjectType",
+													"package": "@beecode/msh-logger"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 107,
+										"name": "ConsoleLogStrategy.log"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 106,
+								"name": "ConsoleLogStrategy.log"
+							}
+						},
+						{
+							"id": 145,
+							"name": "LogTypeToFunctionName",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "logger-strategy/console/log-strategy/simple.ts",
+									"line": 26,
+									"character": 8,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L26"
+								}
+							],
+							"signatures": [
+								{
+									"id": 146,
+									"name": "LogTypeToFunctionName",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/console/log-strategy/simple.ts",
+											"line": 26,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L26"
+										}
+									],
+									"parameters": [
+										{
+											"id": 147,
+											"name": "type",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 3,
+												"name": "LogLevel",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "log"
+											},
+											{
+												"type": "literal",
+												"value": "error"
+											},
+											{
+												"type": "literal",
+												"value": "info"
+											},
+											{
+												"type": "literal",
+												"value": "warn"
+											}
+										]
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								148
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								150,
+								145
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/console/log-strategy/simple.ts",
+							"line": 7,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L7"
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"target": 105,
+							"name": "ConsoleLogStrategy",
+							"package": "@beecode/msh-logger"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						144
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/log-strategy/simple.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 142,
+			"name": "logger-strategy/console/log-strategy/simple.test",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "logger-strategy/console/log-strategy/simple.test.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.test.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 33,
+			"name": "logger-strategy/void",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 34,
+					"name": "LoggerStrategyVoid",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 35,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 36,
+									"name": "new LoggerStrategyVoid",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 34,
+										"name": "LoggerStrategyVoid",
+										"package": "@beecode/msh-logger"
+									}
+								}
+							]
+						},
+						{
+							"id": 53,
+							"name": "clone",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/void.ts",
+									"line": 9,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L9"
+								}
+							],
+							"signatures": [
+								{
+									"id": 54,
+									"name": "clone",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/void.ts",
+											"line": 9,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L9"
+										}
+									],
+									"parameters": [
+										{
+											"id": 55,
+											"name": "_",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 11,
+												"name": "LoggerStrategyParams",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 34,
+										"name": "LoggerStrategyVoid",
+										"package": "@beecode/msh-logger"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 30,
+										"name": "LoggerStrategy.clone"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 29,
+								"name": "LoggerStrategy.clone"
+							}
+						},
+						{
+							"id": 37,
+							"name": "debug",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/void.ts",
+									"line": 4,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L4"
+								}
+							],
+							"signatures": [
+								{
+									"id": 38,
+									"name": "debug",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/void.ts",
+											"line": 4,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L4"
+										}
+									],
+									"parameters": [
+										{
+											"id": 39,
+											"name": "_",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										},
+										{
+											"id": 40,
+											"name": "__",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 18,
+										"name": "LoggerStrategy.debug"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 17,
+								"name": "LoggerStrategy.debug"
+							}
+						},
+						{
+							"id": 41,
+							"name": "error",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/void.ts",
+									"line": 5,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L5"
+								}
+							],
+							"signatures": [
+								{
+									"id": 42,
+									"name": "error",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/void.ts",
+											"line": 5,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L5"
+										}
+									],
+									"parameters": [
+										{
+											"id": 43,
+											"name": "_",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										},
+										{
+											"id": 44,
+											"name": "__",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 27,
+										"name": "LoggerStrategy.error"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 26,
+								"name": "LoggerStrategy.error"
+							}
+						},
+						{
+							"id": 45,
+							"name": "info",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/void.ts",
+									"line": 6,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L6"
+								}
+							],
+							"signatures": [
+								{
+									"id": 46,
+									"name": "info",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/void.ts",
+											"line": 6,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L6"
+										}
+									],
+									"parameters": [
+										{
+											"id": 47,
+											"name": "_",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										},
+										{
+											"id": 48,
+											"name": "__",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 21,
+										"name": "LoggerStrategy.info"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 20,
+								"name": "LoggerStrategy.info"
+							}
+						},
+						{
+							"id": 49,
+							"name": "warn",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "logger-strategy/void.ts",
+									"line": 7,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L7"
+								}
+							],
+							"signatures": [
+								{
+									"id": 50,
+									"name": "warn",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "logger-strategy/void.ts",
+											"line": 7,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L7"
+										}
+									],
+									"parameters": [
+										{
+											"id": 51,
+											"name": "_",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										},
+										{
+											"id": 52,
+											"name": "__",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 10,
+												"name": "StringOrObjectType",
+												"package": "@beecode/msh-logger"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"target": 24,
+										"name": "LoggerStrategy.warn"
+									}
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"target": 23,
+								"name": "LoggerStrategy.warn"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								35
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								53,
+								37,
+								41,
+								45,
+								49
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "logger-strategy/void.ts",
+							"line": 3,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L3"
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"target": 16,
+							"name": "LoggerStrategy",
+							"package": "@beecode/msh-logger"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						34
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "logger-strategy/void.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 32,
+			"name": "logger-strategy/void.test",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "logger-strategy/void.test.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.test.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 103,
+			"name": "util/type/types",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "util/type/types.d.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/util/type/types.d.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				1,
+				2,
+				8,
+				56,
+				66,
+				65,
+				104,
+				159,
+				116,
+				115,
+				143,
+				142,
+				33,
+				32,
+				103
+			]
+		}
+	],
+	"packageName": "@beecode/msh-logger",
+	"symbolIdMap": {
+		"1": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"2": {
+			"sourceFileName": "src/log-level.ts",
+			"qualifiedName": ""
+		},
+		"3": {
+			"sourceFileName": "src/log-level.ts",
+			"qualifiedName": "LogLevel"
+		},
+		"4": {
+			"sourceFileName": "src/log-level.ts",
+			"qualifiedName": "LogLevel.ERROR"
+		},
+		"5": {
+			"sourceFileName": "src/log-level.ts",
+			"qualifiedName": "LogLevel.WARN"
+		},
+		"6": {
+			"sourceFileName": "src/log-level.ts",
+			"qualifiedName": "LogLevel.INFO"
+		},
+		"7": {
+			"sourceFileName": "src/log-level.ts",
+			"qualifiedName": "LogLevel.DEBUG"
+		},
+		"8": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": ""
+		},
+		"9": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "ObjectType"
+		},
+		"10": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "StringOrObjectType"
+		},
+		"11": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategyParams"
+		},
+		"12": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "__type"
+		},
+		"13": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "__type.logLevel"
+		},
+		"14": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "__type.messagePrefix"
+		},
+		"15": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "__type.meta"
+		},
+		"16": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy"
+		},
+		"17": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.debug"
+		},
+		"18": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.debug"
+		},
+		"19": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"20": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.info"
+		},
+		"21": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.info"
+		},
+		"22": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"23": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.warn"
+		},
+		"24": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.warn"
+		},
+		"25": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"26": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.error"
+		},
+		"27": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.error"
+		},
+		"28": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"29": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.clone"
+		},
+		"30": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy.clone"
+		},
+		"31": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "overrideParams"
+		},
+		"32": {
+			"sourceFileName": "src/logger-strategy/void.test.ts",
+			"qualifiedName": ""
+		},
+		"33": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": ""
+		},
+		"34": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid"
+		},
+		"37": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.debug"
+		},
+		"38": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.debug"
+		},
+		"39": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "_"
+		},
+		"40": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "__"
+		},
+		"41": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.error"
+		},
+		"42": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.error"
+		},
+		"43": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "_"
+		},
+		"44": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "__"
+		},
+		"45": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.info"
+		},
+		"46": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.info"
+		},
+		"47": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "_"
+		},
+		"48": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "__"
+		},
+		"49": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.warn"
+		},
+		"50": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.warn"
+		},
+		"51": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "_"
+		},
+		"52": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "__"
+		},
+		"53": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.clone"
+		},
+		"54": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "LoggerStrategyVoid.clone"
+		},
+		"55": {
+			"sourceFileName": "src/logger-strategy/void.ts",
+			"qualifiedName": "_"
+		},
+		"56": {
+			"sourceFileName": "src/logger-strategy/__mocks__/logger-strategy-mock.ts",
+			"qualifiedName": ""
+		},
+		"57": {
+			"sourceFileName": "src/logger-strategy/__mocks__/logger-strategy-mock.ts",
+			"qualifiedName": "LoggerStrategyMock"
+		},
+		"60": {
+			"sourceFileName": "src/logger-strategy/__mocks__/logger-strategy-mock.ts",
+			"qualifiedName": "LoggerStrategyMock.clone"
+		},
+		"61": {
+			"sourceFileName": "src/logger-strategy/__mocks__/logger-strategy-mock.ts",
+			"qualifiedName": "LoggerStrategyMock.debug"
+		},
+		"62": {
+			"sourceFileName": "src/logger-strategy/__mocks__/logger-strategy-mock.ts",
+			"qualifiedName": "LoggerStrategyMock.error"
+		},
+		"63": {
+			"sourceFileName": "src/logger-strategy/__mocks__/logger-strategy-mock.ts",
+			"qualifiedName": "LoggerStrategyMock.info"
+		},
+		"64": {
+			"sourceFileName": "src/logger-strategy/__mocks__/logger-strategy-mock.ts",
+			"qualifiedName": "LoggerStrategyMock.warn"
+		},
+		"65": {
+			"sourceFileName": "src/logger-strategy/console/index.test.ts",
+			"qualifiedName": ""
+		},
+		"66": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": ""
+		},
+		"67": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "ConsoleLoggerParams"
+		},
+		"68": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "__type"
+		},
+		"69": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "__type.consoleLogStrategy"
+		},
+		"70": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole"
+		},
+		"71": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.LogLevelToInt"
+		},
+		"72": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.LogLevelToInt"
+		},
+		"73": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "logLevel"
+		},
+		"74": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.__constructor"
+		},
+		"75": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole"
+		},
+		"76": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "params"
+		},
+		"77": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._logLevel"
+		},
+		"78": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._consoleLogStrategy"
+		},
+		"79": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._messagePrefix"
+		},
+		"80": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._meta"
+		},
+		"81": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.clone"
+		},
+		"82": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.clone"
+		},
+		"83": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "params"
+		},
+		"84": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._shouldLog"
+		},
+		"85": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._shouldLog"
+		},
+		"86": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "currentLevel"
+		},
+		"87": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._logMessage"
+		},
+		"88": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole._logMessage"
+		},
+		"89": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "type"
+		},
+		"90": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"91": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.debug"
+		},
+		"92": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.debug"
+		},
+		"93": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"94": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.info"
+		},
+		"95": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.info"
+		},
+		"96": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"97": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.warn"
+		},
+		"98": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.warn"
+		},
+		"99": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"100": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.error"
+		},
+		"101": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "LoggerStrategyConsole.error"
+		},
+		"102": {
+			"sourceFileName": "src/logger-strategy/console/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"103": {
+			"sourceFileName": "src/util/type/types.d.ts",
+			"qualifiedName": ""
+		},
+		"104": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": ""
+		},
+		"105": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "ConsoleLogStrategy"
+		},
+		"106": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "ConsoleLogStrategy.log"
+		},
+		"107": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "ConsoleLogStrategy.log"
+		},
+		"108": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "params"
+		},
+		"109": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "__type"
+		},
+		"110": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "__type.type"
+		},
+		"111": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "__type.meta"
+		},
+		"112": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "__type.datetime"
+		},
+		"113": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "__type.prefix"
+		},
+		"114": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/index.ts",
+			"qualifiedName": "messageObjects"
+		},
+		"115": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.test.ts",
+			"qualifiedName": ""
+		},
+		"116": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": ""
+		},
+		"117": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson"
+		},
+		"120": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson._objectUtil"
+		},
+		"121": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson.log"
+		},
+		"122": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson.log"
+		},
+		"123": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "params"
+		},
+		"124": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type"
+		},
+		"125": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type.type"
+		},
+		"126": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type.meta"
+		},
+		"127": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type.datetime"
+		},
+		"128": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type.prefix"
+		},
+		"129": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "msgs"
+		},
+		"130": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson._messagePayloadExtractorIfExists"
+		},
+		"131": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson._messagePayloadExtractorIfExists"
+		},
+		"132": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "params"
+		},
+		"133": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type"
+		},
+		"134": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type.msg"
+		},
+		"135": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type.prefix"
+		},
+		"136": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type"
+		},
+		"137": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "__type.message"
+		},
+		"138": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson._joinDefined"
+		},
+		"139": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "ConsoleLogStrategyNewRelicJson._joinDefined"
+		},
+		"140": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "prefix"
+		},
+		"141": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/new-relic-json.ts",
+			"qualifiedName": "msg"
+		},
+		"142": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.test.ts",
+			"qualifiedName": ""
+		},
+		"143": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": ""
+		},
+		"144": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "ConsoleLogStrategySimple"
+		},
+		"145": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "ConsoleLogStrategySimple.LogTypeToFunctionName"
+		},
+		"146": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "ConsoleLogStrategySimple.LogTypeToFunctionName"
+		},
+		"147": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "type"
+		},
+		"150": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "ConsoleLogStrategySimple.log"
+		},
+		"151": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "ConsoleLogStrategySimple.log"
+		},
+		"152": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "params"
+		},
+		"153": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "__type"
+		},
+		"154": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "__type.type"
+		},
+		"155": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "__type.meta"
+		},
+		"156": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "__type.datetime"
+		},
+		"157": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "__type.prefix"
+		},
+		"158": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/simple.ts",
+			"qualifiedName": "msgs"
+		},
+		"159": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": ""
+		},
+		"160": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "ConsoleLogStrategyMock"
+		},
+		"163": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "ConsoleLogStrategyMock.log"
+		},
+		"164": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "__type"
+		},
+		"165": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "__type"
+		},
+		"166": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "params"
+		},
+		"167": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "__type"
+		},
+		"168": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "__type.type"
+		},
+		"169": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "__type.meta"
+		},
+		"170": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "__type.datetime"
+		},
+		"171": {
+			"sourceFileName": "src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock.ts",
+			"qualifiedName": "__type.prefix"
+		},
+		"172": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "ObjectType"
+		},
+		"173": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "StringOrObjectType"
+		},
+		"174": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategyParams"
+		},
+		"175": {
+			"sourceFileName": "src/logger-strategy/index.ts",
+			"qualifiedName": "LoggerStrategy"
+		},
+		"176": {
+			"sourceFileName": "src/log-level.ts",
+			"qualifiedName": "LogLevel"
+		}
+	}
+}
