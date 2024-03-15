@@ -1,6 +1,6 @@
 import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
-import { LoggerStrategyVoid } from '#/logger-strategy/void'
+import { LoggerStrategyVoid } from '#src/logger-strategy/void'
 
 jest.mock('#/logger-strategy/void')
 

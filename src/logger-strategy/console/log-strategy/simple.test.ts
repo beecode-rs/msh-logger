@@ -1,7 +1,7 @@
 import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
-import { LogLevel } from '#/log-level'
-import { ConsoleLogStrategySimple } from '#/logger-strategy/console/log-strategy/simple'
+import { LogLevel } from '#src/log-level'
+import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
 
 describe('SimpleConsoleLog', () => {
 	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>

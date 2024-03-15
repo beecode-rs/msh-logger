@@ -1,6 +1,6 @@
 import { jest } from '@jest/globals'
 
-import { LoggerStrategy, LoggerStrategyParams } from '#'
+import { LoggerStrategy, LoggerStrategyParams } from '#src'
 
 export class LoggerStrategyVoid implements LoggerStrategy {
 	clone = jest.fn<(overrideParams?: LoggerStrategyParams | undefined) => LoggerStrategy>()
