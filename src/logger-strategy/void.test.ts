@@ -2,12 +2,13 @@ import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@je
 
 import { LoggerStrategyVoid } from '#src/logger-strategy/void'
 
-jest.mock('#/logger-strategy/void')
+jest.mock('#src/logger-strategy/void')
 
 describe('LoggerStrategyVoid', () => {
 	describe('should not call logger', () => {
 		let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
-		const logger = new LoggerStrategyVoid()
+		const LoggerStrategyVoidMocked = jest.mocked(LoggerStrategyVoid)
+		const logger = new LoggerStrategyVoidMocked()
 		const dummyMessage = 'dummyMessage'
 		const dummyObject = { dummy: 'object' }
 
