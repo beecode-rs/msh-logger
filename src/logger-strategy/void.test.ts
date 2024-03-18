@@ -1,16 +1,16 @@
 import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
-import { LoggerStrategyVoid } from '#src/logger-strategy/void'
+const { LoggerStrategyVoid } = esmImportMocked(import.meta.url, '#src/logger-strategy/void')
 
 jest.mock('#src/logger-strategy/void')
 
 describe('LoggerStrategyVoid', () => {
 	describe('should not call logger', () => {
 		let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
-		const LoggerStrategyVoidMocked = jest.mocked(LoggerStrategyVoid)
-		const logger = new LoggerStrategyVoidMocked()
 		const dummyMessage = 'dummyMessage'
 		const dummyObject = { dummy: 'object' }
+
+		const logger = new LoggerStrategyVoid()
 
 		beforeEach(() => {
 			spy_console_log = jest.spyOn(console, 'log').mockImplementation(jest.fn)
