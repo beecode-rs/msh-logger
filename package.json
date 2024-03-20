@@ -15,10 +15,10 @@
 	"author": "Milos Bugarinovic <milos.bugarinovic@gmail.com> (https://milos.bugarinovic.com)",
 	"type": "module",
 	"imports": {
-		"#src": "./src/index.ts",
+		"#src": "./dist/index.js",
 		"#src/*": [
-			"./src/*.ts",
-			"./src/*/index.ts"
+			"./dist/*.js",
+			"./dist/*/index.js"
 		]
 	},
 	"exports": {

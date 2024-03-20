@@ -1,8 +1,14 @@
 import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
-const { LoggerStrategyVoid } = esmImportMocked(import.meta.url, '#src/logger-strategy/void')
+jest.unstable_mockModule('#src/logger-strategy/void', async () => {
+	const { LoggerStrategy } = await import('#src/logger-strategy/__mocks__/logger-strategy-mock')
 
-jest.mock('#src/logger-strategy/void')
+	return {
+		LoggerStrategyVoid: LoggerStrategy,
+	}
+})
+
+const { LoggerStrategyVoid: LoggerStrategyVoidMock } = await import('#src/logger-strategy/void')
 
 describe('LoggerStrategyVoid', () => {
 	describe('should not call logger', () => {
@@ -10,7 +16,7 @@ describe('LoggerStrategyVoid', () => {
 		const dummyMessage = 'dummyMessage'
 		const dummyObject = { dummy: 'object' }
 
-		const logger = new LoggerStrategyVoid()
+		const logger = new LoggerStrategyVoidMock()
 
 		beforeEach(() => {
 			spy_console_log = jest.spyOn(console, 'log').mockImplementation(jest.fn)
@@ -47,7 +53,7 @@ describe('LoggerStrategyVoid', () => {
 
 	describe('clone', () => {
 		it('should just clone logger', () => {
-			const toClone = new LoggerStrategyVoid()
+			const toClone = new LoggerStrategyVoidMock()
 			const clonedLogger = toClone.clone()
 			expect(clonedLogger).not.toBe(toClone)
 		})

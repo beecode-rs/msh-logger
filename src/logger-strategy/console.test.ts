@@ -2,7 +2,7 @@ import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@je
 
 import { LogLevel } from '#src/log-level'
 import { LoggerStrategyConsole } from '#src/logger-strategy/console'
-import { ConsoleLogStrategyMock } from '#src/logger-strategy/console/log-strategy/__mocks__/console-log-strategy-mock'
+import { ConsoleLogStrategyMock } from '#src/logger-strategy/console/__mocks__/log-strategy-mock'
 import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
 
 describe('LoggerStrategyConsole', () => {
