@@ -6,9 +6,6 @@ const jestConfig: JestConfigWithTsJest = {
 	preset: 'ts-jest/presets/default-esm',
 	setupFilesAfterEnv: ['jest-extended/all', '<rootDir>/src/index-jest-setup.ts'],
 	testEnvironment: 'node',
-	moduleNameMapper: {
-		'(.*)/dist/(.*).js': '$1/src/$2.ts',
-	},
 	testMatch: ['<rootDir>/src/**/*.(spec|test).[jt]s?(x)'],
 	testPathIgnorePatterns: ['/node_modules/'],
 	transform: {},
