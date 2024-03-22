@@ -1,11 +1,13 @@
-import { LogLevel } from 'src/log-level'
-import { ConsoleLogStrategySimple } from 'src/logger-strategy/console/log-strategy/simple'
+import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+
+import { LogLevel } from '#src/log-level'
+import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
 
 describe('SimpleConsoleLog', () => {
-	let spy_console_log: jest.SpyInstance
-	let spy_console_info: jest.SpyInstance
-	let spy_console_warn: jest.SpyInstance
-	let spy_console_error: jest.SpyInstance
+	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	let spy_console_info: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	let spy_console_warn: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	let spy_console_error: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
 	const simpleConsoleLog = new ConsoleLogStrategySimple()
 	const mockDateTime = new Date()
 	const mockDateTimeStr = mockDateTime.toISOString()
@@ -17,8 +19,12 @@ describe('SimpleConsoleLog', () => {
 		spy_console_error = jest.spyOn(console, 'error').mockImplementation(jest.fn)
 	})
 
-	afterEach(() => jest.resetAllMocks())
-	afterAll(() => jest.restoreAllMocks())
+	afterEach(() => {
+		jest.resetAllMocks()
+	})
+	afterAll(() => {
+		jest.restoreAllMocks()
+	})
 
 	describe('log', () => {
 		it('should call console.log with string', () => {
@@ -49,10 +55,9 @@ describe('SimpleConsoleLog', () => {
 			const prefix = 'Prefix'
 			const meta = { m: 'test' }
 			simpleConsoleLog.log({ datetime: mockDateTime, meta, prefix, type: LogLevel.WARN }, msg, msg1)
-			expect(spy_console_warn).toHaveBeenCalledTimes(3)
-			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: ${prefix}`, msg)
-			expect(spy_console_warn).nthCalledWith(2, msg1)
-			expect(spy_console_warn).nthCalledWith(3, meta)
+			expect(spy_console_warn).toHaveBeenCalledTimes(2)
+			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: ${prefix}`, msg, msg1)
+			expect(spy_console_warn).nthCalledWith(2, meta)
 		})
 
 		it('should call console.warn with multiple string', () => {
@@ -60,11 +65,9 @@ describe('SimpleConsoleLog', () => {
 			const msg1 = 'test1'
 			const msg2 = 'test2'
 			simpleConsoleLog.log({ datetime: mockDateTime, type: LogLevel.WARN }, msg, msg1, msg2)
-			expect(spy_console_warn).toHaveBeenCalledTimes(3)
+			expect(spy_console_warn).toHaveBeenCalledTimes(1)
 
-			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: `, msg)
-			expect(spy_console_warn).nthCalledWith(2, msg1)
-			expect(spy_console_warn).nthCalledWith(3, msg2)
+			expect(spy_console_warn).nthCalledWith(1, `${mockDateTimeStr} - WARN: `, msg, msg1, msg2)
 		})
 
 		it('should call console.log with object', () => {
@@ -88,10 +91,9 @@ describe('SimpleConsoleLog', () => {
 			const msg1 = 'test1'
 			const metaObj = { test: 'test' }
 			simpleConsoleLog.log({ datetime: mockDateTime, meta: metaObj, type: LogLevel.ERROR }, msg, msg1)
-			expect(spy_console_error).toHaveBeenCalledTimes(3)
-			expect(spy_console_error).nthCalledWith(1, `${mockDateTimeStr} - ERROR: `, msg)
-			expect(spy_console_error).nthCalledWith(2, msg1)
-			expect(spy_console_error).nthCalledWith(3, metaObj)
+			expect(spy_console_error).toHaveBeenCalledTimes(2)
+			expect(spy_console_error).nthCalledWith(1, `${mockDateTimeStr} - ERROR: `, msg, msg1)
+			expect(spy_console_error).nthCalledWith(2, metaObj)
 		})
 	})
 
@@ -107,8 +109,9 @@ describe('SimpleConsoleLog', () => {
 
 		it('should throw error if wrong type passed', () => {
 			try {
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				ConsoleLogStrategySimple.LogTypeToFunctionName('dummyType' as any)
-				expect.fail('LogTypeToFunctionNane did not fail')
+				throw new Error('LogTypeToFunctionNane did not fail')
 			} catch (err) {
 				if (!(err instanceof Error)) {
 					throw err
