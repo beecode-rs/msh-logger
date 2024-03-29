@@ -23,30 +23,37 @@
 	},
 	"exports": {
 		".": {
-			"default": "./dist/index.js",
-			"types": "./dist/index.d.ts"
+			"types": "./dist/esm/index.d.ts",
+			"require": "./dist/cjs/index.js",
+			"default": "./dist/esm/index.js"
 		},
 		"./*": {
-			"default": [
-				"./dist/*.js",
-				"./dist/*/index.js"
-			],
 			"types": [
-				"./dist/*.d.ts",
-				"./dist/*/index.d.ts"
+				"./dist/esm/*.d.ts",
+				"./dist/esm/*/index.d.ts"
+			],
+			"require": [
+				"./dist/cjs/*.js",
+				"./dist/cjs/*/index.js"
+			],
+			"default": [
+				"./dist/esm/*.js",
+				"./dist/esm/*/index.js"
 			]
 		},
 		"./package.json": "./package.json"
 	},
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"types": "./dist/esm/index.d.ts",
 	"files": [
 		"./dist"
 	],
 	"scripts": {
 		"build": "npm run clean && npm run tsc",
-		"clean": "rimraf ./dist",
+		"build-cjs": "npm run clean-cjs && npm run tsc-cjs",
+		"clean": "rimraf ./dist/esm",
+		"clean-cjs": "rimraf ./dist/cjs",
 		"doc": "concurrently -c auto 'npm:doc:*'",
 		"doc:api": "npx typedoc",
 		"doc:toc": "npx markdown-toc -i ./README.md",
@@ -80,6 +87,7 @@
 		"test:int": "npm run jest -- --config=./jest.config.int.ts",
 		"test:unit": "npm run jest -- --config=./jest.config.unit.ts",
 		"tsc": "tsc -p ./tsconfig.build.json",
+		"tsc-cjs": "tsc -p ./tsconfig.build.cjs.json",
 		"tsc-check": "npm run tsc -- --noEmit",
 		"tsc-cleaner": "ts-cleaner --dist ./dist/esm",
 		"tsc-cleaner-watch": "npm run tsc-cleaner -- --watch",
