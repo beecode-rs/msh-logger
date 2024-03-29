@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/cjs",
+		"module": "CommonJS",
+		"target": "es2016",
+		"moduleResolution": "Node",
+		"resolvePackageJsonImports": false,
+		"esModuleInterop": false,
+		"resolveJsonModule": false,
+		"paths": {
+			"#src/*": ["./src/*"]
+		}
+	},
+	"exclude": ["./**/*.test.ts", "./**/*.contract.ts", "./**/__mocks__/*", "./**/__tests__/*", "./**/__snapshots__/*"],
+	"extends": "./tsconfig.json",
+	"include": ["./src"]
+}
