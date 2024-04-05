@@ -2,8 +2,8 @@
 	"compilerOptions": {
 		"outDir": "./dist/cjs",
 		"module": "CommonJS",
-		"target": "es2016",
-		"moduleResolution": "Node",
+		"target": "ESNext",
+		"moduleResolution": "Node10",
 		"resolvePackageJsonImports": false,
 		"esModuleInterop": false,
 		"resolveJsonModule": false,
