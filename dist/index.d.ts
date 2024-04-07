@@ -1,3 +1,3 @@
-export type { LoggerStrategy, LoggerStrategyParams, ObjectType } from '#src/logger-strategy';
-export { LogLevel } from '#src/log-level';
+export type { LoggerStrategy, LoggerStrategyParams, ObjectType } from './logger-strategy.js';
+export { LogLevel } from './log-level.js';
 //# sourceMappingURL=index.d.ts.map

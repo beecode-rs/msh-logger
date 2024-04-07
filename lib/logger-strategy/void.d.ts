@@ -1,4 +1,4 @@
-import { LoggerStrategy, LoggerStrategyParams } from '../logger-strategy';
+import { LoggerStrategy, LoggerStrategyParams } from '../logger-strategy.js';
 export declare class LoggerStrategyVoid implements LoggerStrategy {
     debug(..._msgs: unknown[]): void;
     error(..._msgs: unknown[]): void;

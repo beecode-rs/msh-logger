@@ -1,5 +1,5 @@
 import { typeUtil } from '@beecode/msh-util/type-util';
-import { LogLevel } from '#src/log-level';
+import { LogLevel } from '../../../log-level.js';
 export class ConsoleLogStrategySimple {
     log(params, ...msgs) {
         const { type, meta, prefix, datetime = new Date() } = params;
