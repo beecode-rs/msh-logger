@@ -10,7 +10,6 @@
 - [LoggerStrategy](index.md#loggerstrategy)
 - [LoggerStrategyParams](index.md#loggerstrategyparams)
 - [ObjectType](index.md#objecttype)
-- [StringOrObjectType](index.md#stringorobjecttype)
 
 ## References
 
@@ -35,9 +34,3 @@ ___
 ### ObjectType
 
 Re-exports [ObjectType](logger_strategy.md#objecttype)
-
-___
-
-### StringOrObjectType
-
-Re-exports [StringOrObjectType](logger_strategy.md#stringorobjecttype)

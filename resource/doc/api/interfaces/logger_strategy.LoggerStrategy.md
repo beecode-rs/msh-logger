@@ -7,7 +7,6 @@
 ## Implemented by
 
 - [`LoggerStrategyConsole`](../classes/logger_strategy_console.LoggerStrategyConsole.md)
-- [`LoggerStrategyMock`](../classes/logger_strategy___mocks___logger_strategy_mock.LoggerStrategyMock.md)
 - [`LoggerStrategyVoid`](../classes/logger_strategy_void.LoggerStrategyVoid.md)
 
 ## Table of contents
@@ -38,19 +37,19 @@
 
 #### Defined in
 
-[logger-strategy/index.ts:18](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L18)
+[logger-strategy.ts:16](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy.ts#L16)
 
 ___
 
 ### debug
 
-▸ **debug**(`...messageObjects`): `void`
+▸ **debug**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -58,19 +57,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/index.ts:14](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L14)
+[logger-strategy.ts:12](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy.ts#L12)
 
 ___
 
 ### error
 
-▸ **error**(`...messageObjects`): `void`
+▸ **error**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -78,19 +77,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/index.ts:17](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L17)
+[logger-strategy.ts:15](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy.ts#L15)
 
 ___
 
 ### info
 
-▸ **info**(`...messageObjects`): `void`
+▸ **info**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -98,19 +97,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/index.ts:15](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L15)
+[logger-strategy.ts:13](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy.ts#L13)
 
 ___
 
 ### warn
 
-▸ **warn**(`...messageObjects`): `void`
+▸ **warn**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -118,4 +117,4 @@ ___
 
 #### Defined in
 
-[logger-strategy/index.ts:16](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L16)
+[logger-strategy.ts:14](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy.ts#L14)

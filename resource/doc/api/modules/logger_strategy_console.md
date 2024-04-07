@@ -16,8 +16,8 @@
 
 ### ConsoleLoggerParams
 
-Ƭ **ConsoleLoggerParams**: { `consoleLogStrategy?`: [`ConsoleLogStrategy`](../interfaces/logger_strategy_console_log_strategy.ConsoleLogStrategy.md)  } & [`LoggerStrategyParams`](logger_strategy.md#loggerstrategyparams)
+Ƭ **ConsoleLoggerParams**: \{ `consoleLogStrategy?`: [`ConsoleLogStrategy`](../interfaces/logger_strategy_console_log_strategy.ConsoleLogStrategy.md)  } & [`LoggerStrategyParams`](logger_strategy.md#loggerstrategyparams)
 
 #### Defined in
 
-[logger-strategy/console/index.ts:8](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L8)
+[logger-strategy/console.ts:8](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L8)

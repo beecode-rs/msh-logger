@@ -26,7 +26,11 @@
 
 ### constructor
 
-• **new LoggerStrategyVoid**()
+• **new LoggerStrategyVoid**(): [`LoggerStrategyVoid`](logger_strategy_void.LoggerStrategyVoid.md)
+
+#### Returns
+
+[`LoggerStrategyVoid`](logger_strategy_void.LoggerStrategyVoid.md)
 
 ## Methods
 
@@ -50,20 +54,19 @@
 
 #### Defined in
 
-[logger-strategy/void.ts:9](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L9)
+[logger-strategy/void.ts:9](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/void.ts#L9)
 
 ___
 
 ### debug
 
-▸ **debug**(`_`, `__?`): `void`
+▸ **debug**(`..._msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `_` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
-| `__?` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
+| `..._msgs` | `unknown`[] |
 
 #### Returns
 
@@ -75,20 +78,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/void.ts:4](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L4)
+[logger-strategy/void.ts:4](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/void.ts#L4)
 
 ___
 
 ### error
 
-▸ **error**(`_`, `__?`): `void`
+▸ **error**(`..._msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `_` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
-| `__?` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
+| `..._msgs` | `unknown`[] |
 
 #### Returns
 
@@ -100,20 +102,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/void.ts:5](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L5)
+[logger-strategy/void.ts:5](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/void.ts#L5)
 
 ___
 
 ### info
 
-▸ **info**(`_`, `__?`): `void`
+▸ **info**(`..._msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `_` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
-| `__?` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
+| `..._msgs` | `unknown`[] |
 
 #### Returns
 
@@ -125,20 +126,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/void.ts:6](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L6)
+[logger-strategy/void.ts:6](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/void.ts#L6)
 
 ___
 
 ### warn
 
-▸ **warn**(`_`, `__?`): `void`
+▸ **warn**(`..._msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `_` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
-| `__?` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
+| `..._msgs` | `unknown`[] |
 
 #### Returns
 
@@ -150,4 +150,4 @@ ___
 
 #### Defined in
 
-[logger-strategy/void.ts:7](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/void.ts#L7)
+[logger-strategy/void.ts:7](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/void.ts#L7)

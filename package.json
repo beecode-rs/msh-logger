@@ -63,7 +63,7 @@
 		"clean": "rimraf ./dist",
 		"clean-cjs": "rimraf ./lib",
 		"doc": "concurrently -c auto 'npm:doc:*'",
-		"doc:api": "npx typedoc",
+		"doc:api": "npx typedoc --tsconfig ./resource/tsconfig/esm.json",
 		"doc:toc": "npx markdown-toc -i ./README.md",
 		"docker-build": "docker build -f ./resource/docker/Dockerfile -t bc-msh-logger ./",
 		"docker-rmi": "docker rmi bc-msh-logger",
@@ -126,7 +126,7 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-util": "1.2.1"
+		"@beecode/msh-util": "2.0.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "7.24.1",

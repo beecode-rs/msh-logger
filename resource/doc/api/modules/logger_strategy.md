@@ -12,7 +12,6 @@
 
 - [LoggerStrategyParams](logger_strategy.md#loggerstrategyparams)
 - [ObjectType](logger_strategy.md#objecttype)
-- [StringOrObjectType](logger_strategy.md#stringorobjecttype)
 
 ## Type Aliases
 
@@ -30,24 +29,14 @@
 
 #### Defined in
 
-[logger-strategy/index.ts:7](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L7)
+[logger-strategy.ts:5](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy.ts#L5)
 
 ___
 
 ### ObjectType
 
-Ƭ **ObjectType**: `Record`<`string`, `any`\>
+Ƭ **ObjectType**: `Record`\<`string`, `unknown`\>
 
 #### Defined in
 
-[logger-strategy/index.ts:3](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L3)
-
-___
-
-### StringOrObjectType
-
-Ƭ **StringOrObjectType**: `string` \| [`ObjectType`](logger_strategy.md#objecttype)
-
-#### Defined in
-
-[logger-strategy/index.ts:5](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/index.ts#L5)
+[logger-strategy.ts:3](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy.ts#L3)

@@ -28,7 +28,11 @@
 
 ### constructor
 
-• **new ConsoleLogStrategyNewRelicJson**()
+• **new ConsoleLogStrategyNewRelicJson**(): [`ConsoleLogStrategyNewRelicJson`](logger_strategy_console_log_strategy_new_relic_json.ConsoleLogStrategyNewRelicJson.md)
+
+#### Returns
+
+[`ConsoleLogStrategyNewRelicJson`](logger_strategy_console_log_strategy_new_relic_json.ConsoleLogStrategyNewRelicJson.md)
 
 ## Properties
 
@@ -38,13 +42,13 @@
 
 #### Defined in
 
-[logger-strategy/console/log-strategy/new-relic-json.ts:8](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L8)
+[logger-strategy/console/log-strategy/new-relic-json.ts:8](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console/log-strategy/new-relic-json.ts#L8)
 
 ## Methods
 
 ### \_joinDefined
 
-▸ `Protected` **_joinDefined**(`prefix?`, `msg?`): `string`
+▸ **_joinDefined**(`prefix?`, `msg?`): `string`
 
 #### Parameters
 
@@ -59,20 +63,20 @@
 
 #### Defined in
 
-[logger-strategy/console/log-strategy/new-relic-json.ts:36](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L36)
+[logger-strategy/console/log-strategy/new-relic-json.ts:48](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console/log-strategy/new-relic-json.ts#L48)
 
 ___
 
 ### \_messagePayloadExtractorIfExists
 
-▸ `Protected` **_messagePayloadExtractorIfExists**(`params`): `Object`
+▸ **_messagePayloadExtractorIfExists**(`params`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `params` | `Object` |
-| `params.msg` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype) |
+| `params.msg` | `unknown` |
 | `params.prefix?` | `string` |
 
 #### Returns
@@ -85,7 +89,7 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/log-strategy/new-relic-json.ts:26](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26)
+[logger-strategy/console/log-strategy/new-relic-json.ts:26](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console/log-strategy/new-relic-json.ts#L26)
 
 ___
 
@@ -102,7 +106,7 @@ ___
 | `params.meta?` | [`ObjectType`](../modules/logger_strategy.md#objecttype) |
 | `params.prefix?` | `string` |
 | `params.type` | [`LogLevel`](../enums/log_level.LogLevel.md) |
-| `...msgs` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -114,4 +118,4 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/log-strategy/new-relic-json.ts:10](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10)
+[logger-strategy/console/log-strategy/new-relic-json.ts:10](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console/log-strategy/new-relic-json.ts#L10)

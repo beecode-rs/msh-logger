@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[log-level.ts:5](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L5)
+[log-level.ts:5](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/log-level.ts#L5)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[log-level.ts:2](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L2)
+[log-level.ts:2](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/log-level.ts#L2)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[log-level.ts:4](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L4)
+[log-level.ts:4](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/log-level.ts#L4)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[log-level.ts:3](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/log-level.ts#L3)
+[log-level.ts:3](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/log-level.ts#L3)

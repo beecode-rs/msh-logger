@@ -36,7 +36,7 @@
 
 ### constructor
 
-• **new LoggerStrategyConsole**(`params?`)
+• **new LoggerStrategyConsole**(`params?`): [`LoggerStrategyConsole`](logger_strategy_console.LoggerStrategyConsole.md)
 
 #### Parameters
 
@@ -44,9 +44,13 @@
 | :------ | :------ |
 | `params?` | [`ConsoleLoggerParams`](../modules/logger_strategy_console.md#consoleloggerparams) |
 
+#### Returns
+
+[`LoggerStrategyConsole`](logger_strategy_console.LoggerStrategyConsole.md)
+
 #### Defined in
 
-[logger-strategy/console/index.ts:18](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L18)
+[logger-strategy/console.ts:18](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L18)
 
 ## Properties
 
@@ -56,7 +60,7 @@
 
 #### Defined in
 
-[logger-strategy/console/index.ts:14](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L14)
+[logger-strategy/console.ts:14](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L14)
 
 ___
 
@@ -66,7 +70,7 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:13](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L13)
+[logger-strategy/console.ts:13](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L13)
 
 ___
 
@@ -76,7 +80,7 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:15](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L15)
+[logger-strategy/console.ts:15](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L15)
 
 ___
 
@@ -86,20 +90,20 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:16](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L16)
+[logger-strategy/console.ts:16](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L16)
 
 ## Methods
 
 ### \_logMessage
 
-▸ `Protected` **_logMessage**(`type`, `...messageObjects`): `void`
+▸ **_logMessage**(`type`, `...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `type` | [`LogLevel`](../enums/log_level.LogLevel.md) |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -107,13 +111,13 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:56](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L56)
+[logger-strategy/console.ts:56](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L56)
 
 ___
 
 ### \_shouldLog
 
-▸ `Protected` **_shouldLog**(`currentLevel`): `boolean`
+▸ **_shouldLog**(`currentLevel`): `boolean`
 
 #### Parameters
 
@@ -127,7 +131,7 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:52](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L52)
+[logger-strategy/console.ts:52](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L52)
 
 ___
 
@@ -151,19 +155,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:27](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L27)
+[logger-strategy/console.ts:27](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L27)
 
 ___
 
 ### debug
 
-▸ **debug**(`...messageObjects`): `void`
+▸ **debug**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -175,19 +179,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:63](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L63)
+[logger-strategy/console.ts:63](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L63)
 
 ___
 
 ### error
 
-▸ **error**(`...messageObjects`): `void`
+▸ **error**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -199,19 +203,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:75](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L75)
+[logger-strategy/console.ts:75](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L75)
 
 ___
 
 ### info
 
-▸ **info**(`...messageObjects`): `void`
+▸ **info**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -223,19 +227,19 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:67](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L67)
+[logger-strategy/console.ts:67](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L67)
 
 ___
 
 ### warn
 
-▸ **warn**(`...messageObjects`): `void`
+▸ **warn**(`...msgs`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...messageObjects` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -247,13 +251,13 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:71](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L71)
+[logger-strategy/console.ts:71](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L71)
 
 ___
 
 ### LogLevelToInt
 
-▸ `Static` **LogLevelToInt**(`logLevel`): `number`
+▸ **LogLevelToInt**(`logLevel`): `number`
 
 #### Parameters
 
@@ -267,4 +271,4 @@ ___
 
 #### Defined in
 
-[logger-strategy/console/index.ts:37](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/index.ts#L37)
+[logger-strategy/console.ts:37](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console.ts#L37)

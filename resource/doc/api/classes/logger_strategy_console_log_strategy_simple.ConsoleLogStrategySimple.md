@@ -23,7 +23,11 @@
 
 ### constructor
 
-• **new ConsoleLogStrategySimple**()
+• **new ConsoleLogStrategySimple**(): [`ConsoleLogStrategySimple`](logger_strategy_console_log_strategy_simple.ConsoleLogStrategySimple.md)
+
+#### Returns
+
+[`ConsoleLogStrategySimple`](logger_strategy_console_log_strategy_simple.ConsoleLogStrategySimple.md)
 
 ## Methods
 
@@ -40,7 +44,7 @@
 | `params.meta?` | [`ObjectType`](../modules/logger_strategy.md#objecttype) |
 | `params.prefix?` | `string` |
 | `params.type` | [`LogLevel`](../enums/log_level.LogLevel.md) |
-| `...msgs` | [`StringOrObjectType`](../modules/logger_strategy.md#stringorobjecttype)[] |
+| `...msgs` | `unknown`[] |
 
 #### Returns
 
@@ -52,13 +56,13 @@
 
 #### Defined in
 
-[logger-strategy/console/log-strategy/simple.ts:8](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L8)
+[logger-strategy/console/log-strategy/simple.ts:8](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console/log-strategy/simple.ts#L8)
 
 ___
 
 ### LogTypeToFunctionName
 
-▸ `Static` **LogTypeToFunctionName**(`type`): ``"log"`` \| ``"error"`` \| ``"info"`` \| ``"warn"``
+▸ **LogTypeToFunctionName**(`type`): ``"log"`` \| ``"info"`` \| ``"warn"`` \| ``"error"``
 
 #### Parameters
 
@@ -68,8 +72,8 @@ ___
 
 #### Returns
 
-``"log"`` \| ``"error"`` \| ``"info"`` \| ``"warn"``
+``"log"`` \| ``"info"`` \| ``"warn"`` \| ``"error"``
 
 #### Defined in
 
-[logger-strategy/console/log-strategy/simple.ts:26](https://github.com/beecode-rs/msh-logger/blob/f45e39e/src/logger-strategy/console/log-strategy/simple.ts#L26)
+[logger-strategy/console/log-strategy/simple.ts:20](https://github.com/beecode-rs/msh-logger/blob/4fbfbd0/src/logger-strategy/console/log-strategy/simple.ts#L20)
