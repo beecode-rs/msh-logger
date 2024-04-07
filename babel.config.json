@@ -1,0 +1,33 @@
+{
+	"ignore": [
+		"node_modules",
+		"../../**/*.test.ts",
+		"../../**/*.contract.ts",
+		"../../**/__mocks__/*",
+		"../../**/__tests__/*",
+		"../../**/__snapshots__/*"
+	],
+	"plugins": [
+		[
+			"@babel/plugin-transform-modules-commonjs",
+			{
+				"strictMode": true
+			}
+		],
+		[
+			"@babel/plugin-proposal-decorators",
+			{
+				"version": "2023-11"
+			}
+		]
+	],
+	"presets": [
+		"@babel/preset-env",
+		[
+			"@babel/preset-typescript",
+			{
+				"tsconfig": "./tsconfig.cjss.json"
+			}
+		]
+	]
+}
