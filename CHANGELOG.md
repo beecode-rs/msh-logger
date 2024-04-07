@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/beecode-rs/msh-logger/compare/v1.0.0...v1.0.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* esmodule build output alias path to relative ([89e2cda](https://github.com/beecode-rs/msh-logger/commit/89e2cda33db485fe2132e23320e29bb17a13b0c1))
+
 # [1.0.0](https://github.com/beecode-rs/msh-logger/compare/v0.2.1...v1.0.0) (2024-04-07)
 
 
