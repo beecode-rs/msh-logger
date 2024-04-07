@@ -1,3 +1,13 @@
+# [1.0.0](https://github.com/beecode-rs/msh-logger/compare/v0.2.1...v1.0.0) (2024-04-07)
+
+
+* refactor!: es modules and commonjs build (#3) ([d087ea4](https://github.com/beecode-rs/msh-logger/commit/d087ea442c760a756f08f479f867b4440415a564)), closes [#3](https://github.com/beecode-rs/msh-logger/issues/3)
+
+
+### BREAKING CHANGES
+
+* changed file structure
+
 ## [0.2.1](https://github.com/beecode-rs/msh-logger/compare/v0.2.0...v0.2.1) (2023-05-22)
 
 
