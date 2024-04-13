@@ -46,6 +46,7 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint', 'eslint-plugin-import', 'import', 'no-only-tests', 'no-loops', 'jest', 'sort-keys-fix'],
 	rules: {
+		'@typescript-eslint/no-floating-promises': ['error'],
 		"@typescript-eslint/prefer-ts-expect-error":"warn",
 		// ESLINT
 		// 'no-restricted-imports': [
