@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/beecode-rs/msh-logger/compare/v1.0.2...v1.0.3) (2024-04-15)
+
+
+### Bug Fixes
+
+* bump semantic-release from 23.0.7 to 23.0.8 ([0433817](https://github.com/beecode-rs/msh-logger/commit/0433817192749f5331e41d00fff1f748f0558b9e))
+* update package.json ([818c241](https://github.com/beecode-rs/msh-logger/commit/818c2410196e853cf0636a156a94b377ae2de2e9))
+
 ## [1.0.2](https://github.com/beecode-rs/msh-logger/compare/v1.0.1...v1.0.2) (2024-04-10)
 
 
