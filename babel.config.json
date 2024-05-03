@@ -26,7 +26,7 @@
 		[
 			"@babel/preset-typescript",
 			{
-				"tsconfig": "./tsconfig.cjss.json"
+				"tsconfig": "./tsconfig.cjs.json"
 			}
 		]
 	]

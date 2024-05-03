@@ -1,12 +1,12 @@
-import { jest } from '@jest/globals'
+import { vi } from 'vitest'
 
-import { LoggerStrategyParams, LoggerStrategy as LoggerStrategyToMock } from '#src/logger-strategy'
+import { LoggerStrategy as LoggerStrategyToMock } from '#src/logger-strategy'
 
 export class LoggerStrategy implements LoggerStrategyToMock {
-	clone = jest.fn<(overrideParams?: LoggerStrategyParams | undefined) => LoggerStrategy>()
+	clone = vi.fn()
 
-	debug = jest.fn<(..._msgs: unknown[]) => void>()
-	error = jest.fn<(..._msgs: unknown[]) => void>()
-	info = jest.fn<(..._msgs: unknown[]) => void>()
-	warn = jest.fn<(..._msgs: unknown[]) => void>()
+	debug = vi.fn()
+	error = vi.fn()
+	info = vi.fn()
+	warn = vi.fn()
 }
