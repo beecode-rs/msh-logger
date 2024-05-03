@@ -110,7 +110,7 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-util": "2.0.5"
+		"@beecode/msh-util": "2.0.6"
 	},
 	"devDependencies": {
 		"@babel/cli": "7.24.5",
