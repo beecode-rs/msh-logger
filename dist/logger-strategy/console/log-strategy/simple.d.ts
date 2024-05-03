@@ -1,6 +1,6 @@
-import { LogLevel } from '../../../log-level.js';
-import { ObjectType } from '../../../logger-strategy.js';
-import { ConsoleLogStrategy } from '../../../logger-strategy/console/log-strategy.js';
+import { LogLevel } from '#src/log-level';
+import { ObjectType } from '#src/logger-strategy';
+import { ConsoleLogStrategy } from '#src/logger-strategy/console/log-strategy';
 export declare class ConsoleLogStrategySimple implements ConsoleLogStrategy {
     log(params: {
         type: LogLevel;

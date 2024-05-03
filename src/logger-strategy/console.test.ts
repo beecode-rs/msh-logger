@@ -1,6 +1,7 @@
-import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { Mock, afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { LogLevel } from '#src/log-level'
+import { LoggerStrategyConsoleSpy } from '#src/logger-strategy/__mocks__/console-spy'
 import { LoggerStrategyConsole } from '#src/logger-strategy/console'
 import { ConsoleLogStrategyMock } from '#src/logger-strategy/console/__mocks__/log-strategy-mock'
 import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
@@ -81,20 +82,17 @@ describe('LoggerStrategyConsole', () => {
 	})
 
 	describe('_logMessage', () => {
-		let spy_logger_shouldLog: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+		let spy_logger_shouldLog: Mock
 
 		const consoleLogStrategy = new ConsoleLogStrategyMock()
 		const logMessageLogger = new LoggerStrategyConsole({ consoleLogStrategy })
 
 		beforeEach(() => {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			spy_logger_shouldLog = jest.spyOn(logMessageLogger, '_shouldLog' as any)
-		})
-		afterEach(() => {
-			jest.resetAllMocks()
+			spy_logger_shouldLog = vi.spyOn(logMessageLogger, '_shouldLog' as any)
 		})
 		afterAll(() => {
-			jest.restoreAllMocks()
+			vi.restoreAllMocks()
 		})
 
 		it('should not log messages if shouldLog returns false', () => {
@@ -119,48 +117,37 @@ describe('LoggerStrategyConsole', () => {
 	})
 
 	describe('public functions', () => {
-		let spy_logger_logMessage: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+		const logger = new LoggerStrategyConsoleSpy()
 
-		const logger = new LoggerStrategyConsole()
 		const dummyMessage = 'dummy message'
 		const dummyObject = { dummy: 'object' }
-		beforeEach(() => {
-			jest.spyOn(console, 'log').mockImplementation(jest.fn)
-			jest.spyOn(console, 'error').mockImplementation(jest.fn)
-			jest.spyOn(console, 'warn').mockImplementation(jest.fn)
-			jest.spyOn(console, 'info').mockImplementation(jest.fn)
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			spy_logger_logMessage = jest.spyOn(logger, '_logMessage' as any)
-		})
-		afterEach(() => {
-			jest.resetAllMocks()
-		})
+		beforeEach(() => {})
 		afterAll(() => {
-			jest.restoreAllMocks()
+			vi.restoreAllMocks()
 		})
 
 		it('should call logger with error level for error', () => {
 			logger.error(dummyMessage, dummyObject)
-			expect(spy_logger_logMessage).toHaveBeenCalledTimes(1)
-			expect(spy_logger_logMessage).toHaveBeenCalledWith(LogLevel.ERROR, dummyMessage, dummyObject)
+			expect(logger.spy_logMessage).toHaveBeenCalledTimes(1)
+			expect(logger.spy_logMessage).toHaveBeenCalledWith(LogLevel.ERROR, dummyMessage, dummyObject)
 		})
 
 		it('should call logger with warn level for warn', () => {
 			logger.warn(dummyMessage, dummyObject)
-			expect(spy_logger_logMessage).toHaveBeenCalledTimes(1)
-			expect(spy_logger_logMessage).toHaveBeenCalledWith(LogLevel.WARN, dummyMessage, dummyObject)
+			expect(logger.spy_logMessage).toHaveBeenCalledTimes(1)
+			expect(logger.spy_logMessage).toHaveBeenCalledWith(LogLevel.WARN, dummyMessage, dummyObject)
 		})
 
 		it('should call logger with info level for info', () => {
 			logger.info(dummyMessage, dummyObject)
-			expect(spy_logger_logMessage).toHaveBeenCalledTimes(1)
-			expect(spy_logger_logMessage).toHaveBeenCalledWith(LogLevel.INFO, dummyMessage, dummyObject)
+			expect(logger.spy_logMessage).toHaveBeenCalledTimes(1)
+			expect(logger.spy_logMessage).toHaveBeenCalledWith(LogLevel.INFO, dummyMessage, dummyObject)
 		})
 
 		it('should call logger with debug level for debug', () => {
 			logger.debug(dummyMessage, dummyObject)
-			expect(spy_logger_logMessage).toHaveBeenCalledTimes(1)
-			expect(spy_logger_logMessage).toHaveBeenCalledWith(LogLevel.DEBUG, dummyMessage, dummyObject)
+			expect(logger.spy_logMessage).toHaveBeenCalledTimes(1)
+			expect(logger.spy_logMessage).toHaveBeenCalledWith(LogLevel.DEBUG, dummyMessage, dummyObject)
 		})
 	})
 

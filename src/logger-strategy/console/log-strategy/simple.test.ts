@@ -1,29 +1,19 @@
-import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { afterAll, describe, expect, it, vi } from 'vitest'
 
 import { LogLevel } from '#src/log-level'
 import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
 
 describe('SimpleConsoleLog', () => {
-	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
-	let spy_console_info: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
-	let spy_console_warn: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
-	let spy_console_error: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	const spy_console_log = vi.spyOn(console, 'log').mockImplementation(() => undefined)
+	const spy_console_info = vi.spyOn(console, 'info').mockImplementation(() => undefined)
+	const spy_console_warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined)
+	const spy_console_error = vi.spyOn(console, 'error').mockImplementation(() => undefined)
 	const simpleConsoleLog = new ConsoleLogStrategySimple()
 	const mockDateTime = new Date()
 	const mockDateTimeStr = mockDateTime.toISOString()
 
-	beforeEach(() => {
-		spy_console_log = jest.spyOn(console, 'log').mockImplementation(jest.fn)
-		spy_console_info = jest.spyOn(console, 'info').mockImplementation(jest.fn)
-		spy_console_warn = jest.spyOn(console, 'warn').mockImplementation(jest.fn)
-		spy_console_error = jest.spyOn(console, 'error').mockImplementation(jest.fn)
-	})
-
-	afterEach(() => {
-		jest.resetAllMocks()
-	})
 	afterAll(() => {
-		jest.restoreAllMocks()
+		vi.restoreAllMocks()
 	})
 
 	describe('log', () => {

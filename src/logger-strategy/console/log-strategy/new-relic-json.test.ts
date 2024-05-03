@@ -1,11 +1,13 @@
 import { ObjectUtil } from '@beecode/msh-util/object-util'
-import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { afterAll, describe, expect, it, vi } from 'vitest'
 
 import { LogLevel } from '#src/log-level'
 import { ConsoleLogStrategyNewRelicJson } from '#src/logger-strategy/console/log-strategy/new-relic-json'
 
 describe('NewRelicConsoleLog', () => {
-	let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+	// let spy_console_log: Mock
+	const spy_console_log = vi.spyOn(console, 'log').mockImplementation(() => undefined)
+
 	const objectUtil = new ObjectUtil()
 	const deepStringify = (obj: unknown): string => {
 		return objectUtil.deepStringify(obj, { isSorted: true })
@@ -15,14 +17,11 @@ describe('NewRelicConsoleLog', () => {
 	const mockDateTime = new Date()
 	const mockTimeStamp = mockDateTime.getTime()
 
-	beforeEach(() => {
-		spy_console_log = jest.spyOn(console, 'log').mockImplementation(jest.fn)
-	})
-	afterEach(() => {
-		jest.resetAllMocks()
-	})
+	// beforeEach(() => {
+	// 	spy_console_log = vi.spyOn(console, 'log').mockImplementation(vi.fn)
+	// })
 	afterAll(() => {
-		jest.restoreAllMocks()
+		vi.restoreAllMocks()
 	})
 
 	describe('log', () => {

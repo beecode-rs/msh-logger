@@ -1,6 +1,6 @@
-import { afterAll, afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { Mock, afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-jest.unstable_mockModule('#src/logger-strategy/void', async () => {
+vi.mock('#src/logger-strategy/void', async () => {
 	const { LoggerStrategy } = await import('#src/logger-strategy/__mocks__/logger-strategy-mock')
 
 	return {
@@ -12,21 +12,18 @@ const { LoggerStrategyVoid: LoggerStrategyVoidMock } = await import('#src/logger
 
 describe('LoggerStrategyVoid', () => {
 	describe('should not call logger', () => {
-		let spy_console_log: jest.SpiedFunction<(message?: never, ...optionalParams: never[]) => void>
+		let spy_console_log: Mock
 		const dummyMessage = 'dummyMessage'
 		const dummyObject = { dummy: 'object' }
 
 		const logger = new LoggerStrategyVoidMock()
 
 		beforeEach(() => {
-			spy_console_log = jest.spyOn(console, 'log').mockImplementation(jest.fn)
+			spy_console_log = vi.spyOn(console, 'log').mockImplementation(vi.fn)
 		})
 
-		afterEach(() => {
-			jest.resetAllMocks()
-		})
 		afterAll(() => {
-			jest.restoreAllMocks()
+			vi.restoreAllMocks()
 		})
 
 		it('should not log on error', () => {
