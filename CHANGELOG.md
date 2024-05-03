@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/beecode-rs/msh-logger/compare/v1.0.3...v1.0.4) (2024-05-03)
+
+
+### Bug Fixes
+
+* update package.json, esmodule remove alias, use vitest instead of jest ([#16](https://github.com/beecode-rs/msh-logger/issues/16)) ([87e5c7d](https://github.com/beecode-rs/msh-logger/commit/87e5c7dc9039042be4cf96d7cea7cf88a8052a76))
+
 ## [1.0.3](https://github.com/beecode-rs/msh-logger/compare/v1.0.2...v1.0.3) (2024-04-15)
 
 
