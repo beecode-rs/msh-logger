@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/beecode-rs/msh-logger/compare/v1.0.4...v1.0.5) (2024-05-04)
+
+
+### Bug Fixes
+
+* update package.json, use shared config for eslint and prettier ([ef0d21b](https://github.com/beecode-rs/msh-logger/commit/ef0d21bbf6bc5aca2185e4936b2e43985c02b339))
+
 ## [1.0.4](https://github.com/beecode-rs/msh-logger/compare/v1.0.3...v1.0.4) (2024-05-03)
 
 
