@@ -129,7 +129,7 @@
 		"@semantic-release/git": "10.0.1",
 		"@semantic-release/github": "10.0.3",
 		"@semantic-release/release-notes-generator": "13.0.0",
-		"@types/node": "20.12.8",
+		"@types/node": "20.12.10",
 		"@vitest/coverage-v8": "1.6.0",
 		"commitizen": "4.3.0",
 		"concurrently": "8.2.2",
