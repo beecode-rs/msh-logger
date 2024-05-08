@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/beecode-rs/msh-logger/compare/v1.0.5...v1.1.0) (2024-05-08)
+
+
+### Features
+
+* add shared semantic release config ([9da7eb2](https://github.com/beecode-rs/msh-logger/commit/9da7eb2e51b21b3879a5f37632518631883ad970))
+
 ## [1.0.5](https://github.com/beecode-rs/msh-logger/compare/v1.0.4...v1.0.5) (2024-05-04)
 
 
