@@ -1,6 +1,6 @@
 import { LogLevel } from '../log-level.js';
-import { LoggerStrategy, LoggerStrategyParams, ObjectType } from '../logger-strategy.js';
-import { ConsoleLogStrategy } from '../logger-strategy/console/log-strategy.js';
+import { type LoggerStrategy, type LoggerStrategyParams, type ObjectType } from '../logger-strategy.js';
+import { type ConsoleLogStrategy } from '../logger-strategy/console/log-strategy.js';
 export type ConsoleLoggerParams = {
     consoleLogStrategy?: ConsoleLogStrategy;
 } & LoggerStrategyParams;

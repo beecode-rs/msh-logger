@@ -1,8 +1,8 @@
 import { typeUtil } from '@beecode/msh-util/type-util'
 
 import { LogLevel } from '#src/log-level'
-import { LoggerStrategy, LoggerStrategyParams, ObjectType } from '#src/logger-strategy'
-import { ConsoleLogStrategy } from '#src/logger-strategy/console/log-strategy'
+import { type LoggerStrategy, type LoggerStrategyParams, type ObjectType } from '#src/logger-strategy'
+import { type ConsoleLogStrategy } from '#src/logger-strategy/console/log-strategy'
 import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
 
 export type ConsoleLoggerParams = {
@@ -45,6 +45,7 @@ export class LoggerStrategyConsole implements LoggerStrategy {
 			case LogLevel.DEBUG:
 				return 3
 			default:
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				throw typeUtil.exhaustiveError(`Unknown log lever [${logLevel}]`, logLevel)
 		}
 	}

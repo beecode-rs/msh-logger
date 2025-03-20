@@ -1,6 +1,6 @@
 import { vi } from 'vitest'
 
-import { LogLevel } from '#src'
+import { type LogLevel } from '#src'
 import { LoggerStrategyConsole } from '#src/logger-strategy/console'
 
 export class LoggerStrategyConsoleSpy extends LoggerStrategyConsole {

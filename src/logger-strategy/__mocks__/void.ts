@@ -1,9 +1,9 @@
 import { jest } from 'vitest'
 
-import { LoggerStrategy, LoggerStrategyParams } from '#src'
+import { type LoggerStrategy, type LoggerStrategyParams } from '#src'
 
 export class LoggerStrategyVoid implements LoggerStrategy {
-	clone = jest.fn<(overrideParams?: LoggerStrategyParams | undefined) => LoggerStrategy>()
+	clone = jest.fn<(overrideParams?: LoggerStrategyParams) => LoggerStrategy>()
 
 	debug = jest.fn<(..._msgs: unknown[]) => void>().mockImplementation((_msg: unknown) => {})
 	error = jest.fn<(..._msgs: unknown[]) => void>().mockImplementation((_msg: unknown) => {})

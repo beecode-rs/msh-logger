@@ -1,4 +1,4 @@
-import { LogLevel } from './log-level.js';
+import { type LogLevel } from './log-level.js';
 export type ObjectType = Record<string, unknown>;
 export type LoggerStrategyParams = {
     logLevel?: LogLevel;

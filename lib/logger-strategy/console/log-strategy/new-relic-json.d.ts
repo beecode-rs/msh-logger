@@ -1,7 +1,7 @@
 import { ObjectUtil } from '@beecode/msh-util/object-util';
-import { LogLevel } from '../../../log-level.js';
-import { ObjectType } from '../../../logger-strategy.js';
-import { ConsoleLogStrategy } from '../../../logger-strategy/console/log-strategy.js';
+import { type LogLevel } from '../../../log-level.js';
+import { type ObjectType } from '../../../logger-strategy.js';
+import { type ConsoleLogStrategy } from '../../../logger-strategy/console/log-strategy.js';
 export declare class ConsoleLogStrategyNewRelicJson implements ConsoleLogStrategy {
     protected _objectUtil: ObjectUtil;
     log(params: {

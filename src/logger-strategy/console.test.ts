@@ -1,4 +1,4 @@
-import { Mock, afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
+import { type Mock, afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { LogLevel } from '#src/log-level'
 import { LoggerStrategyConsoleSpy } from '#src/logger-strategy/__mocks__/console-spy'

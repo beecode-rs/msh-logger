@@ -1,8 +1,8 @@
 import { typeUtil } from '@beecode/msh-util/type-util'
 
 import { LogLevel } from '#src/log-level'
-import { ObjectType } from '#src/logger-strategy'
-import { ConsoleLogStrategy } from '#src/logger-strategy/console/log-strategy'
+import { type ObjectType } from '#src/logger-strategy'
+import { type ConsoleLogStrategy } from '#src/logger-strategy/console/log-strategy'
 
 export class ConsoleLogStrategySimple implements ConsoleLogStrategy {
 	log(params: { type: LogLevel; meta?: ObjectType; datetime?: Date; prefix?: string }, ...msgs: unknown[]): void {
@@ -28,6 +28,7 @@ export class ConsoleLogStrategySimple implements ConsoleLogStrategy {
 			case LogLevel.DEBUG:
 				return 'log'
 			default:
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				throw typeUtil.exhaustiveError(`Unknown log level type [${type}]`, type)
 		}
 	}

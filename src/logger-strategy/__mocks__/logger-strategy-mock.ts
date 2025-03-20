@@ -1,6 +1,6 @@
 import { vi } from 'vitest'
 
-import { LoggerStrategy as LoggerStrategyToMock } from '#src/logger-strategy'
+import { type LoggerStrategy as LoggerStrategyToMock } from '#src/logger-strategy'
 
 export class LoggerStrategy implements LoggerStrategyToMock {
 	clone = vi.fn()

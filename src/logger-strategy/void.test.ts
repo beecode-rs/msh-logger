@@ -1,4 +1,4 @@
-import { Mock, afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { type Mock, afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 vi.mock('#src/logger-strategy/void', async () => {
 	const { LoggerStrategy } = await import('#src/logger-strategy/__mocks__/logger-strategy-mock')
