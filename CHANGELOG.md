@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/beecode-rs/msh-logger/compare/v1.1.0...v1.1.1) (2025-03-20)
+
+
+### Bug Fixes
+
+* update @beecode/msh-config to 1.1.3 and @beecode/msh-util to 2.0.11 ([9ef44f1](https://github.com/beecode-rs/msh-logger/commit/9ef44f1797ad02227b7c69826a8dac68ec269780))
+* update Node.js version, add Prettier config, and refactor imports to use type annotations ([142ce80](https://github.com/beecode-rs/msh-logger/commit/142ce806ac2fe2195d5672ff88828919aa5fc43a))
+
 # [1.1.0](https://github.com/beecode-rs/msh-logger/compare/v1.0.5...v1.1.0) (2024-05-08)
 
 
