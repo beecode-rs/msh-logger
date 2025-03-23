@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/beecode-rs/msh-logger/compare/v1.1.1...v1.1.2) (2025-03-23)
+
+
+### Bug Fixes
+
+* refactor ESLint configuration and update dependencies ([d29e270](https://github.com/beecode-rs/msh-logger/commit/d29e270d3a3d3a1611474f0ca4149a93a7af36e0))
+
 ## [1.1.1](https://github.com/beecode-rs/msh-logger/compare/v1.1.0...v1.1.1) (2025-03-20)
 
 
