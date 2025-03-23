@@ -30,6 +30,7 @@ export class LoggerStrategyConsole implements LoggerStrategy {
 		return new LoggerStrategyConsole({
 			logLevel: logLevel ?? this._logLevel,
 			messagePrefix: messagePrefix ?? this._messagePrefix,
+			// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
 			meta: (this._meta || meta) && { ...this._meta, ...meta },
 		})
 	}

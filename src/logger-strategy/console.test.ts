@@ -121,6 +121,7 @@ describe('LoggerStrategyConsole', () => {
 
 		const dummyMessage = 'dummy message'
 		const dummyObject = { dummy: 'object' }
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		beforeEach(() => {})
 		afterAll(() => {
 			vi.restoreAllMocks()
