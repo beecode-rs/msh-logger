@@ -115,7 +115,7 @@
 		"@beecode/msh-util": "2.0.12"
 	},
 	"devDependencies": {
-		"@babel/cli": "7.26.4",
+		"@babel/cli": "7.27.0",
 		"@babel/core": "7.26.10",
 		"@babel/plugin-proposal-decorators": "7.25.9",
 		"@babel/plugin-transform-modules-commonjs": "7.26.3",
