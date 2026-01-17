@@ -1,0 +1,23 @@
+# Progress Log
+
+## Learnings
+(Patterns discovered during implementation)
+- Pino 9.x has built-in TypeScript types, no need for @types/pino
+- Use `pino()` to create logger instance in constructor
+- Map LogLevel enum to pino methods: ERROR->error, WARN->warn, INFO->info, DEBUG->debug
+- Pino log methods take (object, message) format - merge meta into object
+- Follow `_joinDefined` helper pattern from new-relic-json.ts for prefix handling
+
+---
+
+## Iteration 1 - US-002: Create ConsoleLogStrategyPino class
+- What was implemented: Created ConsoleLogStrategyPino class that implements ConsoleLogStrategy interface
+- Files changed:
+  - Created: src/logger-strategy/console/log-strategy/pino.ts
+  - Modified: PRD.md (marked US-002 as complete)
+- Learnings for future iterations:
+  - Pino log signature is (object, message) not (message, object)
+  - Used `typeUtil.exhaustiveError` for exhaustive switch statement (same as simple.ts)
+  - Protected `_logger` instance created in constructor
+  - Each message is logged separately (forEach over msgs array)
+---
