@@ -46,7 +46,10 @@
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
 		"target": "ESNext",
-		"traceResolution": false
+		"traceResolution": false,
+		"types": [
+			"node"
+		]
 	},
 	"include": [
 		"./*.*",
