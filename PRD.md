@@ -54,9 +54,9 @@ Add a Pino-based console log strategy alongside the existing Simple and NewRelic
 **Description:** As a developer, I want to ensure all tests pass after implementation.
 
 **Acceptance Criteria:**
-- [ ] Run `npm run test:unit` - all tests pass
-- [ ] Run `npm run lint` - no lint errors
-- [ ] Typecheck passes
+- [x] Run `npm run test:unit` - all tests pass
+- [x] Run `npm run lint` - no lint errors
+- [x] Typecheck passes
 
 ## Non-Goals
 

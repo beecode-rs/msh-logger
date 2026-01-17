@@ -7,6 +7,8 @@
 - Map LogLevel enum to pino methods: ERROR->error, WARN->warn, INFO->info, DEBUG->debug
 - Pino log methods take (object, message) format - merge meta into object
 - Follow `_joinDefined` helper pattern from new-relic-json.ts for prefix handling
+- Mock pino using vi.mock() with a factory function that returns mock methods
+- Use vi.importMock() with dynamic await to access mock object for assertions
 
 ---
 
@@ -20,4 +22,32 @@
   - Used `typeUtil.exhaustiveError` for exhaustive switch statement (same as simple.ts)
   - Protected `_logger` instance created in constructor
   - Each message is logged separately (forEach over msgs array)
+---
+
+## Iteration 2 - US-003: Write unit tests for ConsoleLogStrategyPino
+- What was implemented: Created comprehensive unit tests for ConsoleLogStrategyPino (19 tests total)
+- Files changed:
+  - Created: src/logger-strategy/console/log-strategy/pino.test.ts
+  - Modified: src/logger-strategy/console/log-strategy/pino.ts (lint fixes)
+  - Modified: PRD.md (marked US-003 as complete)
+- Learnings for future iterations:
+  - Mocking pino: Use vi.mock('pino', () => { ... }) with __mockLogger export for test access
+  - Access mock via: await vi.importMock<...>('pino')
+  - Run lint-fix before final lint check - auto-fixes key sorting, import order, blank lines
+  - ESLint rule @typescript-eslint/no-base-to-string requires disable comment when using String() on unknown
+  - JSON sort issues in tsconfig.json can be fixed with npm run lint-json-fix
+---
+
+## Iteration 3 - US-004: Verify all tests pass and fix if needed
+- What was implemented: Verified all quality checks pass
+- Verification results:
+  - npm run test:unit: 76 tests passed (5 test files)
+  - npm run lint: All linters pass (prettier, eslint, json)
+  - npm run tsc-check: TypeScript type check passes
+- Files changed:
+  - Modified: PRD.md (marked US-004 as complete)
+  - Modified: progress.txt (added this iteration)
+- Learnings for future iterations:
+  - All Pino implementation tests integrate well with existing test suite
+  - No additional fixes were needed after the previous iterations
 ---
