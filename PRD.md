@@ -39,16 +39,16 @@ Add a Pino-based console log strategy alongside the existing Simple and NewRelic
 **Description:** As a developer, I want unit tests for the Pino strategy to ensure it works correctly.
 
 **Acceptance Criteria:**
-- [ ] Create `src/logger-strategy/console/log-strategy/pino.test.ts`
-- [ ] Test logging with string message
-- [ ] Test logging with object message
-- [ ] Test logging with meta object
-- [ ] Test logging with prefix
-- [ ] Test all log levels (ERROR, WARN, INFO, DEBUG)
-- [ ] Mock pino to verify correct methods are called
-- [ ] Follow test patterns from `simple.test.ts` and `new-relic-json.test.ts`
-- [ ] Tests pass: `npm run test:unit -- src/logger-strategy/console/log-strategy/pino.test.ts`
-- [ ] Typecheck passes
+- [x] Create `src/logger-strategy/console/log-strategy/pino.test.ts`
+- [x] Test logging with string message
+- [x] Test logging with object message
+- [x] Test logging with meta object
+- [x] Test logging with prefix
+- [x] Test all log levels (ERROR, WARN, INFO, DEBUG)
+- [x] Mock pino to verify correct methods are called
+- [x] Follow test patterns from `simple.test.ts` and `new-relic-json.test.ts`
+- [x] Tests pass: `npm run test:unit -- src/logger-strategy/console/log-strategy/pino.test.ts`
+- [x] Typecheck passes
 
 ### US-004: Verify all tests pass and fix if needed
 **Description:** As a developer, I want to ensure all tests pass after implementation.

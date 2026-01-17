@@ -1,5 +1,5 @@
-import pino, { type Logger } from 'pino'
 import { typeUtil } from '@beecode/msh-util/type-util'
+import pino, { type Logger } from 'pino'
 
 import { LogLevel } from '#src/log-level'
 import { type ObjectType } from '#src/logger-strategy'
@@ -33,6 +33,7 @@ export class ConsoleLogStrategyPino implements ConsoleLogStrategy {
 
 		if (typeof msg === 'object') {
 			const { message } = msg as { message?: string }
+
 			return this._joinDefined(prefix, message ?? JSON.stringify(msg))
 		}
 
@@ -40,6 +41,7 @@ export class ConsoleLogStrategyPino implements ConsoleLogStrategy {
 			return this._joinDefined(prefix, msg)
 		}
 
+		// eslint-disable-next-line @typescript-eslint/no-base-to-string -- msg is a primitive at this point (string/object cases handled above)
 		return this._joinDefined(prefix, String(msg))
 	}
 
