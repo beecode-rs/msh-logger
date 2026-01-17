@@ -42,10 +42,11 @@ This is a logging abstraction package using the **Strategy Pattern**.
 - `LoggerStrategyVoid` - No-op logger (default, ignores all logs)
 - `LoggerStrategyConsole` - Outputs to console with configurable log level
 
-**Console Log Strategies** (`src/logger-strategy/console/log-strategy.ts`):
+**Console Log Strategies** (`src/logger-strategy/console/log-strategy/`):
 - Nested strategy pattern for formatting console output
 - `ConsoleLogStrategySimple` - Human-readable format with timestamps
 - `ConsoleLogStrategyNewRelicJson` - JSON format for New Relic ingestion
+- `ConsoleLogStrategyPino` - Pino logger integration for production-grade logging
 
 ### Pattern Hierarchy
 
@@ -55,7 +56,8 @@ LoggerStrategy (interface)
 └── LoggerStrategyConsole
     └── uses ConsoleLogStrategy (interface)
         ├── ConsoleLogStrategySimple
-        └── ConsoleLogStrategyNewRelicJson
+        ├── ConsoleLogStrategyNewRelicJson
+        └── ConsoleLogStrategyPino
 ```
 
 ## Code Conventions
