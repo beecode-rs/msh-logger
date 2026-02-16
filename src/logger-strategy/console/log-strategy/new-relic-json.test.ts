@@ -1,8 +1,8 @@
 import { ObjectUtil } from '@beecode/msh-util/object-util'
 import { afterAll, describe, expect, it, vi } from 'vitest'
 
-import { LogLevel } from '#src/log-level'
-import { ConsoleLogStrategyNewRelicJson } from '#src/logger-strategy/console/log-strategy/new-relic-json'
+import { LogLevel } from '#src/log-level.js'
+import { ConsoleLogStrategyNewRelicJson } from '#src/logger-strategy/console/log-strategy/new-relic-json.js'
 
 describe('NewRelicConsoleLog', () => {
 	// let spy_console_log: Mock

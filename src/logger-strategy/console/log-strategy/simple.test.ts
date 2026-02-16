@@ -1,7 +1,7 @@
 import { afterAll, describe, expect, it, vi } from 'vitest'
 
-import { LogLevel } from '#src/log-level'
-import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
+import { LogLevel } from '#src/log-level.js'
+import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple.js'
 
 describe('SimpleConsoleLog', () => {
 	const spy_console_log = vi.spyOn(console, 'log').mockImplementation(() => undefined)

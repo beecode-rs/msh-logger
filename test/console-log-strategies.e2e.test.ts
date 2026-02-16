@@ -1,10 +1,9 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
-
 import { LogLevel } from '@beecode/msh-logger/log-level'
 import { LoggerStrategyConsole } from '@beecode/msh-logger/logger-strategy/console'
 import { ConsoleLogStrategyNewRelicJson } from '@beecode/msh-logger/logger-strategy/console/log-strategy/new-relic-json'
 import { ConsoleLogStrategyPino } from '@beecode/msh-logger/logger-strategy/console/log-strategy/pino'
 import { ConsoleLogStrategySimple } from '@beecode/msh-logger/logger-strategy/console/log-strategy/simple'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Mock pino for testing
 vi.mock('pino', () => {
@@ -22,9 +21,7 @@ vi.mock('pino', () => {
 })
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { __mockLogger: mockPinoLogger } = await vi.importMock<{ __mockLogger: Record<string, ReturnType<typeof vi.fn>> }>(
-	'pino'
-)
+const { __mockLogger: mockPinoLogger } = await vi.importMock<{ __mockLogger: Record<string, ReturnType<typeof vi.fn>> }>('pino')
 
 describe('Console Log Strategies E2E', () => {
 	let consoleLogSpy: ReturnType<typeof vi.spyOn>
@@ -33,9 +30,13 @@ describe('Console Log Strategies E2E', () => {
 	let consoleErrorSpy: ReturnType<typeof vi.spyOn>
 
 	beforeEach(() => {
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		consoleInfoSpy = vi.spyOn(console, 'info').mockImplementation(() => {})
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
 		vi.clearAllMocks()
 	})
@@ -43,8 +44,8 @@ describe('Console Log Strategies E2E', () => {
 	describe('ConsoleLogStrategySimple', () => {
 		it('should log all log levels correctly', () => {
 			const logger = new LoggerStrategyConsole({
-				logLevel: LogLevel.DEBUG,
 				consoleLogStrategy: new ConsoleLogStrategySimple(),
+				logLevel: LogLevel.DEBUG,
 			})
 
 			logger.debug('Debug message')
@@ -71,8 +72,8 @@ describe('Console Log Strategies E2E', () => {
 
 		it('should log with prefix and meta', () => {
 			const logger = new LoggerStrategyConsole({
-				logLevel: LogLevel.DEBUG,
 				consoleLogStrategy: new ConsoleLogStrategySimple(),
+				logLevel: LogLevel.DEBUG,
 				messagePrefix: '[TEST]',
 				meta: { service: 'test-service' },
 			})
@@ -116,9 +117,9 @@ describe('Console Log Strategies E2E', () => {
 
 			strategy.log(
 				{
-					type: LogLevel.INFO,
-					prefix: '[TEST]',
 					meta: { service: 'test-service', version: '1.0.0' },
+					prefix: '[TEST]',
+					type: LogLevel.INFO,
 				},
 				'Test message'
 			)
@@ -137,8 +138,8 @@ describe('Console Log Strategies E2E', () => {
 	describe('ConsoleLogStrategyPino', () => {
 		it('should log all log levels correctly using Pino', () => {
 			const logger = new LoggerStrategyConsole({
-				logLevel: LogLevel.DEBUG,
 				consoleLogStrategy: new ConsoleLogStrategyPino(),
+				logLevel: LogLevel.DEBUG,
 			})
 
 			logger.debug('Debug message')
@@ -162,8 +163,8 @@ describe('Console Log Strategies E2E', () => {
 
 		it('should log with prefix and meta using Pino', () => {
 			const logger = new LoggerStrategyConsole({
-				logLevel: LogLevel.INFO,
 				consoleLogStrategy: new ConsoleLogStrategyPino(),
+				logLevel: LogLevel.INFO,
 				messagePrefix: '[TEST]',
 				meta: { service: 'test-service', version: '1.0.0' },
 			})

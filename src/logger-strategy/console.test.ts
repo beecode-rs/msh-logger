@@ -1,10 +1,10 @@
 import { type Mock, afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
-import { LogLevel } from '#src/log-level'
-import { LoggerStrategyConsoleSpy } from '#src/logger-strategy/__mocks__/console-spy'
-import { LoggerStrategyConsole } from '#src/logger-strategy/console'
-import { ConsoleLogStrategyMock } from '#src/logger-strategy/console/__mocks__/log-strategy-mock'
-import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple'
+import { LogLevel } from '#src/log-level.js'
+import { LoggerStrategyConsoleSpy } from '#src/logger-strategy/__mocks__/console-spy.js'
+import { ConsoleLogStrategyMock } from '#src/logger-strategy/console/__mocks__/log-strategy-mock.js'
+import { ConsoleLogStrategySimple } from '#src/logger-strategy/console/log-strategy/simple.js'
+import { LoggerStrategyConsole } from '#src/logger-strategy/console.js'
 
 describe('LoggerStrategyConsole', () => {
 	const defaultLogger = new LoggerStrategyConsole()

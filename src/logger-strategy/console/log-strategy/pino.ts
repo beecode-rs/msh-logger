@@ -1,9 +1,9 @@
 import { typeUtil } from '@beecode/msh-util/type-util'
 import pino, { type Logger } from 'pino'
 
-import { LogLevel } from '#src/log-level'
-import { type ObjectType } from '#src/logger-strategy'
-import { type ConsoleLogStrategy } from '#src/logger-strategy/console/log-strategy'
+import { LogLevel } from '#src/log-level.js'
+import { type ConsoleLogStrategy } from '#src/logger-strategy/console/log-strategy.js'
+import { type ObjectType } from '#src/logger-strategy.js'
 
 export class ConsoleLogStrategyPino implements ConsoleLogStrategy {
 	protected _logger: Logger

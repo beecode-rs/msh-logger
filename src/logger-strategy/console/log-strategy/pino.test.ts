@@ -1,7 +1,7 @@
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
-import { LogLevel } from '#src/log-level'
-import { ConsoleLogStrategyPino } from '#src/logger-strategy/console/log-strategy/pino'
+import { LogLevel } from '#src/log-level.js'
+import { ConsoleLogStrategyPino } from '#src/logger-strategy/console/log-strategy/pino.js'
 
 // Mock pino module
 vi.mock('pino', () => {

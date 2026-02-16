@@ -1,14 +1,14 @@
 import { type Mock, afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-vi.mock('#src/logger-strategy/void', async () => {
-	const { LoggerStrategy } = await import('#src/logger-strategy/__mocks__/logger-strategy-mock')
+vi.mock('#src/logger-strategy/void.js', async () => {
+	const { LoggerStrategy } = await import('#src/logger-strategy/__mocks__/logger-strategy-mock.js')
 
 	return {
 		LoggerStrategyVoid: LoggerStrategy,
 	}
 })
 
-const { LoggerStrategyVoid: LoggerStrategyVoidMock } = await import('#src/logger-strategy/void')
+const { LoggerStrategyVoid: LoggerStrategyVoidMock } = await import('#src/logger-strategy/void.js')
 
 describe('LoggerStrategyVoid', () => {
 	describe('should not call logger', () => {
