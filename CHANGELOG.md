@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/beecode-rs/msh-logger/compare/v1.2.0...v1.2.1) (2026-02-16)
+
+
+### Bug Fixes
+
+* update packages and tests ([23be976](https://github.com/beecode-rs/msh-logger/commit/23be976840f41adc3fb95f5260e5f223ff0325ad))
+
 # [1.2.0](https://github.com/beecode-rs/msh-logger/compare/v1.1.3...v1.2.0) (2026-02-16)
 
 
