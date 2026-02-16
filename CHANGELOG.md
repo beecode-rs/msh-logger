@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/beecode-rs/msh-logger/compare/v1.1.3...v1.2.0) (2026-02-16)
+
+
+### Features
+
+* add Pino logger strategy implementation ([#81](https://github.com/beecode-rs/msh-logger/issues/81)) ([59f3c8c](https://github.com/beecode-rs/msh-logger/commit/59f3c8cc4a007e452efb7b5ac367aded50e7451a))
+
 ## [1.1.3](https://github.com/beecode-rs/msh-logger/compare/v1.1.2...v1.1.3) (2025-03-27)
 
 
