@@ -1,7 +1,7 @@
 import { vi } from 'vitest'
 
-import { type LogLevel } from '#src'
-import { LoggerStrategyConsole } from '#src/logger-strategy/console'
+import { type LogLevel } from '#src/index.js'
+import { LoggerStrategyConsole } from '#src/logger-strategy/console.js'
 
 export class LoggerStrategyConsoleSpy extends LoggerStrategyConsole {
 	spy_shouldLog = vi.fn<[LogLevel], boolean>().mockImplementation(super._shouldLog)

@@ -1,4 +1,4 @@
-import { type LoggerStrategy, type LoggerStrategyParams } from '#src/logger-strategy'
+import { type LoggerStrategy, type LoggerStrategyParams } from '#src/logger-strategy.js'
 
 export class LoggerStrategyVoid implements LoggerStrategy {
 	debug(..._msgs: unknown[]): void {} // eslint-disable-line

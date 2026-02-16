@@ -1,6 +1,6 @@
 import { jest } from 'vitest'
 
-import { type LoggerStrategy, type LoggerStrategyParams } from '#src'
+import { type LoggerStrategy, type LoggerStrategyParams } from '#src/index.js'
 
 export class LoggerStrategyVoid implements LoggerStrategy {
 	clone = jest.fn<(overrideParams?: LoggerStrategyParams) => LoggerStrategy>()

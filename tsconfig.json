@@ -35,6 +35,9 @@
 			],
 			"#src/*": [
 				"./src/*"
+			],
+			"#src/*.js": [
+				"./src/*"
 			]
 		},
 		"pretty": true,
@@ -46,7 +49,10 @@
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
 		"target": "ESNext",
-		"traceResolution": false
+		"traceResolution": false,
+		"types": [
+			"node"
+		]
 	},
 	"include": [
 		"./*.*",
