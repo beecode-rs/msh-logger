@@ -1,0 +1,7 @@
+subject: FormattingStrategySimpleString
+module: ./simple-string.js
+subjectType: class
+constructor:
+  terms:
+    - params: []
+      result: {}

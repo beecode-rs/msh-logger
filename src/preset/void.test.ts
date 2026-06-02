@@ -1,22 +1,14 @@
-import { type Mock, afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { type Mock, afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
-vi.mock('#src/logger-strategy/void.js', async () => {
-	const { LoggerStrategy } = await import('#src/logger-strategy/__mocks__/logger-strategy-mock.js')
+import { PresetVoid } from '#src/preset/void.js'
 
-	return {
-		LoggerStrategyVoid: LoggerStrategy,
-	}
-})
-
-const { LoggerStrategyVoid: LoggerStrategyVoidMock } = await import('#src/logger-strategy/void.js')
-
-describe('LoggerStrategyVoid', () => {
+describe('PresetVoid', () => {
 	describe('should not call logger', () => {
 		let spy_console_log: Mock
 		const dummyMessage = 'dummyMessage'
 		const dummyObject = { dummy: 'object' }
 
-		const logger = new LoggerStrategyVoidMock()
+		const logger = new PresetVoid()
 
 		beforeEach(() => {
 			spy_console_log = vi.spyOn(console, 'log').mockImplementation(vi.fn)
@@ -29,7 +21,6 @@ describe('LoggerStrategyVoid', () => {
 		it('should not log on error', () => {
 			logger.error(dummyMessage, dummyObject)
 			expect(spy_console_log).not.toHaveBeenCalled()
-			expect(logger.error).toHaveBeenCalledTimes(1)
 		})
 
 		it('should not log on warn', () => {
@@ -50,7 +41,7 @@ describe('LoggerStrategyVoid', () => {
 
 	describe('clone', () => {
 		it('should just clone logger', () => {
-			const toClone = new LoggerStrategyVoidMock()
+			const toClone = new PresetVoid()
 			const clonedLogger = toClone.clone()
 			expect(clonedLogger).not.toBe(toClone)
 		})

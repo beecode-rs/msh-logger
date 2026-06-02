@@ -1,0 +1,9 @@
+subject: TransportingStrategyStream
+module: ./stream.js
+subjectType: class
+constructor:
+  terms:
+    - params:
+        - { write: 'mock' }
+      result:
+        _stream: {}

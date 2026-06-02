@@ -1,0 +1,127 @@
+subject: LoggerStrategyBase
+module: ./base.js
+subjectType: class
+constructor:
+  terms:
+    - params:
+        - formattingStrategy: {}
+          transportingStrategy: {}
+      result:
+        _logLevel: ERROR
+        _formattingStrategy: {}
+        _transportingStrategy: {}
+    - params:
+        - formattingStrategy: {}
+          logLevel: DEBUG
+          transportingStrategy: {}
+      result:
+        _logLevel: DEBUG
+        _formattingStrategy: {}
+        _transportingStrategy: {}
+    - params:
+        - formattingStrategy: {}
+          messagePrefix: 'test-prefix'
+          transportingStrategy: {}
+      result:
+        _logLevel: ERROR
+        _messagePrefix: 'test-prefix'
+        _formattingStrategy: {}
+        _transportingStrategy: {}
+    - params:
+        - formattingStrategy: {}
+          meta:
+            requestId: req-123
+            userId: user-456
+          transportingStrategy: {}
+      result:
+        _logLevel: ERROR
+        _meta:
+          requestId: req-123
+          userId: user-456
+        _formattingStrategy: {}
+        _transportingStrategy: {}
+    - params:
+        - formattingStrategy: {}
+          logLevel: WARN
+          messagePrefix: 'my-app'
+          meta:
+            env: production
+          transportingStrategy: {}
+      result:
+        _logLevel: WARN
+        _messagePrefix: 'my-app'
+        _meta:
+          env: production
+        _formattingStrategy: {}
+        _transportingStrategy: {}
+methods:
+  clone:
+    terms:
+      - constructorParams:
+          - formattingStrategy: {}
+            logLevel: DEBUG
+            messagePrefix: 'app'
+            meta:
+              service: auth
+            transportingStrategy: {}
+        params: []
+        result:
+          _logLevel: DEBUG
+          _messagePrefix: 'app'
+          _meta:
+            service: auth
+          _formattingStrategy: {}
+          _transportingStrategy: {}
+      - constructorParams:
+          - formattingStrategy: {}
+            logLevel: DEBUG
+            messagePrefix: 'app'
+            transportingStrategy: {}
+        params:
+          - logLevel: WARN
+        result:
+          _logLevel: WARN
+          _messagePrefix: 'app'
+          _formattingStrategy: {}
+          _transportingStrategy: {}
+      - constructorParams:
+          - formattingStrategy: {}
+            logLevel: INFO
+            messagePrefix: 'old-prefix'
+            transportingStrategy: {}
+        params:
+          - messagePrefix: 'new-prefix'
+        result:
+          _logLevel: INFO
+          _messagePrefix: 'new-prefix'
+          _formattingStrategy: {}
+          _transportingStrategy: {}
+      - constructorParams:
+          - formattingStrategy: {}
+            logLevel: ERROR
+            meta:
+              requestId: req-1
+            transportingStrategy: {}
+        params:
+          - meta:
+              userId: user-1
+        result:
+          _logLevel: ERROR
+          _meta:
+            requestId: req-1
+            userId: user-1
+          _formattingStrategy: {}
+          _transportingStrategy: {}
+      - constructorParams:
+          - formattingStrategy: {}
+            logLevel: DEBUG
+            transportingStrategy: {}
+        params:
+          - meta:
+              requestId: req-99
+        result:
+          _logLevel: DEBUG
+          _meta:
+            requestId: req-99
+          _formattingStrategy: {}
+          _transportingStrategy: {}

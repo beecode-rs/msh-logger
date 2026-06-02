@@ -1,0 +1,18 @@
+subject: PresetPino
+module: ./pino.js
+subjectType: class
+constructor:
+  terms:
+    - params: []
+      result:
+        _logLevel: ERROR
+        _formattingStrategy: {}
+        _transportingStrategy:
+          _logger: {}
+    - params:
+        - logLevel: DEBUG
+      result:
+        _logLevel: DEBUG
+        _formattingStrategy: {}
+        _transportingStrategy:
+          _logger: {}

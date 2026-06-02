@@ -1,0 +1,16 @@
+subject: PresetConsoleSimpleString
+module: ./console-simple-string.js
+subjectType: class
+constructor:
+  terms:
+    - params: []
+      result:
+        _logLevel: ERROR
+        _formattingStrategy: {}
+        _transportingStrategy: {}
+    - params:
+        - logLevel: DEBUG
+      result:
+        _logLevel: DEBUG
+        _formattingStrategy: {}
+        _transportingStrategy: {}

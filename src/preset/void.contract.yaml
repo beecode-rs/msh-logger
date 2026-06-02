@@ -1,0 +1,13 @@
+subject: PresetVoid
+module: ./void.js
+subjectType: class
+constructor:
+  terms:
+    - params: []
+      result: {}
+methods:
+  clone:
+    terms:
+      - constructorParams: []
+        params: []
+        result: {}

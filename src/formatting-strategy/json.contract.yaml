@@ -1,0 +1,7 @@
+subject: FormattingStrategyJson
+module: ./json.js
+subjectType: class
+constructor:
+  terms:
+    - params: []
+      result: {}

@@ -9,9 +9,11 @@ export type LoggerStrategyParams = {
 }
 
 export interface LoggerStrategy {
-	debug(...msgs: unknown[]): void
-	info(...msgs: unknown[]): void
-	warn(...msgs: unknown[]): void
+	fatal(...msgs: unknown[]): void
 	error(...msgs: unknown[]): void
+	warn(...msgs: unknown[]): void
+	info(...msgs: unknown[]): void
+	debug(...msgs: unknown[]): void
+	trace(...msgs: unknown[]): void
 	clone(overrideParams?: LoggerStrategyParams): LoggerStrategy
 }
