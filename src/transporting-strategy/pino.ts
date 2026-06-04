@@ -14,18 +14,8 @@ export class TransportingStrategyPino implements TransportingStrategy {
 
 	transport(log: FormattedLog): void {
 		const fnName = TransportingStrategyPino.LevelToFn(log.level)
-		const { message, meta, timestamp, extra, prefix } = log
-		const logObject: Record<string, unknown> = { ...meta, time: timestamp }
 
-		if (extra && Object.keys(extra).length > 0) {
-			Object.assign(logObject, extra)
-		}
-
-		if (prefix) {
-			logObject.prefix = prefix
-		}
-
-		this._logger[fnName](logObject, message)
+		this._logger[fnName](log.metadata ?? {}, log.message)
 	}
 
 	static LevelToFn(level: LogLevel): 'fatal' | 'error' | 'info' | 'debug' | 'warn' | 'trace' {
@@ -43,8 +33,7 @@ export class TransportingStrategyPino implements TransportingStrategy {
 			case LogLevel.TRACE:
 				return 'trace'
 			default:
-				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-				throw typeUtil.exhaustiveError(`Unknown level [${level}]`, level)
+				throw typeUtil.exhaustiveError(`Unknown level [${String(level)}]`, level)
 		}
 	}
 }

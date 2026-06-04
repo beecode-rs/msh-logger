@@ -89,7 +89,7 @@ describe('LoggerStrategyBase', () => {
 		]
 
 		it.each(testCases)(
-			'should decide to log message if config level is %s and message level is %s as %p',
+			'should decide to log message if config level is %s and message level is %s as %s',
 			(confLevel, msgLevel, shouldLog) => {
 				const logger = new LoggerStrategyBase({
 					formattingStrategy: new FormattingStrategySimpleString(),
@@ -109,7 +109,7 @@ describe('LoggerStrategyBase', () => {
 		const logMessageLogger = new LoggerStrategyBase({ formattingStrategy, transportingStrategy })
 
 		beforeEach(() => {
-			formattingStrategy.format.mockReturnValue([{ level: LogLevel.ERROR, message: 'mock', timestamp: 0 }])
+			formattingStrategy.format.mockReturnValue([{ level: LogLevel.ERROR, message: 'mock' }])
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_logger_shouldLog = vi.spyOn(logMessageLogger, '_shouldLog' as any)
 		})
@@ -133,7 +133,7 @@ describe('LoggerStrategyBase', () => {
 			expect(spy_logger_shouldLog).toHaveBeenCalledWith(LogLevel.ERROR)
 			expect(formattingStrategy.format).toHaveBeenCalledTimes(1)
 			expect(formattingStrategy.format).toHaveBeenCalledWith(
-				{ level: LogLevel.ERROR, meta: undefined, prefix: undefined },
+				{ category: undefined, level: LogLevel.ERROR, meta: undefined, timestamp: expect.any(Number) },
 				'test message'
 			)
 		})
@@ -148,7 +148,7 @@ describe('LoggerStrategyBase', () => {
 		const dummyObject = { dummy: 'object' }
 
 		beforeEach(() => {
-			formattingStrategy.format.mockReturnValue([{ level: LogLevel.DEBUG, message: 'mock', timestamp: 0 }])
+			formattingStrategy.format.mockReturnValue([{ level: LogLevel.DEBUG, message: 'mock' }])
 		})
 		afterAll(() => {
 			vi.restoreAllMocks()
@@ -158,7 +158,7 @@ describe('LoggerStrategyBase', () => {
 			logger.fatal(dummyMessage, dummyObject)
 			expect(formattingStrategy.format).toHaveBeenCalledTimes(1)
 			expect(formattingStrategy.format).toHaveBeenCalledWith(
-				{ level: LogLevel.FATAL, meta: undefined, prefix: undefined },
+				{ category: undefined, level: LogLevel.FATAL, meta: undefined, timestamp: expect.any(Number) },
 				dummyMessage,
 				dummyObject
 			)
@@ -168,7 +168,7 @@ describe('LoggerStrategyBase', () => {
 			logger.error(dummyMessage, dummyObject)
 			expect(formattingStrategy.format).toHaveBeenCalledTimes(1)
 			expect(formattingStrategy.format).toHaveBeenCalledWith(
-				{ level: LogLevel.ERROR, meta: undefined, prefix: undefined },
+				{ category: undefined, level: LogLevel.ERROR, meta: undefined, timestamp: expect.any(Number) },
 				dummyMessage,
 				dummyObject
 			)
@@ -178,7 +178,7 @@ describe('LoggerStrategyBase', () => {
 			logger.warn(dummyMessage, dummyObject)
 			expect(formattingStrategy.format).toHaveBeenCalledTimes(1)
 			expect(formattingStrategy.format).toHaveBeenCalledWith(
-				{ level: LogLevel.WARN, meta: undefined, prefix: undefined },
+				{ category: undefined, level: LogLevel.WARN, meta: undefined, timestamp: expect.any(Number) },
 				dummyMessage,
 				dummyObject
 			)
@@ -188,7 +188,7 @@ describe('LoggerStrategyBase', () => {
 			logger.info(dummyMessage, dummyObject)
 			expect(formattingStrategy.format).toHaveBeenCalledTimes(1)
 			expect(formattingStrategy.format).toHaveBeenCalledWith(
-				{ level: LogLevel.INFO, meta: undefined, prefix: undefined },
+				{ category: undefined, level: LogLevel.INFO, meta: undefined, timestamp: expect.any(Number) },
 				dummyMessage,
 				dummyObject
 			)
@@ -198,7 +198,7 @@ describe('LoggerStrategyBase', () => {
 			logger.debug(dummyMessage, dummyObject)
 			expect(formattingStrategy.format).toHaveBeenCalledTimes(1)
 			expect(formattingStrategy.format).toHaveBeenCalledWith(
-				{ level: LogLevel.DEBUG, meta: undefined, prefix: undefined },
+				{ category: undefined, level: LogLevel.DEBUG, meta: undefined, timestamp: expect.any(Number) },
 				dummyMessage,
 				dummyObject
 			)
@@ -208,7 +208,7 @@ describe('LoggerStrategyBase', () => {
 			logger.trace(dummyMessage, dummyObject)
 			expect(formattingStrategy.format).toHaveBeenCalledTimes(1)
 			expect(formattingStrategy.format).toHaveBeenCalledWith(
-				{ level: LogLevel.TRACE, meta: undefined, prefix: undefined },
+				{ category: undefined, level: LogLevel.TRACE, meta: undefined, timestamp: expect.any(Number) },
 				dummyMessage,
 				dummyObject
 			)

@@ -6,6 +6,7 @@ import { TransportingStrategyConsole } from '#src/transporting-strategy/console.
 
 describe('TransportingStrategyConsole', () => {
 	const spy_console_log = vi.spyOn(console, 'log').mockImplementation(() => undefined)
+	const spy_console_debug = vi.spyOn(console, 'debug').mockImplementation(() => undefined)
 	const spy_console_info = vi.spyOn(console, 'info').mockImplementation(() => undefined)
 	const spy_console_warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined)
 	const spy_console_error = vi.spyOn(console, 'error').mockImplementation(() => undefined)
@@ -16,58 +17,50 @@ describe('TransportingStrategyConsole', () => {
 	})
 
 	describe('transport', () => {
-		it('should call console.log for DEBUG level', () => {
-			const log: FormattedLog = { level: LogLevel.DEBUG, message: 'test', timestamp: new Date().getTime() }
+		it('should call console.debug for DEBUG level', () => {
+			const log: FormattedLog = { level: LogLevel.DEBUG, message: '2025-01-01T00:00:00.000Z - DEBUG: test' }
 			transporter.transport(log)
-			expect(spy_console_log).toHaveBeenCalledTimes(1)
-			expect(spy_console_log).toHaveBeenCalledWith(expect.stringContaining('DEBUG: test'))
+			expect(spy_console_debug).toHaveBeenCalledTimes(1)
+			expect(spy_console_debug).toHaveBeenCalledWith('2025-01-01T00:00:00.000Z - DEBUG: test')
 		})
 
 		it('should call console.info for INFO level', () => {
-			const log: FormattedLog = { level: LogLevel.INFO, message: 'test', timestamp: new Date().getTime() }
+			const log: FormattedLog = { level: LogLevel.INFO, message: '2025-01-01T00:00:00.000Z - INFO: test' }
 			transporter.transport(log)
 			expect(spy_console_info).toHaveBeenCalledTimes(1)
-			expect(spy_console_info).toHaveBeenCalledWith(expect.stringContaining('INFO: test'))
+			expect(spy_console_info).toHaveBeenCalledWith('2025-01-01T00:00:00.000Z - INFO: test')
 		})
 
 		it('should call console.warn for WARN level', () => {
-			const log: FormattedLog = { level: LogLevel.WARN, message: 'test', timestamp: new Date().getTime() }
+			const log: FormattedLog = { level: LogLevel.WARN, message: '2025-01-01T00:00:00.000Z - WARN: test' }
 			transporter.transport(log)
 			expect(spy_console_warn).toHaveBeenCalledTimes(1)
-			expect(spy_console_warn).toHaveBeenCalledWith(expect.stringContaining('WARN: test'))
+			expect(spy_console_warn).toHaveBeenCalledWith('2025-01-01T00:00:00.000Z - WARN: test')
 		})
 
 		it('should call console.error for ERROR level', () => {
-			const log: FormattedLog = { level: LogLevel.ERROR, message: 'test', timestamp: new Date().getTime() }
+			const log: FormattedLog = { level: LogLevel.ERROR, message: '2025-01-01T00:00:00.000Z - ERROR: test' }
 			transporter.transport(log)
 			expect(spy_console_error).toHaveBeenCalledTimes(1)
-			expect(spy_console_error).toHaveBeenCalledWith(expect.stringContaining('ERROR: test'))
+			expect(spy_console_error).toHaveBeenCalledWith('2025-01-01T00:00:00.000Z - ERROR: test')
 		})
 
-		it('should call console with meta separately', () => {
-			const meta = { service: 'test' }
-			const log: FormattedLog = { level: LogLevel.INFO, message: 'test', meta, timestamp: new Date().getTime() }
+		it('should call console with metadata separately', () => {
+			const metadata = { service: 'test' }
+			const log: FormattedLog = { level: LogLevel.INFO, message: '2025-01-01T00:00:00.000Z - INFO: test', metadata }
 			transporter.transport(log)
 			expect(spy_console_info).toHaveBeenCalledTimes(2)
-			expect(spy_console_info).nthCalledWith(2, meta)
-		})
-
-		it('should call console with extra separately when non-empty', () => {
-			const extra = { err: 'stack' }
-			const log: FormattedLog = { extra, level: LogLevel.ERROR, message: 'test', timestamp: new Date().getTime() }
-			transporter.transport(log)
-			expect(spy_console_error).toHaveBeenCalledTimes(2)
-			expect(spy_console_error).nthCalledWith(2, extra)
+			expect(spy_console_info).nthCalledWith(2, metadata)
 		})
 	})
 
 	describe('LevelToFn', () => {
 		it.each([
-			['log', LogLevel.DEBUG],
+			['debug', LogLevel.DEBUG],
 			['info', LogLevel.INFO],
 			['warn', LogLevel.WARN],
 			['error', LogLevel.ERROR],
-		] as [string, LogLevel][])('should return %p for log level %s', (expected, level) => {
+		] as [string, LogLevel][])('should return %s for log level %s', (expected, level) => {
 			const fn = TransportingStrategyConsole.LevelToFn(level)
 			expect(fn.name).toEqual(expected)
 		})

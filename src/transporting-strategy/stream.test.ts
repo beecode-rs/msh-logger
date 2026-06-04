@@ -11,7 +11,7 @@ describe('TransportingStrategyStream', () => {
 			const mockStream = { write: mockWrite } as unknown as NodeJS.WritableStream
 			const transporter = new TransportingStrategyStream(mockStream)
 
-			const log: FormattedLog = { level: LogLevel.INFO, message: 'test', timestamp: 1234567890 }
+			const log: FormattedLog = { level: LogLevel.INFO, message: 'test' }
 			transporter.transport(log)
 
 			expect(mockWrite).toHaveBeenCalledTimes(1)
@@ -25,10 +25,8 @@ describe('TransportingStrategyStream', () => {
 
 			const log: FormattedLog = {
 				level: LogLevel.ERROR,
-				message: 'something failed',
-				meta: { service: 'api' },
-				prefix: '[app]',
-				timestamp: 999,
+				message: '2025-01-01T00:00:00.000Z - ERROR: something failed',
+				metadata: { service: 'api' },
 			}
 			transporter.transport(log)
 

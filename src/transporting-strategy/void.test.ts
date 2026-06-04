@@ -14,7 +14,7 @@ describe('TransportingStrategyVoid', () => {
 
 	describe('transport', () => {
 		it('should not output anything', () => {
-			const log: FormattedLog = { level: LogLevel.ERROR, message: 'test', timestamp: new Date().getTime() }
+			const log: FormattedLog = { level: LogLevel.ERROR, message: 'test' }
 			transporter.transport(log)
 			expect(spy_console_log).not.toHaveBeenCalled()
 		})

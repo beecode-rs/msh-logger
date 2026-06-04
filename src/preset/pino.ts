@@ -1,6 +1,6 @@
 import { type Logger } from 'pino'
 
-import { FormattingStrategyPino } from '#src/formatting-strategy/pino.js'
+import { FormattingStrategyJson } from '#src/formatting-strategy/json.js'
 import { LoggerStrategyBase, type LoggerStrategyBaseParams } from '#src/logger-strategy/base.js'
 import { TransportingStrategyPino } from '#src/transporting-strategy/pino.js'
 
@@ -14,7 +14,7 @@ export class PresetPino extends LoggerStrategyBase {
 
 		super({
 			...rest,
-			formattingStrategy: new FormattingStrategyPino(),
+			formattingStrategy: new FormattingStrategyJson(),
 			transportingStrategy: new TransportingStrategyPino(pinoLogger),
 		})
 	}

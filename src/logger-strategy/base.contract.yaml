@@ -20,11 +20,11 @@ constructor:
         _transportingStrategy: {}
     - params:
         - formattingStrategy: {}
-          messagePrefix: 'test-prefix'
+          category: 'test-prefix'
           transportingStrategy: {}
       result:
         _logLevel: ERROR
-        _messagePrefix: 'test-prefix'
+        _category: 'test-prefix'
         _formattingStrategy: {}
         _transportingStrategy: {}
     - params:
@@ -43,13 +43,13 @@ constructor:
     - params:
         - formattingStrategy: {}
           logLevel: WARN
-          messagePrefix: 'my-app'
+          category: 'my-app'
           meta:
             env: production
           transportingStrategy: {}
       result:
         _logLevel: WARN
-        _messagePrefix: 'my-app'
+        _category: 'my-app'
         _meta:
           env: production
         _formattingStrategy: {}
@@ -60,14 +60,14 @@ methods:
       - constructorParams:
           - formattingStrategy: {}
             logLevel: DEBUG
-            messagePrefix: 'app'
+            category: 'app'
             meta:
               service: auth
             transportingStrategy: {}
         params: []
         result:
           _logLevel: DEBUG
-          _messagePrefix: 'app'
+          _category: 'app'
           _meta:
             service: auth
           _formattingStrategy: {}
@@ -75,25 +75,25 @@ methods:
       - constructorParams:
           - formattingStrategy: {}
             logLevel: DEBUG
-            messagePrefix: 'app'
+            category: 'app'
             transportingStrategy: {}
         params:
           - logLevel: WARN
         result:
           _logLevel: WARN
-          _messagePrefix: 'app'
+          _category: 'app'
           _formattingStrategy: {}
           _transportingStrategy: {}
       - constructorParams:
           - formattingStrategy: {}
             logLevel: INFO
-            messagePrefix: 'old-prefix'
+            category: 'old-prefix'
             transportingStrategy: {}
         params:
-          - messagePrefix: 'new-prefix'
+          - category: 'new-prefix'
         result:
           _logLevel: INFO
-          _messagePrefix: 'new-prefix'
+          _category: 'new-prefix'
           _formattingStrategy: {}
           _transportingStrategy: {}
       - constructorParams:

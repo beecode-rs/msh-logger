@@ -4,7 +4,7 @@ export type ObjectType = Record<string, unknown>
 
 export type LoggerStrategyParams = {
 	logLevel?: LogLevel
-	messagePrefix?: string
+	category?: string
 	meta?: ObjectType
 }
 

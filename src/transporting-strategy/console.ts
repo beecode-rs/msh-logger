@@ -8,16 +8,11 @@ import { type TransportingStrategy } from '#src/transporting-strategy.js'
 export class TransportingStrategyConsole implements TransportingStrategy {
 	transport(log: FormattedLog): void {
 		const fn = TransportingStrategyConsole.LevelToFn(log.level)
-		const ts = new Date(log.timestamp).toISOString()
 
-		fn(`${ts} - ${log.level}: ${log.message}`)
+		fn(log.message)
 
-		if (log.meta) {
-			fn(log.meta)
-		}
-
-		if (log.extra && Object.keys(log.extra).length > 0) {
-			fn(log.extra)
+		if (log.metadata) {
+			fn(log.metadata)
 		}
 	}
 
@@ -32,12 +27,11 @@ export class TransportingStrategyConsole implements TransportingStrategy {
 			case LogLevel.INFO:
 				return console.info
 			case LogLevel.DEBUG:
-				return console.log
+				return console.debug
 			case LogLevel.TRACE:
 				return console.log
 			default:
-				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-				throw typeUtil.exhaustiveError(`Unknown level [${level}]`, level)
+				throw typeUtil.exhaustiveError(`Unknown level [${String(level)}]`, level)
 		}
 	}
 }
