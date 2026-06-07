@@ -48,7 +48,7 @@ npm i @beecode/msh-logger
 
 ```typescript
 import { LogLevel } from '@beecode/msh-logger'
-import { PresetConsoleSimpleString } from '@beecode/msh-logger/preset/console-simple-string'
+import { PresetConsoleSimpleString } from '@beecode/msh-logger/controller/preset/console-simple-string'
 
 const logger = new PresetConsoleSimpleString({ logLevel: LogLevel.INFO })
 
@@ -82,17 +82,29 @@ The logger is built on two independent, composable strategy layers:
 The `LoggerStrategyBase` composes one of each. **Presets** pre-wire common combinations so you don't have to think about the two layers individually.
 
 ```
-LoggerStrategy (interface)
-├── PresetVoid (no-op)
-└── LoggerStrategyBase (composable base)
-    ├── uses FormattingStrategy (interface)
-    │   ├── FormattingStrategySimpleString
-    │   └── FormattingStrategyJson
-    └── uses TransportingStrategy (interface)
-        ├── TransportingStrategyConsole
-        ├── TransportingStrategyPino
-        ├── TransportingStrategyStream
-        └── TransportingStrategyVoid
+src/
+├── business/
+│   ├── model/
+│   │   └── log-level.ts                         # LogLevel enum
+│   └── service/
+│       ├── logger-strategy.ts                    # LoggerStrategy interface
+│       ├── logger-strategy/
+│       │   └── base.ts                           # LoggerStrategyBase
+│       ├── formatting-strategy.ts                # FormattingStrategy interface
+│       ├── formatting-strategy/
+│       │   ├── simple-string.ts                  # FormattingStrategySimpleString
+│       │   └── json.ts                           # FormattingStrategyJson
+│       ├── transporting-strategy.ts              # TransportingStrategy interface
+│       └── transporting-strategy/
+│           ├── console.ts                        # TransportingStrategyConsole
+│           ├── pino.ts                           # TransportingStrategyPino
+│           ├── stream.ts                         # TransportingStrategyStream
+│           └── void.ts                           # TransportingStrategyVoid
+└── controller/preset/                       # Pre-wired presets
+    ├── console-simple-string.ts             # PresetConsoleSimpleString
+    ├── console-json.ts                      # PresetConsoleJson
+    ├── pino.ts                              # PresetPino
+    └── void.ts                              # PresetVoid
 ```
 
 **Presets** (convenience wrappers):
@@ -129,7 +141,7 @@ Human-readable console output with timestamps. Good for local development.
 
 ```typescript
 import { LogLevel } from '@beecode/msh-logger'
-import { PresetConsoleSimpleString } from '@beecode/msh-logger/preset/console-simple-string'
+import { PresetConsoleSimpleString } from '@beecode/msh-logger/controller/preset/console-simple-string'
 
 const logger = new PresetConsoleSimpleString({
   logLevel: LogLevel.DEBUG,
@@ -158,7 +170,7 @@ JSON-formatted console output. Good for structured log ingestion.
 
 ```typescript
 import { LogLevel } from '@beecode/msh-logger'
-import { PresetConsoleJson } from '@beecode/msh-logger/preset/console-json'
+import { PresetConsoleJson } from '@beecode/msh-logger/controller/preset/console-json'
 
 const logger = new PresetConsoleJson({
   logLevel: LogLevel.INFO,
@@ -187,7 +199,7 @@ Production-grade logging via [Pino](https://getpino.io/). Delegates formatting a
 
 ```typescript
 import { LogLevel } from '@beecode/msh-logger'
-import { PresetPino } from '@beecode/msh-logger/preset/pino'
+import { PresetPino } from '@beecode/msh-logger/controller/preset/pino'
 
 const logger = new PresetPino({
   logLevel: LogLevel.INFO,
@@ -208,7 +220,7 @@ const logger = new PresetPino({
 The default no-op logger. All log calls are silently ignored — useful for testing or disabling logging entirely.
 
 ```typescript
-import { PresetVoid } from '@beecode/msh-logger/preset/void'
+import { PresetVoid } from '@beecode/msh-logger/controller/preset/void'
 
 const logger = new PresetVoid()
 
@@ -225,7 +237,7 @@ Formatting strategies transform raw log data into `FormattedLog[]` objects. Each
 Human-readable format with timestamps. Produces messages like `2026-05-30T12:00:00.000Z - INFO: [category] message`.
 
 ```typescript
-import { FormattingStrategySimpleString } from '@beecode/msh-logger/formatting-strategy/simple-string'
+import { FormattingStrategySimpleString } from '@beecode/msh-logger/business/service/formatting-strategy/simple-string'
 
 const formatter = new FormattingStrategySimpleString()
 ```
@@ -235,7 +247,7 @@ const formatter = new FormattingStrategySimpleString()
 Structured JSON format. Extracts `message` from objects and spreads remaining keys into metadata.
 
 ```typescript
-import { FormattingStrategyJson } from '@beecode/msh-logger/formatting-strategy/json'
+import { FormattingStrategyJson } from '@beecode/msh-logger/business/service/formatting-strategy/json'
 
 const formatter = new FormattingStrategyJson()
 ```
@@ -249,7 +261,7 @@ Transporting strategies receive `FormattedLog` objects and write them to a desti
 Writes to `console.*` methods, mapping log levels to the appropriate console function.
 
 ```typescript
-import { TransportingStrategyConsole } from '@beecode/msh-logger/transporting-strategy/console'
+import { TransportingStrategyConsole } from '@beecode/msh-logger/business/service/transporting-strategy/console'
 
 const transport = new TransportingStrategyConsole()
 ```
@@ -259,7 +271,7 @@ const transport = new TransportingStrategyConsole()
 Sends logs to a [Pino](https://getpino.io/) logger instance. Optionally inject a custom Pino logger; defaults to `pino()`.
 
 ```typescript
-import { TransportingStrategyPino } from '@beecode/msh-logger/transporting-strategy/pino'
+import { TransportingStrategyPino } from '@beecode/msh-logger/business/service/transporting-strategy/pino'
 
 const transport = new TransportingStrategyPino() // uses default pino()
 // or with a custom instance:
@@ -272,7 +284,7 @@ Writes JSON-stringified `FormattedLog` to any `NodeJS.WritableStream`. Useful fo
 
 ```typescript
 import { createWriteStream } from 'node:fs'
-import { TransportingStrategyStream } from '@beecode/msh-logger/transporting-strategy/stream'
+import { TransportingStrategyStream } from '@beecode/msh-logger/business/service/transporting-strategy/stream'
 
 const stream = createWriteStream('./app.log')
 const transport = new TransportingStrategyStream(stream)
@@ -283,7 +295,7 @@ const transport = new TransportingStrategyStream(stream)
 No-op transport. Silently drops all logs.
 
 ```typescript
-import { TransportingStrategyVoid } from '@beecode/msh-logger/transporting-strategy/void'
+import { TransportingStrategyVoid } from '@beecode/msh-logger/business/service/transporting-strategy/void'
 
 const transport = new TransportingStrategyVoid()
 ```
@@ -294,9 +306,9 @@ Combine any formatting strategy with any transporting strategy to build a custom
 
 ```typescript
 import { LogLevel } from '@beecode/msh-logger'
-import { LoggerStrategyBase } from '@beecode/msh-logger/logger-strategy/base'
-import { FormattingStrategyJson } from '@beecode/msh-logger/formatting-strategy/json'
-import { TransportingStrategyStream } from '@beecode/msh-logger/transporting-strategy/stream'
+import { LoggerStrategyBase } from '@beecode/msh-logger/business/service/logger-strategy/base'
+import { FormattingStrategyJson } from '@beecode/msh-logger/business/service/formatting-strategy/json'
+import { TransportingStrategyStream } from '@beecode/msh-logger/business/service/transporting-strategy/stream'
 import { createWriteStream } from 'node:fs'
 
 const logger = new LoggerStrategyBase({
@@ -324,7 +336,7 @@ Use `clone()` to create a child logger that inherits settings from a parent, wit
 
 ```typescript
 import { LogLevel } from '@beecode/msh-logger'
-import { PresetConsoleSimpleString } from '@beecode/msh-logger/preset/console-simple-string'
+import { PresetConsoleSimpleString } from '@beecode/msh-logger/controller/preset/console-simple-string'
 
 const parent = new PresetConsoleSimpleString({
   logLevel: LogLevel.INFO,
@@ -355,7 +367,7 @@ Full API documentation is generated with TypeDoc and available in `resource/doc/
 | `LoggerStrategyParams` | type | Params for configuring loggers and `clone()` |
 | `ObjectType` | type | `Record<string, unknown>` — metadata bag |
 
-**Formatting types** (from `@beecode/msh-logger/formatting-strategy`):
+**Formatting types** (from `@beecode/msh-logger/business/service/formatting-strategy`):
 
 | Export | Kind | Description |
 |--------|------|-------------|
@@ -366,32 +378,32 @@ Full API documentation is generated with TypeDoc and available in `resource/doc/
 
 | Import path | Export |
 |-------------|--------|
-| `@beecode/msh-logger/preset/console-simple-string` | `PresetConsoleSimpleString` |
-| `@beecode/msh-logger/preset/console-json` | `PresetConsoleJson` |
-| `@beecode/msh-logger/preset/pino` | `PresetPino` |
-| `@beecode/msh-logger/preset/void` | `PresetVoid` |
+| `@beecode/msh-logger/controller/preset/console-simple-string` | `PresetConsoleSimpleString` |
+| `@beecode/msh-logger/controller/preset/console-json` | `PresetConsoleJson` |
+| `@beecode/msh-logger/controller/preset/pino` | `PresetPino` |
+| `@beecode/msh-logger/controller/preset/void` | `PresetVoid` |
 
 **Formatting strategy imports** (via subpath):
 
 | Import path | Export |
 |-------------|--------|
-| `@beecode/msh-logger/formatting-strategy/json` | `FormattingStrategyJson` |
-| `@beecode/msh-logger/formatting-strategy/simple-string` | `FormattingStrategySimpleString` |
+| `@beecode/msh-logger/business/service/formatting-strategy/json` | `FormattingStrategyJson` |
+| `@beecode/msh-logger/business/service/formatting-strategy/simple-string` | `FormattingStrategySimpleString` |
 
 **Transporting strategy imports** (via subpath):
 
 | Import path | Export |
 |-------------|--------|
-| `@beecode/msh-logger/transporting-strategy/console` | `TransportingStrategyConsole` |
-| `@beecode/msh-logger/transporting-strategy/pino` | `TransportingStrategyPino` |
-| `@beecode/msh-logger/transporting-strategy/stream` | `TransportingStrategyStream` |
-| `@beecode/msh-logger/transporting-strategy/void` | `TransportingStrategyVoid` |
+| `@beecode/msh-logger/business/service/transporting-strategy/console` | `TransportingStrategyConsole` |
+| `@beecode/msh-logger/business/service/transporting-strategy/pino` | `TransportingStrategyPino` |
+| `@beecode/msh-logger/business/service/transporting-strategy/stream` | `TransportingStrategyStream` |
+| `@beecode/msh-logger/business/service/transporting-strategy/void` | `TransportingStrategyVoid` |
 
 **Base class import** (via subpath):
 
 | Import path | Export |
 |-------------|--------|
-| `@beecode/msh-logger/logger-strategy/base` | `LoggerStrategyBase`, `LoggerStrategyBaseParams` |
+| `@beecode/msh-logger/business/service/logger-strategy/base` | `LoggerStrategyBase`, `LoggerStrategyBaseParams` |
 
 ## Migrating from v1 to v2
 

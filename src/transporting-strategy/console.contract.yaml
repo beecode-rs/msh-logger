@@ -1,7 +1,0 @@
-subject: TransportingStrategyConsole
-module: ./console.js
-subjectType: class
-constructor:
-  terms:
-    - params: []
-      result: {}

@@ -1,8 +1,0 @@
-subject: TransportingStrategyPino
-module: ./pino.js
-subjectType: class
-constructor:
-  terms:
-    - params: []
-      result:
-        _logger: {}

@@ -1,7 +1,0 @@
-subject: TransportingStrategyVoid
-module: ./void.js
-subjectType: class
-constructor:
-  terms:
-    - params: []
-      result: {}

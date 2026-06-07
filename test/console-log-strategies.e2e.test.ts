@@ -1,5 +1,5 @@
-import { LogLevel } from '@beecode/msh-logger/log-level'
-import { PresetConsoleSimpleString } from '@beecode/msh-logger/preset/console-simple-string'
+import { LogLevel } from '@beecode/msh-logger/business/model/log-level'
+import { PresetConsoleSimpleString } from '@beecode/msh-logger/controller/preset/console-simple-string'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 
 describe('Package exports smoke test', () => {
