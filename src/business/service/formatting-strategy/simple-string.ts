@@ -14,10 +14,7 @@ export class FormattingStrategySimpleString implements FormattingStrategy {
 		const { level, metadata, category, timestamp = timeUtil.dateToUnix(timeUtil.now()) } = params
 
 		if (msgs.length === 0) {
-			let prefix = ''
-			if (category) {
-				prefix = `[${category}]`
-			}
+			const prefix = this._formatPrefix(category)
 
 			return [{ level, message: this._formatLine(level, timestamp, prefix), metadata }]
 		}
@@ -31,6 +28,14 @@ export class FormattingStrategySimpleString implements FormattingStrategy {
 
 	protected _formatLine(level: LogLevel, timestamp: number, msg: string): string {
 		return `${timeUtil.unixToDate(timestamp).toISOString()} - ${level}: ${msg}`
+	}
+
+	protected _formatPrefix(category?: string): string {
+		if (category) {
+			return `[${category}]`
+		}
+
+		return ''
 	}
 
 	protected _formatMsg(msg: unknown, category?: string): string {
