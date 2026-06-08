@@ -7,7 +7,7 @@ export default defineConfig({
 	plugins: [tsconfigPaths(), contractYamlPlugin()],
 	test: {
 		coverage: {
-			exclude: ['lib/**', ...coverageConfigDefaults.exclude],
+			exclude: [...coverageConfigDefaults.exclude],
 		},
 		include: ['src/**/*.contract.yaml'],
 		mockReset: true,

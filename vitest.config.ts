@@ -5,7 +5,7 @@ export default defineConfig({
 	plugins: [tsconfigPaths()],
 	test: {
 		coverage: {
-			exclude: ['lib/**', ...coverageConfigDefaults.exclude],
+			exclude: [...coverageConfigDefaults.exclude],
 		},
 		mockReset: true,
 		passWithNoTests: true,

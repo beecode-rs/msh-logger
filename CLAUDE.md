@@ -7,7 +7,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```bash
 # Build
 npm run build             # Build ESM to dist/
-npm run build-cjs         # Build CommonJS to lib/
 npm run clean             # Remove dist/
 
 # Test
