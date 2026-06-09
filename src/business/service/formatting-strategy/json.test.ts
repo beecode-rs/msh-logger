@@ -43,7 +43,9 @@ describe('FormattingStrategyJson', () => {
 			const obj = { key: 'value' }
 			const result = formatter.format({ level: LogLevel.INFO, timestamp: mockTimestamp }, obj)
 
-			expect(result).toEqual([{ level: LogLevel.INFO, message: '{"key":"value"}', metadata: { timestamp: mockTimestamp } }])
+			expect(result).toEqual([
+				{ level: LogLevel.INFO, message: '{"key":"value"}', metadata: { timestamp: mockTimestamp } },
+			])
 		})
 
 		it('should format object without message property with category in metadata only', () => {
@@ -51,7 +53,11 @@ describe('FormattingStrategyJson', () => {
 			const result = formatter.format({ category: 'Prefix', level: LogLevel.INFO, timestamp: mockTimestamp }, obj)
 
 			expect(result).toEqual([
-				{ level: LogLevel.INFO, message: '{"key":"value"}', metadata: { category: 'Prefix', timestamp: mockTimestamp } },
+				{
+					level: LogLevel.INFO,
+					message: '{"key":"value"}',
+					metadata: { category: 'Prefix', timestamp: mockTimestamp },
+				},
 			])
 		})
 
@@ -60,7 +66,11 @@ describe('FormattingStrategyJson', () => {
 			const result = formatter.format({ level: LogLevel.ERROR, timestamp: mockTimestamp }, obj)
 
 			expect(result).toEqual([
-				{ level: LogLevel.ERROR, message: 'something failed', metadata: { err: 'stack trace', timestamp: mockTimestamp } },
+				{
+					level: LogLevel.ERROR,
+					message: 'something failed',
+					metadata: { err: 'stack trace', timestamp: mockTimestamp },
+				},
 			])
 		})
 
@@ -68,13 +78,17 @@ describe('FormattingStrategyJson', () => {
 			const metadata = { service: 'test' }
 			const result = formatter.format({ level: LogLevel.INFO, meta: metadata, timestamp: mockTimestamp }, 'test')
 
-			expect(result).toEqual([{ level: LogLevel.INFO, message: 'test', metadata: { service: 'test', timestamp: mockTimestamp } }])
+			expect(result).toEqual([
+				{ level: LogLevel.INFO, message: 'test', metadata: { service: 'test', timestamp: mockTimestamp } },
+			])
 		})
 
 		it('should handle empty message with category', () => {
 			const result = formatter.format({ category: 'Prefix', level: LogLevel.DEBUG, timestamp: mockTimestamp }, '')
 
-			expect(result).toEqual([{ level: LogLevel.DEBUG, message: '', metadata: { category: 'Prefix', timestamp: mockTimestamp } }])
+			expect(result).toEqual([
+				{ level: LogLevel.DEBUG, message: '', metadata: { category: 'Prefix', timestamp: mockTimestamp } },
+			])
 		})
 
 		it('should handle empty message without category', () => {

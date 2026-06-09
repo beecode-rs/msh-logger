@@ -18,7 +18,9 @@ vi.mock('pino', () => {
 })
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { __mockLogger: mockLogger } = await vi.importMock<{ __mockLogger: Record<string, ReturnType<typeof vi.fn>> }>('pino')
+const { __mockLogger: mockLogger } = await vi.importMock<{ __mockLogger: Record<string, ReturnType<typeof vi.fn>> }>(
+	'pino'
+)
 
 describe('TransportingStrategyPino', () => {
 	const transporter = new TransportingStrategyPino()

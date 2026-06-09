@@ -3,7 +3,11 @@ import { typeUtil } from '@beecode/msh-util/type-util'
 
 import { LogLevel } from '#src/business/model/log-level.js'
 import { type FormattingStrategy } from '#src/business/service/formatting-strategy.js'
-import { type LoggerStrategy, type LoggerStrategyParams, type ObjectType } from '#src/business/service/logger-strategy.js'
+import {
+	type LoggerStrategy,
+	type LoggerStrategyParams,
+	type ObjectType,
+} from '#src/business/service/logger-strategy.js'
 import { type TransportingStrategy } from '#src/business/service/transporting-strategy.js'
 import { objectUtil } from '#src/util/object-util.js'
 

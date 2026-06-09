@@ -27,7 +27,9 @@ describe('FormattingStrategySimpleString', () => {
 		it('should format string message with timestamp and level', () => {
 			const result = formatter.format({ level: LogLevel.ERROR, timestamp: mockTimestamp }, 'test')
 
-			expect(result).toEqual([{ level: LogLevel.ERROR, message: `${mockTimestampIso} - ERROR: test`, metadata: undefined }])
+			expect(result).toEqual([
+				{ level: LogLevel.ERROR, message: `${mockTimestampIso} - ERROR: test`, metadata: undefined },
+			])
 		})
 
 		it('should format string message with category, timestamp and level', () => {
