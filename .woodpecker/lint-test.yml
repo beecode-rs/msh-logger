@@ -5,8 +5,10 @@ when:
       - dependabot-update
 
 steps:
-  lint-test:
+  - name: lint-test
     image: node:22.22.1-alpine3.23
+    when:
+      - path: ['src/**']
     commands:
       - npm ci
       - npm run lint
