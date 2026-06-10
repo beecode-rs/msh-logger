@@ -6,11 +6,11 @@
 
 # Class: FormattingStrategySimpleString
 
-Defined in: business/service/formatting-strategy/simple-string.ts:9
+Defined in: [business/service/formatting-strategy/simple-string.ts:9](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/simple-string.ts#L9)
 
 ## Implements
 
-- [`FormattingStrategy`](../../../../model/formatting-strategy/interfaces/FormattingStrategy.md)
+- [`FormattingStrategy`](../../interfaces/FormattingStrategy.md)
 
 ## Constructors
 
@@ -28,7 +28,7 @@ Defined in: business/service/formatting-strategy/simple-string.ts:9
 
 > `protected` **\_formatLine**(`level`, `timestamp`, `msg`): `string`
 
-Defined in: business/service/formatting-strategy/simple-string.ts:32
+Defined in: [business/service/formatting-strategy/simple-string.ts:29](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/simple-string.ts#L29)
 
 #### Parameters
 
@@ -54,7 +54,7 @@ Defined in: business/service/formatting-strategy/simple-string.ts:32
 
 > `protected` **\_formatMsg**(`msg`, `category?`): `string`
 
-Defined in: business/service/formatting-strategy/simple-string.ts:36
+Defined in: [business/service/formatting-strategy/simple-string.ts:41](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/simple-string.ts#L41)
 
 #### Parameters
 
@@ -72,11 +72,29 @@ Defined in: business/service/formatting-strategy/simple-string.ts:36
 
 ***
 
+### \_formatPrefix()
+
+> `protected` **\_formatPrefix**(`category?`): `string`
+
+Defined in: [business/service/formatting-strategy/simple-string.ts:33](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/simple-string.ts#L33)
+
+#### Parameters
+
+##### category?
+
+`string`
+
+#### Returns
+
+`string`
+
+***
+
 ### format()
 
-> **format**(`params`, ...`msgs`): [`FormattedLog`](../../../../model/formatting-strategy/type-aliases/FormattedLog.md)[]
+> **format**(`params`, ...`msgs`): [`FormattedLog`](../../type-aliases/FormattedLog.md)[]
 
-Defined in: business/service/formatting-strategy/simple-string.ts:10
+Defined in: [business/service/formatting-strategy/simple-string.ts:10](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/simple-string.ts#L10)
 
 #### Parameters
 
@@ -104,8 +122,8 @@ Defined in: business/service/formatting-strategy/simple-string.ts:10
 
 #### Returns
 
-[`FormattedLog`](../../../../model/formatting-strategy/type-aliases/FormattedLog.md)[]
+[`FormattedLog`](../../type-aliases/FormattedLog.md)[]
 
 #### Implementation of
 
-[`FormattingStrategy`](../../../../model/formatting-strategy/interfaces/FormattingStrategy.md).[`format`](../../../../model/formatting-strategy/interfaces/FormattingStrategy.md#format)
+[`FormattingStrategy`](../../interfaces/FormattingStrategy.md).[`format`](../../interfaces/FormattingStrategy.md#format)

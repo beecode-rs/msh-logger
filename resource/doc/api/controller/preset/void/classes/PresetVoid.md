@@ -6,11 +6,11 @@
 
 # Class: PresetVoid
 
-Defined in: controller/preset/void.ts:3
+Defined in: [controller/preset/void.ts:3](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L3)
 
 ## Implements
 
-- [`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md)
+- [`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md)
 
 ## Constructors
 
@@ -28,13 +28,13 @@ Defined in: controller/preset/void.ts:3
 
 > **clone**(`_?`): `PresetVoid`
 
-Defined in: controller/preset/void.ts:11
+Defined in: [controller/preset/void.ts:11](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L11)
 
 #### Parameters
 
 ##### \_?
 
-[`LoggerStrategyParams`](../../../../business/model/logger-strategy/type-aliases/LoggerStrategyParams.md)
+[`LoggerStrategyParams`](../../../../business/service/logger-strategy/type-aliases/LoggerStrategyParams.md)
 
 #### Returns
 
@@ -42,7 +42,7 @@ Defined in: controller/preset/void.ts:11
 
 #### Implementation of
 
-[`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md).[`clone`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md#clone)
+[`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md).[`clone`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md#clone)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: controller/preset/void.ts:11
 
 > **debug**(...`_msgs`): `void`
 
-Defined in: controller/preset/void.ts:8
+Defined in: [controller/preset/void.ts:8](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L8)
 
 #### Parameters
 
@@ -64,7 +64,7 @@ Defined in: controller/preset/void.ts:8
 
 #### Implementation of
 
-[`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md).[`debug`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md#debug)
+[`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md).[`debug`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md#debug)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: controller/preset/void.ts:8
 
 > **error**(...`_msgs`): `void`
 
-Defined in: controller/preset/void.ts:5
+Defined in: [controller/preset/void.ts:5](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L5)
 
 #### Parameters
 
@@ -86,7 +86,7 @@ Defined in: controller/preset/void.ts:5
 
 #### Implementation of
 
-[`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md).[`error`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md#error)
+[`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md).[`error`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md#error)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: controller/preset/void.ts:5
 
 > **fatal**(...`_msgs`): `void`
 
-Defined in: controller/preset/void.ts:4
+Defined in: [controller/preset/void.ts:4](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L4)
 
 #### Parameters
 
@@ -108,7 +108,7 @@ Defined in: controller/preset/void.ts:4
 
 #### Implementation of
 
-[`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md).[`fatal`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md#fatal)
+[`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md).[`fatal`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md#fatal)
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: controller/preset/void.ts:4
 
 > **info**(...`_msgs`): `void`
 
-Defined in: controller/preset/void.ts:7
+Defined in: [controller/preset/void.ts:7](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L7)
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Defined in: controller/preset/void.ts:7
 
 #### Implementation of
 
-[`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md).[`info`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md#info)
+[`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md).[`info`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md#info)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: controller/preset/void.ts:7
 
 > **trace**(...`_msgs`): `void`
 
-Defined in: controller/preset/void.ts:9
+Defined in: [controller/preset/void.ts:9](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L9)
 
 #### Parameters
 
@@ -152,7 +152,7 @@ Defined in: controller/preset/void.ts:9
 
 #### Implementation of
 
-[`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md).[`trace`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md#trace)
+[`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md).[`trace`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md#trace)
 
 ***
 
@@ -160,7 +160,7 @@ Defined in: controller/preset/void.ts:9
 
 > **warn**(...`_msgs`): `void`
 
-Defined in: controller/preset/void.ts:6
+Defined in: [controller/preset/void.ts:6](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/void.ts#L6)
 
 #### Parameters
 
@@ -174,4 +174,4 @@ Defined in: controller/preset/void.ts:6
 
 #### Implementation of
 
-[`LoggerStrategy`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md).[`warn`](../../../../business/model/logger-strategy/interfaces/LoggerStrategy.md#warn)
+[`LoggerStrategy`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md).[`warn`](../../../../business/service/logger-strategy/interfaces/LoggerStrategy.md#warn)

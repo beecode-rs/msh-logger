@@ -6,7 +6,7 @@
 
 # Enumeration: LogLevel
 
-Defined in: business/model/log-level.ts:1
+Defined in: [business/model/log-level.ts:1](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/model/log-level.ts#L1)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: business/model/log-level.ts:1
 
 > **DEBUG**: `"DEBUG"`
 
-Defined in: business/model/log-level.ts:6
+Defined in: [business/model/log-level.ts:6](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/model/log-level.ts#L6)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: business/model/log-level.ts:6
 
 > **ERROR**: `"ERROR"`
 
-Defined in: business/model/log-level.ts:3
+Defined in: [business/model/log-level.ts:3](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/model/log-level.ts#L3)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: business/model/log-level.ts:3
 
 > **FATAL**: `"FATAL"`
 
-Defined in: business/model/log-level.ts:2
+Defined in: [business/model/log-level.ts:2](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/model/log-level.ts#L2)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: business/model/log-level.ts:2
 
 > **INFO**: `"INFO"`
 
-Defined in: business/model/log-level.ts:5
+Defined in: [business/model/log-level.ts:5](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/model/log-level.ts#L5)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: business/model/log-level.ts:5
 
 > **TRACE**: `"TRACE"`
 
-Defined in: business/model/log-level.ts:7
+Defined in: [business/model/log-level.ts:7](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/model/log-level.ts#L7)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: business/model/log-level.ts:7
 
 > **WARN**: `"WARN"`
 
-Defined in: business/model/log-level.ts:4
+Defined in: [business/model/log-level.ts:4](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/model/log-level.ts#L4)

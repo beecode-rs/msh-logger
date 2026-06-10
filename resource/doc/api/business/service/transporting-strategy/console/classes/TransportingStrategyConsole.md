@@ -6,11 +6,11 @@
 
 # Class: TransportingStrategyConsole
 
-Defined in: business/service/transporting-strategy/console.ts:8
+Defined in: [business/service/transporting-strategy/console.ts:8](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/console.ts#L8)
 
 ## Implements
 
-- [`TransportingStrategy`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md)
+- [`TransportingStrategy`](../../interfaces/TransportingStrategy.md)
 
 ## Constructors
 
@@ -28,13 +28,13 @@ Defined in: business/service/transporting-strategy/console.ts:8
 
 > **transport**(`log`): `void`
 
-Defined in: business/service/transporting-strategy/console.ts:9
+Defined in: [business/service/transporting-strategy/console.ts:9](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/console.ts#L9)
 
 #### Parameters
 
 ##### log
 
-[`FormattedLog`](../../../../model/formatting-strategy/type-aliases/FormattedLog.md)
+[`FormattedLog`](../../../formatting-strategy/type-aliases/FormattedLog.md)
 
 #### Returns
 
@@ -42,7 +42,7 @@ Defined in: business/service/transporting-strategy/console.ts:9
 
 #### Implementation of
 
-[`TransportingStrategy`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md).[`transport`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md#transport)
+[`TransportingStrategy`](../../interfaces/TransportingStrategy.md).[`transport`](../../interfaces/TransportingStrategy.md#transport)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: business/service/transporting-strategy/console.ts:9
 
 > `static` **LevelToFn**(`level`): (...`args`) => `void`
 
-Defined in: business/service/transporting-strategy/console.ts:19
+Defined in: [business/service/transporting-strategy/console.ts:19](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/console.ts#L19)
 
 #### Parameters
 
@@ -60,14 +60,4 @@ Defined in: business/service/transporting-strategy/console.ts:19
 
 #### Returns
 
-> (...`args`): `void`
-
-##### Parameters
-
-###### args
-
-...`unknown`[]
-
-##### Returns
-
-`void`
+(...`args`) => `void`

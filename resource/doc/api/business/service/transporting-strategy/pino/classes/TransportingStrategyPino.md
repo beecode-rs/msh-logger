@@ -6,11 +6,11 @@
 
 # Class: TransportingStrategyPino
 
-Defined in: business/service/transporting-strategy/pino.ts:8
+Defined in: [business/service/transporting-strategy/pino.ts:8](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/pino.ts#L8)
 
 ## Implements
 
-- [`TransportingStrategy`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md)
+- [`TransportingStrategy`](../../interfaces/TransportingStrategy.md)
 
 ## Constructors
 
@@ -18,7 +18,7 @@ Defined in: business/service/transporting-strategy/pino.ts:8
 
 > **new TransportingStrategyPino**(`logger?`): `TransportingStrategyPino`
 
-Defined in: business/service/transporting-strategy/pino.ts:11
+Defined in: [business/service/transporting-strategy/pino.ts:11](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/pino.ts#L11)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: business/service/transporting-strategy/pino.ts:11
 
 > `protected` **\_logger**: `Logger`
 
-Defined in: business/service/transporting-strategy/pino.ts:9
+Defined in: [business/service/transporting-strategy/pino.ts:9](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/pino.ts#L9)
 
 ## Methods
 
@@ -44,13 +44,13 @@ Defined in: business/service/transporting-strategy/pino.ts:9
 
 > **transport**(`log`): `void`
 
-Defined in: business/service/transporting-strategy/pino.ts:15
+Defined in: [business/service/transporting-strategy/pino.ts:15](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/pino.ts#L15)
 
 #### Parameters
 
 ##### log
 
-[`FormattedLog`](../../../../model/formatting-strategy/type-aliases/FormattedLog.md)
+[`FormattedLog`](../../../formatting-strategy/type-aliases/FormattedLog.md)
 
 #### Returns
 
@@ -58,7 +58,7 @@ Defined in: business/service/transporting-strategy/pino.ts:15
 
 #### Implementation of
 
-[`TransportingStrategy`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md).[`transport`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md#transport)
+[`TransportingStrategy`](../../interfaces/TransportingStrategy.md).[`transport`](../../interfaces/TransportingStrategy.md#transport)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: business/service/transporting-strategy/pino.ts:15
 
 > `static` **LevelToFn**(`level`): `"fatal"` \| `"error"` \| `"warn"` \| `"info"` \| `"debug"` \| `"trace"`
 
-Defined in: business/service/transporting-strategy/pino.ts:21
+Defined in: [business/service/transporting-strategy/pino.ts:21](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/pino.ts#L21)
 
 #### Parameters
 

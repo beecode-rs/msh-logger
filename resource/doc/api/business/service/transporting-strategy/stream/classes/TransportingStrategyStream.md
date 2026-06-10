@@ -6,11 +6,11 @@
 
 # Class: TransportingStrategyStream
 
-Defined in: business/service/transporting-strategy/stream.ts:4
+Defined in: [business/service/transporting-strategy/stream.ts:4](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/stream.ts#L4)
 
 ## Implements
 
-- [`TransportingStrategy`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md)
+- [`TransportingStrategy`](../../interfaces/TransportingStrategy.md)
 
 ## Constructors
 
@@ -18,7 +18,7 @@ Defined in: business/service/transporting-strategy/stream.ts:4
 
 > **new TransportingStrategyStream**(`_stream`): `TransportingStrategyStream`
 
-Defined in: business/service/transporting-strategy/stream.ts:5
+Defined in: [business/service/transporting-strategy/stream.ts:5](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/stream.ts#L5)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: business/service/transporting-strategy/stream.ts:5
 
 > `protected` **\_stream**: `WritableStream`
 
-Defined in: business/service/transporting-strategy/stream.ts:5
+Defined in: [business/service/transporting-strategy/stream.ts:5](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/stream.ts#L5)
 
 ## Methods
 
@@ -44,13 +44,13 @@ Defined in: business/service/transporting-strategy/stream.ts:5
 
 > **transport**(`log`): `void`
 
-Defined in: business/service/transporting-strategy/stream.ts:7
+Defined in: [business/service/transporting-strategy/stream.ts:7](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/transporting-strategy/stream.ts#L7)
 
 #### Parameters
 
 ##### log
 
-[`FormattedLog`](../../../../model/formatting-strategy/type-aliases/FormattedLog.md)
+[`FormattedLog`](../../../formatting-strategy/type-aliases/FormattedLog.md)
 
 #### Returns
 
@@ -58,4 +58,4 @@ Defined in: business/service/transporting-strategy/stream.ts:7
 
 #### Implementation of
 
-[`TransportingStrategy`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md).[`transport`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md#transport)
+[`TransportingStrategy`](../../interfaces/TransportingStrategy.md).[`transport`](../../interfaces/TransportingStrategy.md#transport)

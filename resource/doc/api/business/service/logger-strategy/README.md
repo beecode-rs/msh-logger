@@ -2,9 +2,9 @@
 
 ***
 
-[@beecode/msh-logger](../../../README.md) / business/model/logger-strategy
+[@beecode/msh-logger](../../../README.md) / business/service/logger-strategy
 
-# business/model/logger-strategy
+# business/service/logger-strategy
 
 ## Interfaces
 

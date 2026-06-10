@@ -6,11 +6,11 @@
 
 # Class: FormattingStrategyJson
 
-Defined in: business/service/formatting-strategy/json.ts:9
+Defined in: [business/service/formatting-strategy/json.ts:9](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/json.ts#L9)
 
 ## Implements
 
-- [`FormattingStrategy`](../../../../model/formatting-strategy/interfaces/FormattingStrategy.md)
+- [`FormattingStrategy`](../../interfaces/FormattingStrategy.md)
 
 ## Constructors
 
@@ -28,7 +28,7 @@ Defined in: business/service/formatting-strategy/json.ts:9
 
 > `protected` **\_extractPayload**(`msg`): `object`
 
-Defined in: business/service/formatting-strategy/json.ts:32
+Defined in: [business/service/formatting-strategy/json.ts:32](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/json.ts#L32)
 
 #### Parameters
 
@@ -48,9 +48,9 @@ Defined in: business/service/formatting-strategy/json.ts:32
 
 ### format()
 
-> **format**(`params`, ...`msgs`): [`FormattedLog`](../../../../model/formatting-strategy/type-aliases/FormattedLog.md)[]
+> **format**(`params`, ...`msgs`): [`FormattedLog`](../../type-aliases/FormattedLog.md)[]
 
-Defined in: business/service/formatting-strategy/json.ts:10
+Defined in: [business/service/formatting-strategy/json.ts:10](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/formatting-strategy/json.ts#L10)
 
 #### Parameters
 
@@ -78,8 +78,8 @@ Defined in: business/service/formatting-strategy/json.ts:10
 
 #### Returns
 
-[`FormattedLog`](../../../../model/formatting-strategy/type-aliases/FormattedLog.md)[]
+[`FormattedLog`](../../type-aliases/FormattedLog.md)[]
 
 #### Implementation of
 
-[`FormattingStrategy`](../../../../model/formatting-strategy/interfaces/FormattingStrategy.md).[`format`](../../../../model/formatting-strategy/interfaces/FormattingStrategy.md#format)
+[`FormattingStrategy`](../../interfaces/FormattingStrategy.md).[`format`](../../interfaces/FormattingStrategy.md#format)

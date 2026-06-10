@@ -8,7 +8,7 @@
 
 > `const` **objectUtil**: `object`
 
-Defined in: [util/object-util.ts:3](https://github.com/beecode-rs/msh-logger/blob/fbe544ed35d0e3d76840af98876eac73b4c8f869/src/util/object-util.ts#L3)
+Defined in: [util/object-util.ts:3](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/util/object-util.ts#L3)
 
 ## Type Declaration
 
@@ -26,11 +26,11 @@ Defined in: [util/object-util.ts:3](https://github.com/beecode-rs/msh-logger/blo
 
 ##### base
 
-`T` | `undefined`
+`T` \| `undefined`
 
 ##### override
 
-`T` | `undefined`
+`T` \| `undefined`
 
 #### Returns
 

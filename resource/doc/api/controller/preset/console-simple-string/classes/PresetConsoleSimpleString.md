@@ -6,7 +6,7 @@
 
 # Class: PresetConsoleSimpleString
 
-Defined in: controller/preset/console-simple-string.ts:5
+Defined in: [controller/preset/console-simple-string.ts:5](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/console-simple-string.ts#L5)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: controller/preset/console-simple-string.ts:5
 
 > **new PresetConsoleSimpleString**(`params?`): `PresetConsoleSimpleString`
 
-Defined in: controller/preset/console-simple-string.ts:6
+Defined in: [controller/preset/console-simple-string.ts:6](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/controller/preset/console-simple-string.ts#L6)
 
 #### Parameters
 
@@ -38,9 +38,9 @@ Defined in: controller/preset/console-simple-string.ts:6
 
 ### \_category?
 
-> `protected` `readonly` `optional` **\_category**: `string`
+> `protected` `readonly` `optional` **\_category?**: `string`
 
-Defined in: business/service/logger-strategy/base.ts:21
+Defined in: [business/service/logger-strategy/base.ts:25](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L25)
 
 #### Inherited from
 
@@ -50,9 +50,9 @@ Defined in: business/service/logger-strategy/base.ts:21
 
 ### \_formattingStrategy
 
-> `protected` `readonly` **\_formattingStrategy**: [`FormattingStrategy`](../../../../business/model/formatting-strategy/interfaces/FormattingStrategy.md)
+> `protected` `readonly` **\_formattingStrategy**: [`FormattingStrategy`](../../../../business/service/formatting-strategy/interfaces/FormattingStrategy.md)
 
-Defined in: business/service/logger-strategy/base.ts:19
+Defined in: [business/service/logger-strategy/base.ts:23](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L23)
 
 #### Inherited from
 
@@ -64,7 +64,7 @@ Defined in: business/service/logger-strategy/base.ts:19
 
 > `protected` `readonly` **\_logLevel**: [`LogLevel`](../../../../business/model/log-level/enumerations/LogLevel.md)
 
-Defined in: business/service/logger-strategy/base.ts:18
+Defined in: [business/service/logger-strategy/base.ts:22](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L22)
 
 #### Inherited from
 
@@ -74,9 +74,9 @@ Defined in: business/service/logger-strategy/base.ts:18
 
 ### \_meta?
 
-> `protected` `readonly` `optional` **\_meta**: [`ObjectType`](../../../../util/object-util/type-aliases/ObjectType.md)
+> `protected` `readonly` `optional` **\_meta?**: [`ObjectType`](../../../../util/object-util/type-aliases/ObjectType.md)
 
-Defined in: business/service/logger-strategy/base.ts:22
+Defined in: [business/service/logger-strategy/base.ts:26](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L26)
 
 #### Inherited from
 
@@ -86,9 +86,9 @@ Defined in: business/service/logger-strategy/base.ts:22
 
 ### \_transportingStrategy
 
-> `protected` `readonly` **\_transportingStrategy**: [`TransportingStrategy`](../../../../business/model/transporting-strategy/interfaces/TransportingStrategy.md)
+> `protected` `readonly` **\_transportingStrategy**: [`TransportingStrategy`](../../../../business/service/transporting-strategy/interfaces/TransportingStrategy.md)
 
-Defined in: business/service/logger-strategy/base.ts:20
+Defined in: [business/service/logger-strategy/base.ts:24](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L24)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ Defined in: business/service/logger-strategy/base.ts:20
 
 > `protected` **\_logMessage**(`type`, ...`msgs`): `void`
 
-Defined in: business/service/logger-strategy/base.ts:68
+Defined in: [business/service/logger-strategy/base.ts:72](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L72)
 
 #### Parameters
 
@@ -126,7 +126,7 @@ Defined in: business/service/logger-strategy/base.ts:68
 
 > `protected` **\_shouldLog**(`currentLevel`): `boolean`
 
-Defined in: business/service/logger-strategy/base.ts:64
+Defined in: [business/service/logger-strategy/base.ts:68](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L68)
 
 #### Parameters
 
@@ -148,13 +148,13 @@ Defined in: business/service/logger-strategy/base.ts:64
 
 > **clone**(`params?`): [`LoggerStrategyBase`](../../../../business/service/logger-strategy/base/classes/LoggerStrategyBase.md)
 
-Defined in: business/service/logger-strategy/base.ts:33
+Defined in: [business/service/logger-strategy/base.ts:37](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L37)
 
 #### Parameters
 
 ##### params?
 
-[`LoggerStrategyParams`](../../../../business/model/logger-strategy/type-aliases/LoggerStrategyParams.md)
+[`LoggerStrategyParams`](../../../../business/service/logger-strategy/type-aliases/LoggerStrategyParams.md)
 
 #### Returns
 
@@ -170,7 +170,7 @@ Defined in: business/service/logger-strategy/base.ts:33
 
 > **debug**(...`msgs`): `void`
 
-Defined in: business/service/logger-strategy/base.ts:99
+Defined in: [business/service/logger-strategy/base.ts:103](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L103)
 
 #### Parameters
 
@@ -192,7 +192,7 @@ Defined in: business/service/logger-strategy/base.ts:99
 
 > **error**(...`msgs`): `void`
 
-Defined in: business/service/logger-strategy/base.ts:87
+Defined in: [business/service/logger-strategy/base.ts:91](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L91)
 
 #### Parameters
 
@@ -214,7 +214,7 @@ Defined in: business/service/logger-strategy/base.ts:87
 
 > **fatal**(...`msgs`): `void`
 
-Defined in: business/service/logger-strategy/base.ts:83
+Defined in: [business/service/logger-strategy/base.ts:87](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L87)
 
 #### Parameters
 
@@ -236,7 +236,7 @@ Defined in: business/service/logger-strategy/base.ts:83
 
 > **info**(...`msgs`): `void`
 
-Defined in: business/service/logger-strategy/base.ts:95
+Defined in: [business/service/logger-strategy/base.ts:99](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L99)
 
 #### Parameters
 
@@ -258,7 +258,7 @@ Defined in: business/service/logger-strategy/base.ts:95
 
 > **trace**(...`msgs`): `void`
 
-Defined in: business/service/logger-strategy/base.ts:103
+Defined in: [business/service/logger-strategy/base.ts:107](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L107)
 
 #### Parameters
 
@@ -280,7 +280,7 @@ Defined in: business/service/logger-strategy/base.ts:103
 
 > **warn**(...`msgs`): `void`
 
-Defined in: business/service/logger-strategy/base.ts:91
+Defined in: [business/service/logger-strategy/base.ts:95](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L95)
 
 #### Parameters
 
@@ -302,7 +302,7 @@ Defined in: business/service/logger-strategy/base.ts:91
 
 > `static` **LogLevelToInt**(`logLevel`): `number`
 
-Defined in: business/service/logger-strategy/base.ts:45
+Defined in: [business/service/logger-strategy/base.ts:49](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L49)
 
 #### Parameters
 

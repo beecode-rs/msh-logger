@@ -6,16 +6,16 @@
 
 # Type Alias: LoggerStrategyBaseParams
 
-> **LoggerStrategyBaseParams** = `object` & [`LoggerStrategyParams`](../../../../model/logger-strategy/type-aliases/LoggerStrategyParams.md)
+> **LoggerStrategyBaseParams** = `object` & [`LoggerStrategyParams`](../../type-aliases/LoggerStrategyParams.md)
 
-Defined in: business/service/logger-strategy/base.ts:10
+Defined in: [business/service/logger-strategy/base.ts:14](https://github.com/beecode-rs/msh-logger/blob/829ea53a4bedee60d11f202a01ece6b01cec32fc/src/business/service/logger-strategy/base.ts#L14)
 
 ## Type Declaration
 
 ### formattingStrategy
 
-> **formattingStrategy**: [`FormattingStrategy`](../../../../model/formatting-strategy/interfaces/FormattingStrategy.md)
+> **formattingStrategy**: [`FormattingStrategy`](../../../formatting-strategy/interfaces/FormattingStrategy.md)
 
 ### transportingStrategy
 
-> **transportingStrategy**: [`TransportingStrategy`](../../../../model/transporting-strategy/interfaces/TransportingStrategy.md)
+> **transportingStrategy**: [`TransportingStrategy`](../../../transporting-strategy/interfaces/TransportingStrategy.md)
