@@ -1,0 +1,17 @@
+when:
+  - event: pull_request
+    branch:
+      - main
+      - dependabot-update
+
+steps:
+  lint:
+    image: node:22
+    commands:
+      - npm ci
+      - npm run ws-lint
+
+  test:
+    image: node:22
+    commands:
+      - npm run ws-test

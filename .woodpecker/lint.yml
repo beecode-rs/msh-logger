@@ -1,0 +1,10 @@
+when:
+  - event: pull_request
+    branch: main
+
+steps:
+  lint:
+    image: node:22
+    commands:
+      - npm ci
+      - npm run lint
