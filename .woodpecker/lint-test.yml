@@ -5,13 +5,9 @@ when:
       - dependabot-update
 
 steps:
-  lint:
-    image: node:22
+  lint-test:
+    image: node:22.22.1-alpine3.23
     commands:
       - npm ci
-      - npm run ws-lint
-
-  test:
-    image: node:22
-    commands:
-      - npm run ws-test
+      - npm run lint
+      - npm run test:unit
