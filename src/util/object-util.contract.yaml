@@ -1,0 +1,60 @@
+subject: objectUtil
+module: ./object-util.js
+subjectType: function
+methods:
+  merge:
+    terms:
+      # Zero — both undefined
+      - params:
+          - !undefined
+          - !undefined
+        result: !undefined
+      # Zero — base undefined, override provided
+      - params:
+          - !undefined
+          - name: alice
+        result:
+          name: alice
+      # Zero — override undefined, base provided
+      - params:
+          - name: bob
+          - !undefined
+        result:
+          name: bob
+      # Zero — both empty objects
+      - params: [{}, {}]
+        result: {}
+      # One — base with one key, override empty
+      - params:
+          - id: 1
+          - {}
+        result:
+          id: 1
+      # Many — no overlapping keys
+      - params:
+          - name: alice
+          - age: 30
+        result:
+          name: alice
+          age: 30
+      # Many — overlapping keys, override wins
+      - params:
+          - name: alice
+            age: 25
+          - name: bob
+        result:
+          name: bob
+          age: 25
+      # Many — multiple overlapping keys
+      - params:
+          - a: 1
+            b: 2
+            c: 3
+          - b: 20
+            c: 30
+            d: 4
+        result:
+          a: 1
+          b: 20
+          c: 30
+          d: 4

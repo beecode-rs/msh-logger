@@ -1,3 +1,3 @@
-export type { LoggerStrategy, LoggerStrategyParams, ObjectType } from '#src/logger-strategy.js'
+export type { LoggerStrategy, LoggerStrategyParams, ObjectType } from '#src/business/service/logger-strategy.js'
 
-export { LogLevel } from '#src/log-level.js'
+export { LogLevel } from '#src/business/model/log-level.js'
