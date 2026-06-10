@@ -88,8 +88,8 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-config": "^1.1.8",
-		"@beecode/msh-util": "^2.0.14",
+		"@beecode/msh-config": "^1.2.0",
+		"@beecode/msh-util": "^3.0.0",
 		"pino": "^10.3.1"
 	},
 	"devDependencies": {

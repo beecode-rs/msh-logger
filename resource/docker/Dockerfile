@@ -11,4 +11,3 @@ USER node
 RUN npm ci        && \
     npm run lint  && \
     npm run build && \
-    npm run build-cjs
