@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/beecode-rs/msh-logger/compare/v1.2.1...v2.0.0) (2026-06-11)
+
+
+* refactor!: rearchitect logger with decoupled format/transport layers ([#82](https://github.com/beecode-rs/msh-logger/issues/82)) ([93953db](https://github.com/beecode-rs/msh-logger/commit/93953db17fdb1854fa2f4586640d4cee6317ed72))
+
+
+### BREAKING CHANGES
+
+* public API completely restructured
+- LoggerStrategyConsole → PresetConsoleSimpleString / PresetConsoleJson
+- LoggerStrategyVoid → PresetVoid
+- ConsoleLogStrategySimple → FormattingStrategySimpleString + TransportingStrategyConsole
+- ConsoleLogStrategyNewRelicJson → FormattingStrategyJson + TransportingStrategyConsole
+- ConsoleLogStrategyPino → FormattingStrategyJson + TransportingStrategyPino
+- messagePrefix param renamed to category
+- JSON output uses the "level" key instead of "logtype"
+- LogLevel enum values changed from 0-3 to 10-60
+- Added fatal() and trace() methods to LoggerStrategy interface
+- All import paths changed (see MIGRATION.md)
+- Remove support for CommonJS build
+
 ## [1.2.1](https://github.com/beecode-rs/msh-logger/compare/v1.2.0...v1.2.1) (2026-02-16)
 
 
