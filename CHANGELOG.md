@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/beecode-rs/msh-logger/compare/v2.0.1...v2.0.2) (2026-07-02)
+
+
+### Bug Fixes
+
+* update msh-test-contractor ([d8a5d76](https://github.com/beecode-rs/msh-logger/commit/d8a5d76541d55e5f60c54d167c189884be00d6c0))
+
 ## [2.0.1](https://github.com/beecode-rs/msh-logger/compare/v2.0.0...v2.0.1) (2026-07-01)
 
 
