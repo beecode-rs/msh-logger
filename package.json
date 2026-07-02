@@ -111,7 +111,7 @@
 		"typedoc": "^0.28.19",
 		"typedoc-plugin-markdown": "^4.12.0",
 		"typescript": "^6.0.3",
-		"@beecode/msh-test-contractor": "^1.0.1",
+		"@beecode/msh-test-contractor": "^1.0.2",
 		"vitest": "^4.1.9"
 	},
 	"engines": {
